@@ -35,6 +35,7 @@ module.exports = {
     rules: {
         'react/react-in-jsx-scope': 'off',
         'linebreak-style': ['error', 'windows'],
+        "object-curly-newline": "off",
     },
     ignorePatterns: ['.eslintrc.js'],
 };
