@@ -1,0 +1,18 @@
+:root {
+  --bg-primary-color: #fff;
+  --text-primary-color: #000;
+  --header-primary-bg-color: #F2F7FF;
+  --header-secondary-bg-color: #10316B;
+  --button-default-bg-color: #0057B7;
+  --button-hover-bg-color: #0057b733;
+  --button-hover-border-color: #0057B7;
+  --button-pressing-bg-color: #10316B;
+  --button-text-color: #fff;
+  --button-border-radius: 14px;
+  --button-internal-padding: 16px;
+  --phone-default-text-color: #3F3F3F;
+  --phone-hover-text-color: #0057B7;
+  --phone-pressing-text-color: #10316B;
+  --page-padding-primary: 0 150px;
+  --section-padding-primary: 80px 0; 
+}

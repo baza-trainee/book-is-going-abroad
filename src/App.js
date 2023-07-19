@@ -1,6 +1,8 @@
 function App() {
   return (
-    <div></div>
+    <div>
+      <p>This is a first commercial project Book is going abroad!</p>
+    </div>
   );
 }
 
