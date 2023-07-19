@@ -1,41 +1,52 @@
 module.exports = {
-    env: {
-        browser: true,
-        es2021: true,
-        jest: true,
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+  },
+  extends: [
+    'prettier',
+    'airbnb-base',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
     },
-    extends: [
-        'prettier',
-        'airbnb-base',
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'linebreak-style': 'off',
+    'object-curly-newline': 'off',
+    'comma-dangle': ['error', 'never'],
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'never',
+        objects: 'never',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never',
+      },
     ],
-    overrides: [
-        {
-            env: {
-                node: true,
-            },
-            files: ['.eslintrc.{js,cjs}'],
-            parserOptions: {
-                sourceType: 'script',
-            },
-        },
-    ],
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-    },
-    plugins: ['react'],
-    settings: {
-        react: {
-            version: 'detect',
-        },
-    },
-    rules: {
-        'react/react-in-jsx-scope': 'off',
-        'linebreak-style': ['error', 'windows'],
-        "object-curly-newline": "off",
-    },
-    ignorePatterns: ['.eslintrc.js'],
+  },
+  ignorePatterns: ['.eslintrc.js'],
 };
