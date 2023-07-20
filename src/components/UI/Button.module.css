@@ -1,0 +1,22 @@
+.btn {
+  padding: var(--button-internal-padding);
+
+  cursor: pointer;
+  transition: all .8s ease;
+
+  color: var(--button-text-color); 
+  
+  border-color: var(--button-default-bg-color);
+  border-radius: var(--button-border-radius);    
+  outline: auto;
+  background-color: var(--button-default-bg-color);
+}
+
+.btn:hover {
+  border-color: var(--button-hover-border-color);
+  background-color: var(--button-hover-bg-color);
+}
+
+.btn:active {
+  background-color: var(--button-pressing-bg-color);
+}
