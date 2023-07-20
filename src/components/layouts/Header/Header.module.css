@@ -1,0 +1,177 @@
+/* stylelint-disable selector-class-pattern */
+@font-face {
+    font-family: Header-title-font;
+    src: url('/src/fonts/Inter/static/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: Select-font;
+    src: url('/src/fonts/Fixel/FixelText/FixelText-Regular.ttf');
+}
+
+@font-face {
+    font-family: Nav-font;
+    src: url('/src/fonts/Fixel/FixelText/FixelText-Medium.ttf');
+}
+
+/* HEADER */
+.headerWrapper {
+    margin: 0 auto;
+
+    background: var(--bg-primary-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 1440px;
+    height: 70px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.headerTitle {
+    width: 580px;
+
+    color: var(--header-secondary-bg-color);
+
+    font-family: Header-title-font, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+
+    line-height: 20.57px;
+}
+
+.selectWrapper {
+    position: relative;
+}
+
+.selectWrapper::before {
+    position: absolute;
+    top: 53%;
+    right: 73px;
+
+    display: block;
+
+    width: 28px;
+    height: 28px;
+
+    content: '';
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    background-image: url('./HeaderUpper/earth-lang.svg');
+    background-repeat: no-repeat;
+}
+
+.selectWrapper::after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    display: block;
+
+    width: 12px;
+    height: 6px;
+
+    content: '';
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    background-image: url('./HeaderUpper/arrow.svg');
+    background-repeat: no-repeat;
+}
+
+.langSelect {
+    width: 110px;
+    height: 40px;
+
+    padding: 8px;
+
+    appearance: none;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    /* padding: var(--button-internal-padding); */
+
+    color: var(--button-text-color);
+
+    border: none;
+    border-color: var(--button-pressing-bg-color);
+    border-radius: var(--button-border-radius);
+
+    outline: none;
+
+    background-color: var(--button-pressing-bg-color);
+
+    font-family: Select-font, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.langSelect option {
+    color: var(--button-pressing-bg-color);
+
+    background-color: #fff;
+}
+
+
+/* NAV */
+
+.navWrapper {
+    min-width: 1440px;
+    height: 40px;
+
+
+    margin: 0 auto;
+
+    background: var(--header-secondary-bg-color);
+}
+
+.navBtnWrapper {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-evenly;
+
+    width: 1440px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.navBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+
+    color: var(--button-text-color);
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.navBtn:hover {
+    transform: scale(1.1);
+}
+
+.navBtnText {
+    margin-top: 3px;
+
+    font-family: Nav-font, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 29.9px;
+}
