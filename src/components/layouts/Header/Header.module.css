@@ -16,8 +16,6 @@
 
 /* HEADER */
 .headerWrapper {
-    margin: 0 auto;
-
     background: var(--bg-primary-color);
 }
 
