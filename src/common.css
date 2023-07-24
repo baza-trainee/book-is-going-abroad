@@ -17,5 +17,24 @@
   --phone-pressing-text-color: #10316B;
   --page-padding-primary: 0 150px;
   --section-padding-primary: 80px 0;
-
+  --heading-text-font-family: semibold, sans-serif;
+  --body-text-font-family: medium, sans-serif;
+  --name-organization-font-family: inter, sans-serif;
+  --name-organization-font-size: 17px;
+  --h1-font-size: 40px;
+  --h2-font-size: 35px;
+  --h3-font-size: 30px;
+  --h4-font-size: 25px;
+  --h5-font-size: 32px;
+  --header-font-size: 17px;
+  --footer-font-size: 14px;
+  --body1-font-size: 24px;
+  --body2-font-size: 19px;
+  --body3-font-size: 16px;
+  --select-lang-font-size: 20px;
+  --button-font-size: 19px;
+  --heading-line-height: 0.5;
+  --body-line-height: 0.5;
+  --footer-line-height: 1.6;
+  --button-line-height: 1;
 }
