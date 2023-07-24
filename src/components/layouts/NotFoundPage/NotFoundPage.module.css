@@ -1,0 +1,24 @@
+.not-found-page {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('../../../assets/img/404.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 60px 0;
+  min-height: 100%;
+}
+
+.btn-on-main {
+  padding: 6px 16px;
+  position: relative;
+  top: -60px;
+  left: 30px;
+  font-size: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 200px;
+}
