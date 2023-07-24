@@ -1,11 +1,9 @@
-import Container from '../../Container/Container.jsx';
 import styles from '../Header.module.css';
 import logo from './Logo.svg';
 
 export default function HeaderUpper() {
   return (
     <header className={styles.header}>
-      <Container>
         <div className={styles.headerLogo}>
           <a href="/">
             <img src={logo} alt="logo" />
@@ -25,7 +23,6 @@ export default function HeaderUpper() {
             </select>
           </div>
         </div>
-      </Container>
     </header>
   );
 }

@@ -11,7 +11,6 @@
 body {
   margin: 0;
   min-height: 100vh;
-  line-height: 1.5;
 }
 
 /* Box sizing rules */
@@ -49,9 +48,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
 }
 
 /* Make images easier to work with */
@@ -81,22 +81,6 @@ nav,
 section,
 summary {
   display: block;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 #root {
