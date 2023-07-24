@@ -3,6 +3,8 @@
   --text-primary-color: #000;
   --header-primary-bg-color: #F2F7FF;
   --header-secondary-bg-color: #10316B;
+  --footer-primary-bg-color: #10316B;
+  --footer-primary-text-color: #fff;
   --button-default-bg-color: #0057B7;
   --button-hover-bg-color: #0057b733;
   --button-hover-border-color: #0057B7;
@@ -14,5 +16,6 @@
   --phone-hover-text-color: #0057B7;
   --phone-pressing-text-color: #10316B;
   --page-padding-primary: 0 150px;
-  --section-padding-primary: 80px 0; 
+  --section-padding-primary: 80px 0;
+
 }
