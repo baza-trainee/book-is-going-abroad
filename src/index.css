@@ -2,10 +2,20 @@
 
 @import url('common.css');
 
-/* @font-face {
-  font-family: Fixel;
-  src: url() format("")
-} */
+@font-face {
+  font-family: semibold;
+  src: url('./fonts/Fixel/FixelText/FixelText-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('./fonts/Fixel/FixelText/FixelText-Medium.ttf');
+}
+
+@font-face {
+  font-family: inter;
+  src: url('./fonts/Fixel/FixelText/FixelText-Medium.ttf');
+}
 
 /* stylelint-disable order/properties-order */
 body {
