@@ -4,10 +4,10 @@
   cursor: pointer;
   transition: all .8s ease;
 
-  color: var(--button-text-color);   
+  color: var(--button-text-color);
+  border-color: transparent;   
   
   border-radius: var(--button-border-radius);
-  border-color: transparent;
   background-color: var(--button-default-bg-color);
 }
 
