@@ -7,9 +7,9 @@ import styles from './NotFoundPage.module.css';
 
 const NotFoundPage = () => (
   <main className={styles['not-found-page']}>
-    <NavLink to="/">
-      <Button className={styles['btn-on-main']}>На головну</Button>
-    </NavLink>
+      <NavLink to="/">
+        <Button className={styles['btn-on-main']}>На головну</Button>
+      </NavLink>
   </main>
 );
 
