@@ -1,10 +1,21 @@
 :root {
+  --page-padding-primary: 0 150px;
+  --section-padding-primary: 80px 0;
   --bg-primary-color: #fff;
   --text-primary-color: #000;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
   --header-primary-bg-color: #F2F7FF;
   --header-secondary-bg-color: #10316B;
+  --header-font-size: 17px;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
   --footer-primary-bg-color: #10316B;
   --footer-primary-text-color: #fff;
+  --footer-font-size: 14px;
+  --footer-line-height: 20px;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
   --button-default-bg-color: #0057B7;
   --button-hover-bg-color: #0057b733;
   --button-hover-border-color: #0057B7;
@@ -12,29 +23,35 @@
   --button-text-color: #fff;
   --button-border-radius: 14px;
   --button-internal-padding: 16px;
+  --button-line-height: 30px;
+  --button-font-size: 19px;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
   --phone-default-text-color: #3F3F3F;
   --phone-hover-text-color: #0057B7;
   --phone-pressing-text-color: #10316B;
-  --page-padding-primary: 0 150px;
-  --section-padding-primary: 80px 0;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
   --heading-text-font-family: semibold, sans-serif;
-  --body-text-font-family: medium, sans-serif;
-  --name-organization-font-family: inter, sans-serif;
-  --name-organization-font-size: 17px;
+  --heading-line-height: 50px;
   --h1-font-size: 40px;
   --h2-font-size: 35px;
   --h3-font-size: 32px;
   --h4-font-size: 30px;
   --h5-font-size: 25px;
-  --header-font-size: 17px;
-  --footer-font-size: 14px;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
+  --body-text-font-family: medium, sans-serif;
   --body1-font-size: 24px;
   --body2-font-size: 19px;
   --body3-font-size: 16px;
-  --select-lang-font-size: 20px;
-  --button-font-size: 19px;
-  --heading-line-height: 50px;
   --body-line-height: 30px;
-  --footer-line-height: 20px;
-  --button-line-height: 30px;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
+  --select-lang-font-size: 20px;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
+  --name-organization-font-family: inter, sans-serif;
+  --name-organization-font-size: 17px;
+  --name-organization-line-height: 24px;
 }
