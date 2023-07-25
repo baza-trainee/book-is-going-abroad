@@ -10,7 +10,7 @@ const NotFoundPage = () => (
   <main className={styles['not-found-page']}>
     <Container className={styles['not-found-page-container']}>
       <div className={styles['not-found-page-img-wrapper']}><img src="./assets/img/404.png" alt="404" /></div>
-      <NavLink className={styles['btn-link']} to="/">
+      <NavLink to="/">
         <Button className={styles['btn-on-main']}>На головну</Button>
       </NavLink>
     </Container>

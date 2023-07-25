@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Main />} exact />
         <Route path="/*" element={<NotFoundPage />} exact />
       </Routes>
-      <footer style={{ height: '182px', flexShrink: '0' }}></footer>
+      <footer style={{ height: '200px', flexShrink: '0' }}></footer>
     </>
   );
 }
