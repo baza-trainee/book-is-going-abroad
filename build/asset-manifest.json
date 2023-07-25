@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ccf3068a.css",
+    "main.js": "/static/js/main.b1126ef4.js",
+    "static/js/787.471e581b.chunk.js": "/static/js/787.471e581b.chunk.js",
+    "static/media/Inter-Medium.ttf": "/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
+    "static/media/FixelText-Medium.ttf": "/static/media/FixelText-Medium.2f2c7cdd485a38186db7.ttf",
+    "static/media/FixelText-SemiBold.ttf": "/static/media/FixelText-SemiBold.ecb1388f941dcc0c4844.ttf",
+    "static/media/FixelText-Regular.ttf": "/static/media/FixelText-Regular.a2548bccb7aba570f4f7.ttf",
+    "static/media/404.png": "/static/media/404.8803d2b1f3bd653f891b.png",
+    "static/media/Logo.svg": "/static/media/Logo.babd5ab2893c15f33fafdfa4d0405465.svg",
+    "static/media/fluent.svg": "/static/media/fluent.b23e1c206e85c7669a75fd1360fd233a.svg",
+    "static/media/earth-lang.svg": "/static/media/earth-lang.bc5f457b330c6fe6ee98.svg",
+    "static/media/partnership.svg": "/static/media/partnership.8fbeb6b27217b003fea8413d449f1d94.svg",
+    "static/media/question.svg": "/static/media/question.a12279b0d3911fa1ccc47778c27167fb.svg",
+    "static/media/Adresse.svg": "/static/media/Adresse.2d40473149ee2fb5d9f547599c4006b4.svg",
+    "static/media/Frame.svg": "/static/media/Frame.e032ad432ca618a664d2fc373179ec38.svg",
+    "index.html": "/index.html",
+    "static/media/arrow.svg": "/static/media/arrow.28222f422d5b293f3a37.svg",
+    "main.ccf3068a.css.map": "/static/css/main.ccf3068a.css.map",
+    "main.b1126ef4.js.map": "/static/js/main.b1126ef4.js.map",
+    "787.471e581b.chunk.js.map": "/static/js/787.471e581b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccf3068a.css",
+    "static/js/main.b1126ef4.js"
+  ]
+}
