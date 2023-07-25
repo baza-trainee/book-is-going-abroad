@@ -18,10 +18,10 @@ const Footer = () => (
           </p>
           <div className={styles['footer-payment']}>
             <div>
-              <img src={liqpay} alt="liqpay" />
+              {/* <img src={liqpay} alt="liqpay" />
               <img src={mastercard} alt="liqpay" />
               <img src={privat} alt="liqpay" />
-              <img src={visa} alt="liqpay" />
+              <img src={visa} alt="liqpay" /> */}
             </div>
             <div></div>
           </div>
@@ -29,7 +29,9 @@ const Footer = () => (
           <div></div>
         </div>
         <div>
-          <p className={styles['footer-copywriter']}>Розробка BazaTraineeUkraine © 2023 Всі права захищені</p>
+          <p className={styles['footer-copywriter']}>
+            Розробка BazaTraineeUkraine © 2023 Всі права захищені
+          </p>
         </div>
       </div>
     </Container>
