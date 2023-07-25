@@ -1,11 +1,20 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Routes, Route } from 'react-router-dom';
+import Footer from './components/layouts/Footer/Footer.jsx';
 import Header from './components/layouts/Header/Header.jsx';
+import Main from './components/layouts/Main/Main.jsx';
+import NotFoundPage from './components/layouts/NotFoundPage/NotFoundPage.jsx';
 
 function App() {
   return (
-    <div>
+    <>
       <Header></Header>
-      <p>This is a first commercial project Book is going abroad!</p>
-    </div>
+      <Routes>
+        <Route path="/" element={<Main />} exact />
+        <Route path="/*" element={<NotFoundPage />} exact />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
