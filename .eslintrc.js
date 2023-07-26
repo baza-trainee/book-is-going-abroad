@@ -37,6 +37,15 @@ module.exports = {
     'linebreak-style': 'off',
     'object-curly-newline': 'off',
     'comma-dangle': ['error', 'never'],
+    'max-len': [
+      1,
+      150,
+      2,
+      {
+        ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
+        ignoreUrls: true,
+      },
+    ],
     'comma-dangle': [
       'error',
       {

@@ -9,7 +9,6 @@ export default function HeaderUpper() {
           <img src={logo} alt="logo" />
         </a>
       </div>
-
       <h1 className={styles.headerTitle}>
         БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
         ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
