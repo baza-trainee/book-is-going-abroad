@@ -2,14 +2,18 @@
 import { NavLink } from 'react-router-dom';
 
 import Button from '../../UI/Button.jsx';
+import Container from '../Container/Container.jsx';
 
 import styles from './NotFoundPage.module.css';
 
 const NotFoundPage = () => (
   <main className={styles['not-found-page']}>
-    <NavLink to="/">
-      <Button className={styles['btn-on-main']}>На головну</Button>
-    </NavLink>
+    <Container className={styles['not-found-page-container']}>
+      <div className={styles['not-found-page-img-wrapper']}><img src="./assets/img/404.png" alt="404" /></div>
+      <NavLink to="/">
+        <Button className={styles['btn-on-main']}>На головну</Button>
+      </NavLink>
+    </Container>
   </main>
 );
 
