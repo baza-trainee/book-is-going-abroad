@@ -12,7 +12,6 @@ function App() {
         <Route path="/" element={<Main />} exact />
         <Route path="/*" element={<NotFoundPage />} exact />
       </Routes>
-      <footer style={{ height: '200px', flexShrink: '0' }}></footer>
     </>
   );
 }
