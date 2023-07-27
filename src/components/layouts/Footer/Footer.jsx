@@ -15,25 +15,23 @@ const Footer = () => (
     <Container>
       <div className={styles['footer-container']}>
         <div className={styles['footer-wrapper']}>
-          <div className={styles['footer-logo-wrap']}>
-            <a href="/">
-              <img src={logo} alt="logo" />
-            </a>
-          </div>
+          <a href="/">
+            <img className={styles['footer-logo']} src={logo} alt="logo" />
+          </a>
           <p className={styles['footer-org-name']}>
             БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
             ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
           </p>
           <div className={styles['footer-payment']}>
             <div className={styles['payment-items']}>
-              <img src={liqpay} alt="liqpay" />
-              <img src={mastercard} alt="liqpay" />
-              <img src={privat} alt="liqpay" />
-              <img src={visa} alt="liqpay" />
+              <img className={styles['payment-liqpay-img']} src={liqpay} alt="liqpay" />
+              <img className={styles['payment-mastercard-img']} src={mastercard} alt="liqpay" />
+              <img className={styles['payment-privat-img']} src={privat} alt="liqpay" />
+              <img className={styles['payment-visa-img']} src={visa} alt="liqpay" />
             </div>
-            <Button>Фондувати</Button>
+            <Button className={styles['footer-button']}>Фондувати</Button>
           </div>
-          <ul>
+          <ul className={styles['footer-docs']}>
             <li>
               <a href="/" download>
                 Статут
@@ -60,12 +58,12 @@ const Footer = () => (
               </a>
             </li>
           </ul>
-          <ul>
+          <ul className={styles['footer-contacts']}>
             <li>
               <img src={phone} />
               <a href="tel:+380442095302">+38 044 209 53 02</a>
             </li>
-            <li>
+            <li >
               <img src={phone} />
               <a href="tel:+380986838521">+38 098 683 85 21</a>
             </li>
@@ -80,7 +78,7 @@ const Footer = () => (
             <li>
               <img src={email} />
               <a href="mailto:child.help.book@gmail.com">
-                child.help.book@gmail.com
+                child.help.book@<br/>gmail.com
               </a>
             </li>
           </ul>
