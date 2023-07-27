@@ -14,6 +14,7 @@
   --footer-font-size: 14px;
   --footer-line-height: 20px;
   --footer-padding-primary: 22px 0;
+  --footer-text-font-family: medium, sans-serif;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --button-default-bg-color: #0057B7;
@@ -56,4 +57,5 @@
   --name-organization-font-family: inter, sans-serif;
   --name-organization-font-size: 17px;
   --name-organization-line-height: 24px;
+  --name-organization-footer-font-size: 11px;
 }
