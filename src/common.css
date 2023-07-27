@@ -1,5 +1,4 @@
 :root {
-  --page-padding-primary: 0 150px;
   --section-padding-primary: 80px 0;
   --bg-primary-color: #fff;
   --text-primary-color: #000;
@@ -14,12 +13,15 @@
   --footer-primary-text-color: #fff;
   --footer-font-size: 14px;
   --footer-line-height: 20px;
+  --footer-padding-primary: 22px 0;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --button-default-bg-color: #0057B7;
   --button-hover-bg-color: #0057b733;
+  --button-border-color: #0057B7;
   --button-hover-border-color: #0057B7;
   --button-pressing-bg-color: #10316B;
+  --button-pressing-border-color: #10316B;
   --button-text-color: #fff;
   --button-border-radius: 14px;
   --button-internal-padding: 16px;
