@@ -1,0 +1,19 @@
+.footer-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.payment-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.footer-button {
+  padding: 12px 47px;
+  font-size: var(--button-font-size);
+  align-self: center;
+}

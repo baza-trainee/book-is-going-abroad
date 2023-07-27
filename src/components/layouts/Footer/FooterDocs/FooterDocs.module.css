@@ -1,0 +1,12 @@
+.footer-docs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-docs li {
+  font-size: var(--footer-font-size);
+  font-family: var(--footer-text-font-family);
+  color: var(--footer-primary-text-color);
+}
