@@ -2,16 +2,25 @@
 
 @import url('common.css');
 
-/* @font-face {
-  font-family: Fixel;
-  src: url() format("")
-} */
+@font-face {
+  font-family: semibold;
+  src: url('./fonts/Fixel/FixelText/FixelText-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('./fonts/Fixel/FixelText/FixelText-Medium.ttf');
+}
+
+@font-face {
+  font-family: inter;
+  src: url('./fonts/Fixel/FixelText/FixelText-Medium.ttf');
+}
 
 /* stylelint-disable order/properties-order */
 body {
   margin: 0;
   min-height: 100vh;
-  line-height: 1.5;
 }
 
 /* Box sizing rules */
@@ -34,13 +43,15 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
+  padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -49,9 +60,11 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
 }
 
 /* Make images easier to work with */
@@ -69,6 +82,10 @@ select {
   font: inherit;
 }
 
+button {
+  border: none;
+}
+
 article,
 aside,
 details,
@@ -83,18 +100,8 @@ summary {
   display: block;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

@@ -4,11 +4,9 @@
   cursor: pointer;
   transition: all .8s ease;
 
-  color: var(--button-text-color); 
-  
-  border-color: var(--button-default-bg-color);
-  border-radius: var(--button-border-radius);    
-  outline: auto;
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
   background-color: var(--button-default-bg-color);
 }
 
@@ -18,5 +16,6 @@
 }
 
 .btn:active {
+  border-color: var(--button-pressing-border-color);
   background-color: var(--button-pressing-bg-color);
 }

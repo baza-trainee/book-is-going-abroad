@@ -16,8 +16,6 @@
 
 /* HEADER */
 .headerWrapper {
-    margin: 0 auto;
-
     background: var(--bg-primary-color);
 }
 
@@ -26,7 +24,9 @@
     align-items: center;
     justify-content: space-around;
 
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
+
     height: 70px;
 
     margin: 0 auto;
@@ -129,7 +129,7 @@
 /* NAV */
 
 .navWrapper {
-    min-width: 1440px;
+    width: 100%;
     height: 40px;
 
 
@@ -144,7 +144,7 @@
 
     justify-content: space-evenly;
 
-    width: 1440px;
+    max-width: 1440px;
     height: 40px;
     margin: 0 auto;
 }

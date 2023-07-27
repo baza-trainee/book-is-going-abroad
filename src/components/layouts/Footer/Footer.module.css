@@ -1,0 +1,54 @@
+.footer-bg {
+  padding: var(--footer-padding-primary);
+
+  background-color: var(--footer-primary-bg-color);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo-wrap {
+  width: 93px;
+  height: 79px;
+}
+
+.footer-org-name {
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--footer-primary-text-color);
+
+  font-family: var(--name-organization-font-family);
+  font-size: var(--name-organization-font-size);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+.footer-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.payment-items {
+  display: flex;
+  gap: 27px;
+}
+
+.footer-copywriter {
+  color: var(--footer-primary-text-color);
+}
