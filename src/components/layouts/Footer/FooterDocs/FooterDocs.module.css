@@ -9,4 +9,9 @@
   font-size: var(--footer-font-size);
   font-family: var(--footer-text-font-family);
   color: var(--footer-primary-text-color);
+  transition: transform 0.1s ease-in-out;
+}
+
+.footer-docs li:hover {
+  transform: scale(1.1);
 }
