@@ -1,17 +1,17 @@
 /* stylelint-disable selector-class-pattern */
 @font-face {
     font-family: Header-title-font;
-    src: url('/src/fonts/Inter/static/Inter-Medium.ttf');
+    src: url('../../../assets/fonts/Inter/static/Inter-Medium.ttf');
 }
 
 @font-face {
     font-family: Select-font;
-    src: url('/src/fonts/Fixel/FixelText/FixelText-Regular.ttf');
-}
+    src: url('../../../assets/fonts/Fixel/FixelText/FixelText-Medium.ttf');
+  }
 
 @font-face {
     font-family: Nav-font;
-    src: url('/src/fonts/Fixel/FixelText/FixelText-Medium.ttf');
+    src: url('../../../assets/fonts/Fixel/FixelText/FixelText-Medium.ttf');
 }
 
 /* HEADER */
@@ -110,8 +110,8 @@
     background-color: var(--button-pressing-bg-color);
 
     font-family: Select-font, sans-serif;
-    font-size: 20px;
-    line-height: 29.9px;
+    font-size: var(--select-lang-font-size);
+    line-height: var(--body-line-height);
     font-weight: 400;
 }
 
