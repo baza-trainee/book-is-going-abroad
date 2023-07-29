@@ -33,7 +33,7 @@ const Features = () => {
         <div className={styles['features-wrapper']}>
           <div className={styles['features-top']}>
             <div className={styles['features-img-wrapper']}>
-              <img src={ideas} alt="Main ideas" />
+              <img className={styles['features-img']} src={ideas} alt="Main ideas" />
             </div>
             <div
               className={`${styles['features-text-wrapper']} ${styles['features-text-top']}`}>
@@ -49,7 +49,7 @@ const Features = () => {
           </div>
           <div className={`${styles['features-bottom']}`}>
             <img
-              className={styles['features-img-float']}
+              className={`${styles['features-img-float']} ${styles['features-img']}`}
               src={activity}
               alt="Activity goals"
             />
