@@ -4,17 +4,14 @@
 
 @font-face {
   font-family: semibold;
-  src: url('./fonts/Fixel/FixelText/FixelText-SemiBold.ttf');
+  src: url('../src/assets/fonts/Fixel/FixelText/FixelText-SemiBold.ttf');
 }
 
-@font-face {
-  font-family: medium;
-  src: url('./fonts/Fixel/FixelText/FixelText-Medium.ttf');
-}
+
 
 @font-face {
   font-family: inter;
-  src: url('./fonts/Fixel/FixelText/FixelText-Medium.ttf');
+  src: url('../src/assets/fonts/Inter/static/Inter-Medium.ttf');
 }
 
 /* stylelint-disable order/properties-order */

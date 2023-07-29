@@ -1,17 +1,17 @@
 /* stylelint-disable selector-class-pattern */
 @font-face {
     font-family: Header-title-font;
-    src: url('/src/fonts/Inter/static/Inter-Medium.ttf');
+    src: url('../../../assets/fonts/Inter/static/Inter-Medium.ttf');
 }
 
 @font-face {
     font-family: Select-font;
-    src: url('/src/fonts/Fixel/FixelText/FixelText-Regular.ttf');
-}
+    src: url('../../../assets/fonts/Fixel/FixelText/FixelText-Medium.ttf');
+  }
 
 @font-face {
     font-family: Nav-font;
-    src: url('/src/fonts/Fixel/FixelText/FixelText-Medium.ttf');
+    src: url('../../../assets/fonts/Fixel/FixelText/FixelText-Medium.ttf');
 }
 
 /* HEADER */
@@ -22,14 +22,13 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     width: 100%;
-    max-width: 1440px;
-
-    height: 70px;
+    max-width: 1140px;
 
     margin: 0 auto;
+    padding: 20px 0 20px 0;
 
     text-align: center;
 }
@@ -53,7 +52,7 @@
 .selectWrapper::before {
     position: absolute;
     top: 53%;
-    right: 73px;
+    right: 70px;
 
     display: block;
 
@@ -94,15 +93,11 @@
     width: 110px;
     height: 40px;
 
-    padding: 8px;
+    padding: 8px 10.5px 8px 16px;
 
     appearance: none;
 
     cursor: pointer;
-
-    text-align: center;
-
-    /* padding: var(--button-internal-padding); */
 
     color: var(--button-text-color);
 
@@ -115,14 +110,24 @@
     background-color: var(--button-pressing-bg-color);
 
     font-family: Select-font, sans-serif;
-    font-size: 20px;
+    font-size: var(--select-lang-font-size);
+    line-height: var(--body-line-height);
     font-weight: 400;
+}
+
+.langSelect:focus {
+    background-color: var(--button-hover-border-color);
+}
+
+.langSelect:hover {
+    background-color: var(--button-hover-border-color);
 }
 
 .langSelect option {
     color: var(--button-pressing-bg-color);
 
     background-color: #fff;
+    text-align: center;
 }
 
 
@@ -130,10 +135,9 @@
 
 .navWrapper {
     width: 100%;
-    height: 40px;
-
 
     margin: 0 auto;
+    padding: 8px 0 8px 0;
 
     background: var(--header-secondary-bg-color);
 }
@@ -142,10 +146,10 @@
     display: flex;
     align-items: center;
 
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 75px;
 
-    max-width: 1440px;
-    height: 40px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -153,6 +157,8 @@
     display: flex;
     align-items: center;
     gap: 4px;
+
+    padding: 0;
 
     cursor: pointer;
     transition: transform 0.1s ease-in-out;

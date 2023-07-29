@@ -5,11 +5,12 @@ import Button from '../../UI/Button.jsx';
 import Container from '../Container/Container.jsx';
 
 import styles from './NotFoundPage.module.css';
+import image from '../../../assets/img/404.png';
 
 const NotFoundPage = () => (
   <main className={styles['not-found-page']}>
     <Container className={styles['not-found-page-container']}>
-      <div className={styles['not-found-page-img-wrapper']}><img src="./assets/img/404.png" alt="404" /></div>
+      <div className={styles['not-found-page-img-wrapper']}><img src={image} alt="404" /></div>
       <NavLink to="/">
         <Button className={styles['btn-on-main']}>На головну</Button>
       </NavLink>

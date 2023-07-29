@@ -16,14 +16,14 @@ const FooterPayment = () => (
         <img
           className={styles['payment-mastercard-img']}
           src={mastercard}
-          alt="liqpay"
+          alt="mastercard"
         />
         <img
           className={styles['payment-privat-img']}
           src={privat}
-          alt="liqpay"
+          alt="privat"
         />
-        <img className={styles['payment-visa-img']} src={visa} alt="liqpay" />
+        <img className={styles['payment-visa-img']} src={visa} alt="visa" />
       </div>
       <Button className={styles['footer-button']}>Фондувати</Button>
     </div>
