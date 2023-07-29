@@ -57,6 +57,14 @@
   padding: 12px 49px;
 }
 
+.features-img {
+  transition: transform 0.4s ease;
+}
+
+.features-img:hover {
+  transform: scale(1.05);
+}
+
 .features-img-float {
   float: right;
   margin-left: 136px;
