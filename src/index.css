@@ -7,7 +7,10 @@
   src: url('../src/assets/fonts/Fixel/FixelText/FixelText-SemiBold.ttf');
 }
 
-
+@font-face {
+  font-family: medium;
+  src: url('../src/assets/fonts/Fixel/FixelText/FixelText-Medium.ttf');
+}
 
 @font-face {
   font-family: inter;
@@ -25,7 +28,7 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: Fixel, sans-serif;
+  font-family: medium, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -41,7 +44,9 @@ figure,
 blockquote,
 dl,
 dd,
-ul {
+ul,
+input,
+textarea {
   margin: 0;
   padding: 0;
 }

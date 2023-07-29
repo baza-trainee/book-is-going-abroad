@@ -57,4 +57,12 @@
   --name-organization-font-size: 17px;
   --name-organization-line-height: 24px;
   --name-organization-footer-font-size: 11px;
+
+  --feedback-divider-color: #252525;
+
+  --input-placeholder-color: #9B9B9B;
+  --input-padding: 16px;
+  --input-border: 1px solid #B8B8B8;
+  --input-border-radius: 14px;
+  --input-border-color-focus: #000;
 }
