@@ -4,6 +4,7 @@ import Footer from './components/layouts/Footer/Footer.jsx';
 import Header from './components/layouts/Header/Header.jsx';
 import Main from './components/layouts/Main/Main.jsx';
 import NotFoundPage from './components/layouts/NotFoundPage/NotFoundPage.jsx';
+import Features from './components/layouts/Features/Features.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Main />} exact />
         <Route path="/*" element={<NotFoundPage />} exact />
       </Routes>
+      <Features />
       <Footer />
     </>
   );

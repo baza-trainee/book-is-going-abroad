@@ -54,17 +54,33 @@
 
 .features-btn {
   margin-top: 20px;
-  padding-left: 49px;
-  padding-right: 49px;
+  padding: 12px 49px;
 }
 
-.featuring-img-wrapper-float {
+.features-img-float {
   float: right;
   margin-left: 136px;
+  margin-top: -100px;
   position: relative;
   bottom: 30px;
 }
 
+.features-title-float {
+  margin-top: 5px;
+}
+
 .features-text-float {
   width: 100%;
+  max-height: 5em;
+  transition: max-height 2s ease;
+}
+
+.expanded {
+  max-height: 5em; 
+  transition: max-height 2s ease;
+}
+
+.collapsed {
+  max-height: 1000px;
+  transition: max-height 2s ease;
 }
