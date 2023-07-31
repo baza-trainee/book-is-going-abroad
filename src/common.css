@@ -18,10 +18,10 @@
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --button-default-bg-color: #0057B7;
-  --button-hover-bg-color: #0057b733;
   --button-border-color: #0057B7;
-  --button-hover-border-color: #0057B7;
-  --button-pressing-bg-color: #10316B;
+  --button-hover-bg-color: #0057b733;
+  --button-hover-border-color: #10316B;
+  --button-pressing-bg-color: #0057B7;
   --button-pressing-border-color: #10316B;
   --button-text-color: #fff;
   --button-border-radius: 14px;
