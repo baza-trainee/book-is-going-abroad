@@ -19,7 +19,9 @@ const Features = () => {
 
   useEffect(() => {
     if (textRef.current) {
-      setTextHeight(isTextExpanded ? `${textRef.current.scrollHeight}px` : '10em');
+      setTextHeight(
+        isTextExpanded ? `${textRef.current.scrollHeight}px` : '123px'
+      );
     }
   }, [isTextExpanded, text]);
 
@@ -33,7 +35,11 @@ const Features = () => {
         <div className={styles['features-wrapper']}>
           <div className={styles['features-top']}>
             <div className={styles['features-img-wrapper']}>
-              <img className={styles['features-img']} src={ideas} alt="Main ideas" />
+              <img
+                className={styles['features-img']}
+                src={ideas}
+                alt="Main ideas"
+              />
             </div>
             <div
               className={`${styles['features-text-wrapper']} ${styles['features-text-top']}`}>
@@ -57,14 +63,17 @@ const Features = () => {
               className={`${styles['features-title']} ${styles['features-title-float']}`}>
               Цілями діяльності Організації є
             </h3>
-            <p ref={textRef}
+            <p
+              ref={textRef}
               className={`${styles['features-text']} ${styles['features-text-float']} `}
-              style={{ maxHeight: textHeight, transition: 'all 2s ease' }}>
+              style={{ height: textHeight, transition: 'all 1s ease' }}>
               {isTextExpanded ? text : `${text.slice(0, 132)}`}
             </p>
             <Button
               // eslint-disable-next-line no-lone-blocks, no-unused-expressions
-              onClick={() => { handleButtonClick(); }}
+              onClick={() => {
+                handleButtonClick();
+              }}
               className={styles['features-btn']}>
               {isTextExpanded ? 'Зменшити' : 'Збільшити'}
             </Button>
