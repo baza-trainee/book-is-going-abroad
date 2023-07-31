@@ -7,7 +7,7 @@
 @font-face {
     font-family: Select-font;
     src: url('../../../assets/fonts/Fixel/FixelText/FixelText-Medium.ttf');
-  }
+}
 
 @font-face {
     font-family: Nav-font;
@@ -93,7 +93,7 @@
     width: 110px;
     height: 40px;
 
-    padding: 8px 10.5px 8px 16px;
+    padding: 7px 10.5px 8px 16px;
 
     appearance: none;
 
@@ -109,14 +109,11 @@
 
     background-color: var(--button-pressing-bg-color);
 
-    font-family: Select-font, sans-serif;
+    font-family: var(--body-text-font-family);
+    /* font-family: Select-font, sans-serif; */
     font-size: var(--select-lang-font-size);
     line-height: var(--body-line-height);
-    font-weight: 400;
-}
-
-.langSelect:focus {
-    background-color: var(--button-hover-border-color);
+    font-weight: 500;
 }
 
 .langSelect:hover {

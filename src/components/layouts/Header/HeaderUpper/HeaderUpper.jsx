@@ -5,9 +5,7 @@ export default function HeaderUpper() {
   return (
     <header className={styles.header}>
       <div className={styles.headerLogo}>
-        <a href="/">
-          <img src={logo} alt="logo" />
-        </a>
+        <img src={logo} alt="logo" />
       </div>
       <h1 className={styles.headerTitle}>
         БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
