@@ -17,3 +17,13 @@
   font-size: var(--button-font-size);
   align-self: center;
 }
+
+.footer-button:hover {
+  border-color: var(--button-pressing-border-color);
+  background-color: var(--button-pressing-bg-color);
+}
+
+.footer-button:active {
+  border-color: var(--button-hover-border-color);
+  background-color: var(--button-hover-bg-color);
+}
