@@ -11,11 +11,11 @@
 }
 
 .btn:hover {
-  border-color: var(--button-pressing-border-color);
-  background-color: var(--button-pressing-bg-color);
-}
-
-.btn:active {
   border-color: var(--button-hover-border-color);
   background-color: var(--button-hover-bg-color);
+}
+
+.btn:active {  
+  border-color: var(--button-pressing-border-color);
+  background-color: var(--button-pressing-bg-color);
 }
