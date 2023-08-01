@@ -16,7 +16,6 @@ const Feedback = () => (
                 type="text"
                 name="text"
                 placeholder="Ім’я*"
-                autoFocus
                 required
               />
               <input
