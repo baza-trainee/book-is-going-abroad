@@ -38,11 +38,11 @@
 
     color: var(--header-secondary-bg-color);
 
-    font-family: Header-title-font, sans-serif;
-    font-size: 17px;
+    font-family: var(--name-organization-font-family);
+    font-size: var(--name-organization-font-size);
     font-weight: 500;
 
-    line-height: 20.57px;
+    line-height: var(--name-organization-line-height);
 }
 
 .selectWrapper {
@@ -93,7 +93,7 @@
     width: 110px;
     height: 40px;
 
-    padding: 7px 10.5px 8px 16px;
+    padding: 8px 10.5px 8px 16px;
 
     appearance: none;
 
@@ -107,21 +107,20 @@
 
     outline: none;
 
-    background-color: var(--button-pressing-bg-color);
+    background-color: var(--button-hover-bg-color);
 
     font-family: var(--body-text-font-family);
-    /* font-family: Select-font, sans-serif; */
     font-size: var(--select-lang-font-size);
-    line-height: var(--body-line-height);
+    line-height: 29.9px;
     font-weight: 500;
 }
 
 .langSelect:hover {
-    background-color: var(--button-hover-border-color);
+    background-color: var(--button-default-bg-color);
 }
 
 .langSelect option {
-    color: var(--button-pressing-bg-color);
+    color: var(--button-default-bg-color);
 
     background-color: #fff;
     text-align: center;
@@ -134,7 +133,7 @@
     width: 100%;
 
     margin: 0 auto;
-    padding: 8px 0 8px 0;
+    padding: 13px 0 13px 0;
 
     background: var(--header-secondary-bg-color);
 }
@@ -143,8 +142,7 @@
     display: flex;
     align-items: center;
 
-    justify-content: space-around;
-    gap: 75px;
+    justify-content: space-between;
 
     max-width: 1140px;
     margin: 0 auto;
@@ -173,8 +171,7 @@
 .navBtnText {
     margin-top: 3px;
 
-    font-family: Nav-font, sans-serif;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 29.9px;
+    font-family: var(--header-text-font-family);
+    font-size: var(--header-font-size);
+    line-height: var(--header-line-height);
 }

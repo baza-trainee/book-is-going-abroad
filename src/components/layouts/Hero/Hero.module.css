@@ -5,45 +5,46 @@
 }
 
 .heroWrapper {
-  margin: var(--section-padding-primary);
-  margin-bottom: 40px;
+  padding: var(--section-padding-primary);
+  padding-bottom: 40px;
 }
 
 .heroTitle {
   color: #fff;
   font-family: var(--heading-text-font-family);
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   font-weight: 600;
-  line-height: 62.1px;
+  line-height: var(--h1-line-height);
   margin-bottom: 12px;
 }
 
 .heroTitleDescription {
   color: #fff;
   font-family: var(--heading-text-font-family);
-  font-size: var(--h5-font-size);
+  font-size: var(--h6-font-size);
   font-weight: 600;
-  line-height: 34.5px;
+  line-height: var(--h6-line-height);
 
   margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .heroBtn {
   padding: 12px 44px;
   border-radius: var(--button-border-radius);
   font-size: var(--button-font-size);
+  margin-bottom: 80px;
 }
 
 .hotlineWrapper {
   text-align: center;
-  margin-top: 75px;
   margin-bottom: 40px;
 }
 
 .hotlineTitle {
   color: #fff;
   font-family: var(--heading-text-font-family);
-  font-size: var(--h5-font-size);
+  font-size: var(--h6-font-size);
   font-weight: 600;
   line-height: 34.5px;
   margin: 0 0 16px 0;
@@ -61,14 +62,15 @@
 }
 
 .hotlinePhone {
+  position: relative;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 2px;
 
   height: 38px;
 
   font-size: 25px;
-  line-height: 30px;
+  font-weight: 500;
+  line-height: 34.44px;
 
   color: #1E1F20;
 }
@@ -85,31 +87,26 @@
 
 @keyframes slide-top {
   0% {
-      transform: translateY(0) translateX(-50%);
-      opacity: 0;
+    transform: translateY(0) translateX(-50%);
+    opacity: 25%;
   }
 
   50% {
-      transform: translateY(-20px) translateX(-50%);
-      opacity: 10;
-  }
-
-  75% {
-      opacity: 20;
+    transform: translateY(-20px) translateX(-50%);
   }
 
   100% {
-      transform: translateY(-10px) translateX(-50%);
+    transform: translateY(-10px) translateX(-50%);
   }
 }
 
 .notification {
-  position: fixed;
-  bottom: 30px;
+  position: absolute;
+  bottom: 43px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: var(--button-pressing-bg-color);
+  background-color: var(--button-default-bg-color);
   color: #fff;
   border-radius: 14px;
   z-index: 9999;
@@ -132,9 +129,9 @@
 .contactTitle {
   color: #1E1F20;
   font-family: var(--heading-text-font-family);
-  font-size: 30px;
+  font-size: var(--h5-font-size);
   font-weight: 600;
-  line-height: 41.4px;
+  line-height: var(--h5-line-height);
   margin: 0;
   padding-bottom: 7px;
 }
@@ -144,7 +141,7 @@
   font-family: var(--body-text-font-family);
   font-size: var(--body2-font-size);
   font-weight: 500;
-  line-height: 26.22px;
+  line-height: var(--body2-line-height);
   margin: 0;
   padding-bottom: 20px;
 
@@ -152,5 +149,7 @@
 }
 
 .contactBtn {
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
   padding: 12px 19.5px;
 }

@@ -8,11 +8,11 @@ const Hero = () => (
   <section className={styles.hero}>
     <Container>
       <div className={styles.heroWrapper}>
-        <h2 className={styles.heroTitle}>ПОРТАЛ ГУМАНІТАРНОЇ ДОПОМОГИ</h2>
+        <h1 className={styles.heroTitle}>ПОРТАЛ ГУМАНІТАРНОЇ ДОПОМОГИ</h1>
 
-        <h3 className={styles.heroTitleDescription}>
+        <h6 className={styles.heroTitleDescription}>
           Сайт для тих, хто допомогає Україні
-        </h3>
+        </h6>
 
         <Button className={styles.heroBtn}>Підтримати</Button>
 
