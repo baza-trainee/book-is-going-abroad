@@ -13,7 +13,7 @@
 
 .features-bottom {
   width: 100%;
-  padding-top: 104px;
+  padding-top: 90px;
 }
 
 .features-img-wrapper,
@@ -33,17 +33,18 @@
   font-weight: 600;
   color: #252525;
   margin-bottom: 20px;
-  margin-top: 88px;
+  line-height: var(--h2-line-height);
 }
 
 .features-text {
   font-size: var(--body1-font-size);
+  line-height: var(--body1-line-height);
   font-weight: 500;
   color: rgba(0, 0, 0, 0.87);
 }
 
 .features-text-top {
-  padding-left: 95px;
+  padding-left: 74px;
 }
 
 .features-text-bottom {
@@ -67,8 +68,8 @@
 
 .features-img-float {
   float: right;
-  margin-left: 136px;
-  margin-top: -100px;
+  margin-left: 114px;
+  margin-top: -74px;
   position: relative;
   bottom: 30px;
 }
