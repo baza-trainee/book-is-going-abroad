@@ -6,13 +6,15 @@
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --header-primary-bg-color: #F2F7FF;
   --header-secondary-bg-color: #10316B;
-  --header-font-size: 17px;
+  --header-font-size: 19px;
+  --header-line-height: 26.2px;
+  --header-text-font-family: medium, sans-serif;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --footer-primary-bg-color: #10316B;
   --footer-primary-text-color: #fff;
   --footer-font-size: 14px;
-  --footer-line-height: 20px;
+  --footer-line-height: 19.3px;
   --footer-padding-primary: 22px 0;
   --footer-text-font-family: medium, sans-serif;
   
@@ -25,8 +27,9 @@
   --button-pressing-border-color: #10316B;
   --button-text-color: #fff;
   --button-border-radius: 14px;
-  --button-line-height: 30px;
+  --button-line-height: 26.2px;
   --button-font-size: 19px;
+  --button-font-family: semibold, sans-serif;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --phone-default-text-color: #3F3F3F;
@@ -35,19 +38,27 @@
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --heading-text-font-family: semibold, sans-serif;
-  --heading-line-height: 50px;
-  --h1-font-size: 40px;
-  --h2-font-size: 35px;
-  --h3-font-size: 32px;
-  --h4-font-size: 30px;
-  --h5-font-size: 25px;
+  --h1-font-size: 45px;
+  --h1-line-height: 61.1px;
+  --h2-font-size: 40px;
+  --h2-line-height: 55.2px;
+  --h3-font-size: 35px;
+  --h3-line-height: 48.3px;
+  --h4-font-size: 32px;
+  --h4-line-height: 44.2px;
+  --h5-font-size: 30px;
+  --h5-line-height: 41.4px;
+  --h6-font-size: 25px;
+  --h6-line-height: 34.4px;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --body-text-font-family: medium, sans-serif;
   --body1-font-size: 24px;
+  --body1-line-height: 33.1px;
   --body2-font-size: 19px;
+  --body2-line-height: 26.2px;
   --body3-font-size: 16px;
-  --body-line-height: 30px;
+  --body-line-height: 22.1px;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --select-lang-font-size: 20px;
@@ -55,7 +66,7 @@
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --name-organization-font-family: inter, sans-serif;
   --name-organization-font-size: 17px;
-  --name-organization-line-height: 24px;
+  --name-organization-line-height: 20.6px;
   --name-organization-footer-font-size: 11px;
 
   --feedback-divider-color: #252525;
