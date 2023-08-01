@@ -1,11 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { NavLink } from 'react-router-dom';
 
-import Button from '../../UI/Button.jsx';
-import Container from '../Container/Container.jsx';
+import Button from '../UI/Button.jsx';
+import Container from '../layouts/Container/Container.jsx';
 
 import styles from './NotFoundPage.module.css';
-import image from '../../../assets/img/404.png';
+import image from '../../assets/img/404.png';
 
 const NotFoundPage = () => (
   <main className={styles['not-found-page']}>

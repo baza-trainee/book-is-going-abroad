@@ -1,5 +1,5 @@
-import Container from '../Container/Container.jsx';
-import Button from '../../UI/Button.jsx';
+import Container from '../layouts/Container/Container.jsx';
+import Button from '../UI/Button.jsx';
 import styles from './Feedback.module.css';
 import icon from './feedback-phone-icon.svg';
 

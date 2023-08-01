@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 
-import Container from '../Container/Container.jsx';
-import Button from '../../UI/Button.jsx';
+import Container from '../layouts/Container/Container.jsx';
+import Button from '../UI/Button.jsx';
 
 // eslint-disable-next-line import/no-unresolved
-import ideas from '../../../assets/img/features/ideas-img.png';
+import ideas from '../../assets/img/features/ideas-img.png';
 // eslint-disable-next-line import/no-unresolved
-import activity from '../../../assets/img/features/activity-img.png';
+import activity from '../../assets/img/features/activity-img.png';
 import styles from './Features.module.css';
 
 const Features = () => {
