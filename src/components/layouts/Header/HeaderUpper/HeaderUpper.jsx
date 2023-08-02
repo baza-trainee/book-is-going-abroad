@@ -7,10 +7,10 @@ export default function HeaderUpper() {
       <div className={styles.headerLogo}>
         <img src={logo} alt="logo" />
       </div>
-      <h1 className={styles.headerTitle}>
+      <p className={styles.headerTitle}>
         БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
         ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
-      </h1>
+      </p>
 
       <div className={styles.headerLanguage}>
         <div className={styles.selectWrapper}>

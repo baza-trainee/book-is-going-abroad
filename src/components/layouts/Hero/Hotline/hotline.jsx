@@ -41,7 +41,7 @@ export default function Hotline() {
 
   return (
     <div className={styles.hotlineWrapper}>
-      <h5 className={styles.hotlineTitle}>Гаряча лінія</h5>
+      <h6 className={styles.hotlineTitle}>Гаряча лінія</h6>
       <div className={styles.hotlinePhonesWrapper}>{renderPhones}</div>
       {showCopyNotification && (
         <CopyNotififaction message="Номер скопійовано!" />
