@@ -1,0 +1,57 @@
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 461px;
+  max-width: 100%;
+  margin-bottom: 9px;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: var(--input-border-color-focus);
+}
+
+.feedback-form textarea {
+  margin-bottom: 0;
+  min-height: 169px;
+  height: 100%;
+}
+
+.feedback-form input[placeholder],
+.feedback-form textarea[placeholder] {
+  font-family: var(--body-text-font-family);
+  font-size: var(--body2-font-size);
+  line-height: var(--body2-line-height);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--input-placeholder-color);
+  padding: var(--input-padding);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  -webkit-border-radius: var(--input-border-radius);
+  -moz-border-radius: var(--input-border-radius);
+  -ms-border-radius: var(--input-border-radius);
+  -o-border-radius: var(--input-border-radius);
+}
+
+.feedback-button {
+  font-family: var(--body-text-font-family);
+  font-size: var(--button-font-size);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--button-line-height);
+  margin-top: 20px;
+  padding: 12px 51px;
+  align-self: flex-start;
+}
+
+.input-error {
+  color: var(--input-error-color);
+  font-family: var(--input-font-family);
+  font-size: var(--input-font-size);
+  line-height: var(--input-line-height);
+}

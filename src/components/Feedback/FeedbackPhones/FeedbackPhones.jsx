@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
 import CopyNotification from './index';
 
-import styles from './FooterContacts.module.css';
-import phoneNum from './phone-icon.svg';
-import email from './email-icon.svg';
+import styles from './FeedbackPhones.module.css';
+import phoneNum from './feedback-phone-icon.svg';
 
 const contactsArray = [
   { id: 1, phone: '+38 044 209 53 02', icon: phoneNum },
@@ -13,9 +11,7 @@ const contactsArray = [
   { id: 4, phone: '+38 063 499 37 69', icon: phoneNum }
 ];
 
-const emailLink = 'child.help.book@\ngmail.com';
-
-const FooterContacts = () => {
+const FeedbackPhones = () => {
   const [showCopyNotification, setShowCopyNotification] = useState(false);
 
   const handleCopy = (phone) => {
@@ -42,17 +38,11 @@ const FooterContacts = () => {
   ));
 
   return (
-    <div className={styles['footer-contacts']}>
-      {showCopyNotification && (
-        <CopyNotification message="Скопійовано!" />
-      )}
-      <ul className={styles['footer-phones']}>{RenderContacts}</ul>
-      <div className={styles['footer-email']} onClick={() => handleCopy(emailLink)}>
-        <img src={email} />
-        <a href="mailto:child.help.book@gmail.com">{emailLink}</a>
-      </div>
-    </div>
+    <ul className={styles['phones-list']}>
+      {showCopyNotification && <CopyNotification message="Скопійовано!" />}
+      {RenderContacts}
+    </ul>
   );
 };
 
-export default FooterContacts;
+export default FeedbackPhones;
