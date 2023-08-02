@@ -39,7 +39,7 @@
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --heading-text-font-family: semibold, sans-serif;
   --h1-font-size: 45px;
-  --h1-line-height: 61.1px;
+  --h1-line-height: 62.1px;
   --h2-font-size: 40px;
   --h2-line-height: 55.2px;
   --h3-font-size: 35px;
@@ -58,7 +58,7 @@
   --body2-font-size: 19px;
   --body2-line-height: 26.2px;
   --body3-font-size: 16px;
-  --body-line-height: 22.1px;
+  --body3-line-height: 22.1px;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --select-lang-font-size: 20px;

@@ -36,8 +36,12 @@
   color: var(--footer-primary-text-color);
   font-family: var(--name-organization-font-family);
   font-size: var(--name-organization-footer-font-size);
+  line-height: var(--name-organization-line-height);
 }
 
 .footer-copywriter {
   color: var(--footer-primary-text-color);
+  line-height: var(--body3-line-height);
+  font-family: var(--body-text-font-family);
+  font-size: var(--footer-font-size);
 }

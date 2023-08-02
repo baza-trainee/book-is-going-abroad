@@ -11,6 +11,7 @@
   font-size: var(--footer-font-size);
   font-family: var(--footer-text-font-family);
   color: var(--footer-primary-text-color);
+  line-height: var(--footer-line-height);
 }
 
 .footer-phones {
