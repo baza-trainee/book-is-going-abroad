@@ -42,7 +42,7 @@
 .notification {
   position: absolute;
   bottom: 200px;
-  right: -80px;
+  right: -55px;
   transform: translateX(-50%);
   padding: 10px 20px;
   background-color: var(--button-hover-bg-color);
