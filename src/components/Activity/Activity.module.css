@@ -9,6 +9,7 @@
 }
 
 .activity-title {
+  font-family: var(--heading-text-font-family);
   font-size: var(--h2-font-size);
   line-height: var(--h2-line-height);
   font-weight: 600;
