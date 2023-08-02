@@ -76,5 +76,9 @@
   --input-border: 1px solid #B8B8B8;
   --input-border-radius: 14px;
   --input-border-color-focus: #000;
+  --input-error-color: #E24B4B;
+  --input-line-height: 30px;
+  --input-font-size: 15px;
+  --input-font-family: medium, sans-serif;
 }
 

@@ -48,3 +48,10 @@
   padding: 12px 51px;
   align-self: flex-start;
 }
+
+.input-error {
+  color: var(--input-error-color);
+  font-family: var(--input-font-family);
+  font-size: var(--input-font-size);
+  line-height: var(--input-line-height);
+}
