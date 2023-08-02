@@ -15,12 +15,13 @@
   color: var(--text-primary-color);
   font-style: normal;
   font-weight: 600;
-  line-height: var(--body-line-height);
+  line-height: var(--h2-line-height);
   text-align: center;
 }
 
 .feedback-subtitle {
   font-size: var(--h4-font-size);
+  line-height: var(--h4-line-height);
   align-self: flex-start;
 }
 
@@ -66,7 +67,7 @@
 .feedback-form textarea[placeholder] {
   font-family: var(--body-text-font-family);
   font-size: var(--body2-font-size);
-  line-height: var(--body-line-height);
+  line-height: var(--body2-line-height);
   font-style: normal;
   font-weight: 500;
   color: var(--input-placeholder-color);
@@ -116,5 +117,5 @@
   font-size: var(--body1-font-size);
   font-style: normal;
   font-weight: 500;
-  line-height: var(--body-line-height);
+  line-height: var(--body1-line-height);
 }
