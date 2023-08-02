@@ -1,4 +1,5 @@
 // eslint-disable-next-line import/no-unresolved, import/extensions
+import Activity from '../../Activity/Activity.jsx';
 import Features from '../../Features/Features.jsx';
 import Feedback from '../../Feedback/Feedback.jsx';
 // eslint-disable-next-line import/no-unresolved
@@ -8,6 +9,7 @@ const Main = () => (
   // eslint-disable-next-line react/prop-types
   <main className={styles.main}>
     <Features />
+    <Activity />
     <Feedback />
   </main>
 );
