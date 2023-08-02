@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+  position: relative;
 }
 
 .footer-phones li,
@@ -34,4 +35,18 @@
 
 .footer-phones li:hover, .footer-email:hover {
   transform: scale(1.1);
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  bottom: 200px;
+  right: -80px;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: var(--button-hover-bg-color);
+  color: #fff;
+  border-radius: 14px;
+  z-index: 9999;
+  animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
