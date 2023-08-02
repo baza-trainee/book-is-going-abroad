@@ -1,6 +1,6 @@
 import styles from './Hero.module.css';
-import Container from '../Container/Container.jsx';
-import Button from '../../UI/Button.jsx';
+import Container from '../layouts/Container/Container.jsx';
+import Button from '../UI/Button.jsx';
 import Hotline from './Hotline/hotline.jsx';
 import Contact from './Contact/Contact.jsx';
 

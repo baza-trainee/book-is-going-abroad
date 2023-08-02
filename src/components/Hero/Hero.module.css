@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('../../../assets/img/hero/slider.png');
+  background-image: url('../../assets/img/hero/slider.png');
   background-size: cover;
   background-position-y: 55%;
 }
@@ -37,6 +37,8 @@
 }
 
 .hotlineWrapper {
+  position: relative;
+
   text-align: center;
   margin-bottom: 40px;
 }
@@ -62,7 +64,6 @@
 }
 
 .hotlinePhone {
-  position: relative;
   display: flex;
   align-items: flex-end;
 
@@ -106,7 +107,7 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: var(--button-default-bg-color);
+  background-color: var(--header-secondary-bg-color);
   color: #fff;
   border-radius: 14px;
   z-index: 9999;
