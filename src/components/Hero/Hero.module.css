@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('../../../assets/img/hero/slider.png');
+  background-image: url('../../assets/img/hero/slider.png');
   background-size: cover;
   background-position-y: 55%;
 }
