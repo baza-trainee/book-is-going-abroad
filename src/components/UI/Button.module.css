@@ -1,5 +1,6 @@
 .btn {
-  padding: var(--button-internal-padding);
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
 
   cursor: pointer;
   transition: all 0.8s ease;
@@ -15,7 +16,7 @@
   background-color: var(--button-hover-bg-color);
 }
 
-.btn:active {  
+.btn:active {
   border-color: var(--button-pressing-border-color);
   background-color: var(--button-pressing-bg-color);
 }
