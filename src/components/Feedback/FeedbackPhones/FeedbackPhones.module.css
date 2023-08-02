@@ -1,0 +1,45 @@
+.phones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.phones-list li {
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+}
+
+.phones-list li:hover {
+  cursor: pointer;
+  color: var(--phone-hover-text-color);
+  transition: all .3s ease;
+}
+
+.phones-list li:active {
+  color: var(--phone-pressing-text-color);
+}
+
+.phones-list li p {
+  font-family: var(--body-text-font-family);
+  font-size: var(--body1-font-size);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--body1-line-height);
+}
+
+.notification {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: var(--button-hover-bg-color);
+  color: #fff;
+  border-radius: 14px;
+  z-index: 9999;
+  animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
