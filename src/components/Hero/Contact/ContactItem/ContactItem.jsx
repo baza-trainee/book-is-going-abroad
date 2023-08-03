@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import styles from '../../Hero.module.css';
-import Button from '../../../../UI/Button.jsx';
+import Button from '../../../UI/Button.jsx';
 
 const ContactItem = (props) => (
   <div className={styles.contactItem}>

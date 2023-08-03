@@ -60,8 +60,13 @@ const FeedbackForm = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('preventDefault');
+  };
+
   return (
-    <form className={styles['feedback-form']}>
+    <form className={styles['feedback-form']} onSubmit={handleSubmit} noValidate>
       <input
         onChange={(e) => nameHandler(e)}
         value={name}

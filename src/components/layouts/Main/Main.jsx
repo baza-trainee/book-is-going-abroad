@@ -1,4 +1,5 @@
 // eslint-disable-next-line import/no-unresolved, import/extensions
+import Hero from '../../Hero/Hero.jsx';
 import Activity from '../../Activity/Activity.jsx';
 import Address from '../../Address/Address.jsx';
 import Features from '../../Features/Features.jsx';
@@ -9,6 +10,7 @@ import styles from './Main.module.css';
 const Main = () => (
   // eslint-disable-next-line react/prop-types
   <main className={styles.main}>
+    <Hero />
     <Features />
     <Activity />
     <Address />

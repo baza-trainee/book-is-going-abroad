@@ -29,6 +29,7 @@
 }
 
 .features-title {
+  font-family: var(--heading-text-font-family);
   font-size: var(--h3-font-size);
   font-weight: 600;
   color: #252525;
@@ -44,7 +45,7 @@
 }
 
 .features-text-top {
-  padding-left: 74px;
+  padding-left: 70px;
 }
 
 .features-text-bottom {
@@ -68,7 +69,7 @@
 
 .features-img-float {
   float: right;
-  margin-left: 114px;
+  margin-left: 100px;
   margin-top: -74px;
   position: relative;
   bottom: 30px;
