@@ -9,9 +9,9 @@ import styles from '../Directions.module.css';
 const PopupIcon = (props) => {
   const style = {
     position: 'absolute',
-    top: '-40px',
-    left: '125px',
-    minWidth: '385px',
+    top: '-70px',
+    left: '100px',
+    minWidth: '450px',
     borderRadius: '14px',
     fontSize: '16px',
     lineHeight: '24px',
@@ -26,6 +26,7 @@ const PopupIcon = (props) => {
         style={style}
         className={styles.popUp}
         hoverable
+        positionFixed
       />
     </div>
   );
