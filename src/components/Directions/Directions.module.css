@@ -1,0 +1,54 @@
+.listWrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.listWrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.listWrapper3 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.listWrapper4 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.listWrapper5 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.iconWrapper__firstRow {
+    position: relative;
+    margin-right: 80px;
+}
+
+.iconWrapper__secondRow {
+    position: relative;
+    margin-right: 80px;
+}
+
+.iconWrapper__thirdRow {
+    position: relative;
+    margin-right: 80px;
+}
+
+.iconWrapper__fourthRow {
+    position: relative;
+    margin-right: 80px;
+}
+
+.iconWrapper__fifthRow {
+    position: relative;
+    margin-right: 80px;
+}
