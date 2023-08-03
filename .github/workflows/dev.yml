@@ -27,13 +27,5 @@ jobs:
         run: npm install
 
       - name: Install dependencies and npm run build
-        run: |
-          npm ci
-          npm run build
-          
-      - name: Deploy
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
-        with:
-          build_configuration: ng deploy
-          deploy_branch: gh-pages
-          angular_dist_build_folder: docs
+        run: npm ci
+        
