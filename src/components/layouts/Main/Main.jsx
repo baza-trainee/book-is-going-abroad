@@ -1,6 +1,7 @@
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import Hero from '../../Hero/Hero.jsx';
 import Activity from '../../Activity/Activity.jsx';
+import Address from '../../Address/Address.jsx';
 import Features from '../../Features/Features.jsx';
 import Feedback from '../../Feedback/Feedback.jsx';
 // eslint-disable-next-line import/no-unresolved
@@ -12,6 +13,7 @@ const Main = () => (
     <Hero />
     <Features />
     <Activity />
+    <Address />
     <Feedback />
   </main>
 );
