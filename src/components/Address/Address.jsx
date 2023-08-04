@@ -133,22 +133,24 @@ const Address = () => {
         </h2>
         <div className={styles['address-map-wrapper']}>
           <div className={styles['address-inputs']}>
-            <select
-              className={`${styles['address-select']} ${styles['address-select-city']}`}
-              value={selectedCity}
-              onChange={handleCityChange}>
-              <option value="">Місто</option>
-              {uniqueCities.map((city, index) => (
-                <option key={index} value={city}>
-                  {city}
-                </option>
-              ))}
-            </select>
+            <div className={styles['select-city-wrapper']}>
+              <select
+                className={`${styles['address-select']} ${styles['address-select-city']}`}
+                value={selectedCity}
+                onChange={handleCityChange}>
+                <option value="" disabled hidden>Місто</option>
+                {uniqueCities.map((city, index) => (
+                  <option key={index} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
+            </div>
             <select
               className={styles['address-select']}
               value={selectedAddress}
               onChange={handleAddressChange}>
-              <option value="">Адреса</option>
+              <option value="" disabled hidden>Адреса</option>
               {addresses
                 .filter((address) => address.city === selectedCity)
                 .map((address, index) => (

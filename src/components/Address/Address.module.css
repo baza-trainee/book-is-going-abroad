@@ -34,10 +34,11 @@
   max-width: 285px;
   font-size: var(--body3-font-size);
   font-weight: 400;
-  line-height: var(--input-line-height);
+  /* line-height: var(--input-line-height); */
   border-radius: var(--input-border-radius);
   border: var(--input-border);
   background: var(--bg-primary-color);
+  cursor: pointer;
 }
 
 .address-select:focus {
@@ -46,6 +47,19 @@
 
 .address-select-city {
   margin-bottom: 21px;
+  appearance: none;
+}
+
+.select-city-wrapper::after {
+  content: '';
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url('./arrow-down.svg');
+  background-repeat: no-repeat;
+  transform: translate(234px,-59px);
 }
 
 .address-map {
@@ -59,3 +73,4 @@
 .address-map iframe {
   width: 100%;
 }
+
