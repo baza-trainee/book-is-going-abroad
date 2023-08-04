@@ -7,7 +7,7 @@
 }
 
 .footer-phones li,
-.footer-email {
+.footer-email a {
   font-size: var(--footer-font-size);
   font-family: var(--footer-text-font-family);
   color: var(--footer-primary-text-color);
@@ -21,7 +21,8 @@
   gap: 4px;
 }
 
-.footer-phones li, .footer-email {
+.footer-phones li,
+.footer-email {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -34,7 +35,8 @@
   max-width: 100%;
 }
 
-.footer-phones li:hover, .footer-email:hover {
+.footer-phones li:hover,
+.footer-email:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -49,5 +51,5 @@
   color: #fff;
   border-radius: 14px;
   z-index: 9999;
-  animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
