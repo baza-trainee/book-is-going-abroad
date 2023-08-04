@@ -1,0 +1,96 @@
+.directionContainer {
+    width: 98%;
+    max-width: 1320px;
+    margin: 0 auto;
+
+    /* position: relative; */
+
+}
+
+.directionWrapper {
+    padding: var(--section-padding-primary);
+}
+
+.iconsWrapper {
+    position: relative;
+    padding-left: 50px;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    margin-bottom: 40px;
+}
+
+.listWrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listWrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+    position: absolute;
+}
+
+.listWrapper3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listWrapper4 {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 280px;
+    top: 480px;
+
+}
+
+.listWrapper5 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.iconWrapper__firstRow {
+    position: relative;
+    margin-right: 150px;
+}
+
+.iconWrapper__secondRow {
+    position: relative;
+    left: 70px;
+    bottom: 100px;
+}
+
+.iconWrapper__secondRow:not(:last-child) {
+    position: relative;
+    left: 70px;
+    bottom: 100px;
+    margin-right: 145px;
+}
+
+.iconWrapper__thirdRow {
+    position: relative;
+    margin-right: 150px;
+    top: 50px;
+}
+
+.iconWrapper__fourthRow {
+    position: relative;
+    margin-right: 140px;
+}
+
+.iconWrapper__fifthRow {
+    position: relative;
+    margin-right: 130px;
+    top: 40px;
+}
+
+.iconWrapper__fifthRow:last-child {
+    position: relative;
+    margin-left: 30px;
+
+}
