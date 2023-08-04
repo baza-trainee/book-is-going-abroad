@@ -1,0 +1,61 @@
+.address {
+  padding: var(--section-padding-primary);
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address-title {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  font-weight: 600;
+  color: var(--feedback-divider-color);
+  margin-bottom: 40px;
+}
+
+.address-map-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 73px;
+  width: 100%;
+}
+
+.address-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.address-select {
+  padding: 16px 16px 16px 24px;
+  max-width: 285px;
+  font-size: var(--body3-font-size);
+  font-weight: 400;
+  line-height: var(--input-line-height);
+  border-radius: var(--input-border-radius);
+  border: var(--input-border);
+  background: var(--bg-primary-color);
+}
+
+.address-select:focus {
+  outline: 0;
+}
+
+.address-select-city {
+  margin-bottom: 21px;
+}
+
+.address-map {
+  width: 65.79%;
+  max-height: 310px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.address-map iframe {
+  width: 100%;
+}
