@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable global-require */
+import { useState, useEffect, useRef } from 'react';
 
 import Container from '../layouts/Container/Container.jsx';
 
 import styles from './Address.module.css';
 
 const Address = () => {
-  const [selectedCity, setSelectedCity] = useState('Київ');
-  const [selectedAddress, setSelectedAddress] = useState('');
-
   const addresses = [
     {
       city: 'Київ',
@@ -96,34 +94,109 @@ const Address = () => {
     }
   ];
 
+  const [selectedCity, setSelectedCity] = useState('Київ');
+  const [selectedAddress, setSelectedAddress] = useState('');
+  const [linkMap, setLinkMap] = useState('');
+  const [isCitySelectOpen, setIsCitySelectOpen] = useState(false);
+  const [isAddressSelectOpen, setIsAddressSelectOpen] = useState(false);
+
+  const uniqueCities = [...new Set(addresses.map((address) => address.city))];
+
+  const citySelectRef = useRef(null);
+  const addressSelectRef = useRef(null);
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getDefaultAddress = () => {
     const defaultAddress = addresses.find(
       (address) => address.city === selectedCity
     );
-    return defaultAddress ? defaultAddress.link : addresses[0].link;
+    return defaultAddress ? defaultAddress.address : addresses[0].address;
+  };
+
+  const getDefaultLink = () => {
+    const defaultLink = addresses.find(
+      (address) => address.city === selectedCity
+    );
+    return defaultLink ? defaultLink.link : addresses[0].link;
   };
 
   useEffect(() => {
     setSelectedAddress(getDefaultAddress());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCity]);
+  }, []);
 
   useEffect(() => {
-    setSelectedAddress(getDefaultAddress());
+    setLinkMap(getDefaultLink());
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    const defaultAddress = addresses.find(
+      (address) => address.city === selectedCity
+    );
+    setSelectedAddress(defaultAddress ? defaultAddress.address : '');
+    setLinkMap(defaultAddress ? defaultAddress.link : '');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedCity]);
 
   const handleCityChange = (event) => {
     const newCity = event.target.value;
     setSelectedCity(newCity);
-  };
+    setIsCitySelectOpen(false);
 
-  const uniqueCities = [...new Set(addresses.map((address) => address.city))];
+    const defaultAddress = addresses.find((address) => address.city === newCity);
+    setSelectedAddress(defaultAddress ? defaultAddress.address : '');
+  };
 
   const handleAddressChange = (event) => {
-    setSelectedAddress(event.target.value);
+    const newAddressLink = event.target.value;
+    setSelectedAddress(newAddressLink);
+    setIsAddressSelectOpen(false);
   };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    const defaultLink = addresses.find((address) => address.address === selectedAddress);
+    setLinkMap(defaultLink ? defaultLink.link : '');
+  });
+
+  const toggleCitySelect = () => {
+    setIsCitySelectOpen((prev) => !prev);
+    setIsAddressSelectOpen(false);
+  };
+
+  const toggleAddressSelect = () => {
+    setIsAddressSelectOpen((prev) => !prev);
+    setIsCitySelectOpen(false);
+  };
+
+  useEffect(() => {
+    const handleCityOutsideClick = (event) => {
+      if (
+        citySelectRef.current
+        && !citySelectRef.current.contains(event.target)
+      ) {
+        setIsCitySelectOpen(false);
+      }
+    };
+
+    const handleAddressOutsideClick = (event) => {
+      if (
+        addressSelectRef.current
+        && !addressSelectRef.current.contains(event.target)
+      ) {
+        setIsAddressSelectOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleCityOutsideClick);
+    document.addEventListener('click', handleAddressOutsideClick);
+
+    return () => {
+      document.removeEventListener('click', handleCityOutsideClick);
+      document.removeEventListener('click', handleAddressOutsideClick);
+    };
+  }, []);
 
   return (
     <section className={styles.address}>
@@ -133,42 +206,85 @@ const Address = () => {
         </h2>
         <div className={styles['address-map-wrapper']}>
           <div className={styles['address-inputs']}>
-            <div className={styles['select-city-wrapper']}>
-              <select
-                className={`${styles['address-select']} ${styles['address-select-city']}`}
-                value={selectedCity}
-                onChange={handleCityChange}>
-                <option value="" disabled hidden>Місто</option>
+            <div
+              ref={citySelectRef}
+              onClick={toggleCitySelect}
+              className={`${styles['select-city-wrapper']} ${
+                styles['address-select']
+              } ${isCitySelectOpen ? styles.open : ''}`}>
+              <div className={styles['select-title']}>{selectedCity}</div>
+              <div className={styles['address-select-inputs']}>
                 {uniqueCities.map((city, index) => (
-                  <option key={index} value={city}>
+                  <label key={index} value={city}>
+                    <img
+                      src={
+                        city === selectedCity
+                          ? require('./radio-img-checked.svg').default
+                          : require('./radio-img.svg').default
+                      }
+                      alt=""
+                    />
+                    <input
+                      type="radio"
+                      name="city"
+                      value={city}
+                      checked={city === selectedCity}
+                      onClick={(e) => {
+                        handleCityChange(e);
+                        toggleCitySelect();
+                      }}
+                    />
                     {city}
-                  </option>
+                  </label>
                 ))}
-              </select>
+              </div>
             </div>
-            <select
-              className={styles['address-select']}
-              value={selectedAddress}
-              onChange={handleAddressChange}>
-              <option value="" disabled hidden>Адреса</option>
-              {addresses
-                .filter((address) => address.city === selectedCity)
-                .map((address, index) => (
-                  <option key={index} value={address.link}>
+            <div
+              ref={addressSelectRef}
+              onClick={toggleAddressSelect}
+              className={`${styles['select-address-wrapper']} ${
+                styles['address-select']
+              } ${
+                isAddressSelectOpen ? styles.open : ''
+              }`}>
+                <div className={styles['select-title']}>{selectedAddress}</div>
+              <div className={styles['address-select-inputs']}>
+                {addresses
+                  .filter((address) => address.city === selectedCity)
+                  .map((address, index) => (
+                  <label key={index} value={address.address}>
+                    <img
+                      src={
+                        address.address === selectedAddress
+                          ? require('./radio-img-checked.svg').default
+                          : require('./radio-img.svg').default
+                      }
+                      alt=""
+                    />
+                    <input
+                      type="radio"
+                      name="address"
+                      value={address.address}
+                      checked={address.address === selectedAddress}
+                      onClick={(e) => {
+                        handleAddressChange(e);
+                        toggleAddressSelect();
+                      }}
+                    />
                     {address.address}
-                  </option>
-                ))}
-            </select>
+                  </label>))}
+              </div>
+            </div>
           </div>
           <div className={styles['address-map']}>
-            {selectedAddress && (
+            {linkMap && (
               <iframe
                 title="Google Map"
                 width="600"
                 height="310"
                 frameBorder="0"
                 style={{ border: 0 }}
-                src={selectedAddress}></iframe>
+                src={linkMap}></iframe>
             )}
           </div>
         </div>
