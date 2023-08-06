@@ -136,19 +136,19 @@ const Directions = () => {
   ];
 
   const renderDirections1 = directionsRow1.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} trigger={icon} content={content} row={row} />
+    <PopupIcon key={id} icon={icon} content={content} row={row} />
   ));
   const renderDirections2 = directionsRow2.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} trigger={icon} content={content} row={row} />
+    <PopupIcon key={id} icon={icon} content={content} row={row} />
   ));
   const renderDirections3 = directionsRow3.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} trigger={icon} content={content} row={row} />
+    <PopupIcon key={id} icon={icon} content={content} row={row} />
   ));
   const renderDirections4 = directionsRow4.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} trigger={icon} content={content} row={row} />
+    <PopupIcon key={id} icon={icon} content={content} row={row} />
   ));
   const renderDirections5 = directionsRow5.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} trigger={icon} content={content} row={row} />
+    <PopupIcon key={id} icon={icon} content={content} row={row} />
   ));
 
   return (
