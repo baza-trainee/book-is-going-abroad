@@ -1,0 +1,7 @@
+.showIcon {
+    transform: scale(1);
+}
+
+.hideIcon {
+    transform: scale(0);
+}
