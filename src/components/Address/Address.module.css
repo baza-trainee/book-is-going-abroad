@@ -1,5 +1,5 @@
 .address {
-  padding: var(--section-padding-primary);
+  padding-top: 80px;
 }
 
 .address-container {
@@ -26,26 +26,129 @@
 .address-inputs {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 26.7%;
+}
+
+.select-city-wrapper, 
+.select-address-wrapper {
+  position: relative;
+}
+
+.select-city-wrapper {
+  z-index: 20;
+  margin-bottom: 20px;
+}
+
+.select-city-wrapper label, 
+.select-address-wrapper label {
+  display: none;
+}
+
+.select-city-wrapper::after, 
+.select-address-wrapper::after {
+  content: '';
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url('./arrow-down.svg');
+  background-repeat: no-repeat;
+  top: 14px;
+  right: 16px;
+  transition: transform 1s ease;
+}
+
+.select-city-wrapper.open::after,
+.select-address-wrapper.open::after {
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  transform: rotate(180deg);
+  transition: transform 1s ease;
+}
+
+.select-city-wrapper.open label,
+.select-address-wrapper.open label {
+  display: block;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .address-select {
-  padding: 16px 16px 16px 24px;
+  padding: 16px 42px 16px 24px;
   max-width: 285px;
+  width: 100%;
   font-size: var(--body3-font-size);
   font-weight: 400;
-  line-height: var(--input-line-height);
   border-radius: var(--input-border-radius);
   border: var(--input-border);
   background: var(--bg-primary-color);
+  
+  cursor: pointer;
 }
 
-.address-select:focus {
-  outline: 0;
+.select-city-wrapper.open .address-select-inputs {
+  position: absolute;
+  z-index: 20;
+  border-radius: 14px;
+  border: 1px solid #b8b8b8;
+  background: white;
+  width: 100%;
+  top: 60px;
+  right: 0;
+}
+
+.select-address-wrapper.open .address-select-inputs {
+  position: absolute;
+  z-index: 15;
+  border-radius: 14px;
+  border: 1px solid #b8b8b8;
+  background: white;
+  width: 100%;
+  top: 60px;
+  right: 0;
+}
+
+.select-title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.select-city-wrapper.open .address-select-inputs label:hover,
+.select-address-wrapper.open .address-select-inputs label:hover {
+  background-color: #b8b8b8;
+  border-radius: 14px;
+}
+
+.select-city-wrapper label,
+.select-address-wrapper label {
+  padding: 12px 12px;
+}
+
+.select-city-wrapper label img,
+.select-address-wrapper label img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.select-city-wrapper label input, 
+.select-address-wrapper label input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .address-select-city {
   margin-bottom: 21px;
+  appearance: none;
+}
+
+.address-select-address {
+  appearance: none;
 }
 
 .address-map {
