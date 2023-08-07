@@ -1,0 +1,50 @@
+.modal {
+    position: absolute;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.modalActive {
+    transform: scale(1);
+    position: absolute;
+    top: 10px;
+    z-index: 9999;
+    opacity: 1;
+    /* transition: 0.1s linear; */
+}
+
+.modalContent {
+    border-radius: 14px;
+    background-color: #fff;
+    width: 550px;
+    box-shadow: 2px 5px 7px 0px #00000040;
+    transform: scale(1);
+    margin: 1px;
+    display: flex;
+}
+
+.miniIcon {
+    transform: scale(0.9) translateX(-30px) translateY(-20px);
+    pointer-events: none;
+}
+
+.modalTextWrapper {
+    display: flex;
+    pointer-events: none;
+    align-items: center;
+    margin-left: -40px;
+}
+
+.modalText {
+    line-height: 22.08px;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.spanNum {
+    position: absolute;
+    color: #0EA9FF;
+    font-size: 35px;
+    margin: 5px 0 0 10px;
+    pointer-events: none;
+}
