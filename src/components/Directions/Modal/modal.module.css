@@ -8,9 +8,17 @@
     transform: scale(1);
     position: absolute;
     top: 10px;
-    z-index: 9999;
+    z-index: 9998;
     opacity: 1;
-    /* transition: 0.1s linear; */
+}
+
+.modalLast {
+    transform: scale(1);
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    z-index: 9998;
+    opacity: 1;
 }
 
 .modalContent {
@@ -23,9 +31,26 @@
     display: flex;
 }
 
+.modalContentLast {
+    border-radius: 14px;
+    background-color: #fff;
+    width: 550px;
+    box-shadow: 2px 5px 7px 0px #00000040;
+    transform: scale(1);
+    margin: 1px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .miniIcon {
     transform: scale(0.9) translateX(-30px) translateY(-20px);
     pointer-events: none;
+}
+
+.miniIconLast {
+    transform: scale(0.9) translateX(30px) translateY(-20px);
+    pointer-events: none;
+    display: flex;
 }
 
 .modalTextWrapper {
@@ -35,14 +60,39 @@
     margin-left: -40px;
 }
 
+.modalTextWrapperLast {
+    display: flex;
+    pointer-events: none;
+    align-items: center;
+    margin-left: 45px;
+    margin-right: -65px;
+    width: 340px;
+}
+
 .modalText {
     line-height: 22.08px;
     font-size: 16px;
     padding-right: 10px;
 }
 
+.modalTextLast {
+    line-height: 22.08px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
 .spanNum {
     position: absolute;
+    color: #0EA9FF;
+    font-size: 35px;
+    margin: 5px 0 0 10px;
+    pointer-events: none;
+}
+
+.spanNumLast {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     color: #0EA9FF;
     font-size: 35px;
     margin: 5px 0 0 10px;

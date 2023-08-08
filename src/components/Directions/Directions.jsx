@@ -31,6 +31,7 @@ const Directions = () => {
       row: '__firstRow',
       style: 'one',
       num: '1.',
+      last: false,
     },
     {
       id: 2,
@@ -40,6 +41,7 @@ const Directions = () => {
       row: '__firstRow',
       style: 'two',
       num: '2.',
+      last: false,
     },
     {
       id: 3,
@@ -49,6 +51,7 @@ const Directions = () => {
       row: '__firstRow',
       style: 'three',
       num: '3.',
+      last: true,
     },
   ];
 
@@ -60,6 +63,7 @@ const Directions = () => {
       row: '__secondRow',
       style: 'four',
       num: '4.',
+      last: false,
     },
     {
       id: 5,
@@ -69,6 +73,7 @@ const Directions = () => {
       row: '__secondRow',
       style: 'five',
       num: '5.',
+      last: false,
     },
     {
       id: 6,
@@ -79,6 +84,7 @@ const Directions = () => {
       row: '__secondRow',
       style: 'six',
       num: '6.',
+      last: true,
     },
   ];
 
@@ -91,6 +97,7 @@ const Directions = () => {
       row: '__thirdRow',
       style: 'seven',
       num: '7.',
+      last: false,
     },
     {
       id: 8,
@@ -99,6 +106,7 @@ const Directions = () => {
       row: '__thirdRow',
       style: 'eight',
       num: '8.',
+      last: false,
     },
     {
       id: 9,
@@ -108,6 +116,7 @@ const Directions = () => {
       row: '__thirdRow',
       style: 'nine',
       num: '9.',
+      last: true,
     },
   ];
 
@@ -120,6 +129,7 @@ const Directions = () => {
       row: '__fourthRow',
       style: 'ten',
       num: '10.',
+      last: false,
     },
     {
       id: 11,
@@ -129,6 +139,7 @@ const Directions = () => {
       row: '__fourthRow',
       style: 'eleven',
       num: '11.',
+      last: false,
     },
   ];
 
@@ -141,6 +152,7 @@ const Directions = () => {
       row: '__fifthRow',
       style: 'twelve',
       num: '12.',
+      last: false,
     },
     {
       id: 13,
@@ -150,6 +162,7 @@ const Directions = () => {
       row: '__fifthRow',
       style: 'thirteen',
       num: '13.',
+      last: false,
     },
     {
       id: 14,
@@ -159,11 +172,12 @@ const Directions = () => {
       row: '__fifthRow',
       style: 'fourteen',
       num: '14.',
+      last: true,
     },
   ];
 
   const renderDirections1 = directionsRow1.map(
-    ({ id, icon, content, row, style, num }) => (
+    ({ id, icon, content, row, style, num, last }) => (
       <PopupIcon
         key={id}
         icon={icon}
@@ -171,11 +185,12 @@ const Directions = () => {
         row={row}
         style={style}
         num={num}
+        last={last}
       />
     )
   );
   const renderDirections2 = directionsRow2.map(
-    ({ id, icon, content, row, style, num }) => (
+    ({ id, icon, content, row, style, num, last }) => (
       <PopupIcon
         key={id}
         icon={icon}
@@ -183,11 +198,12 @@ const Directions = () => {
         row={row}
         style={style}
         num={num}
+        last={last}
       />
     )
   );
   const renderDirections3 = directionsRow3.map(
-    ({ id, icon, content, row, style, num }) => (
+    ({ id, icon, content, row, style, num, last }) => (
       <PopupIcon
         key={id}
         icon={icon}
@@ -195,11 +211,12 @@ const Directions = () => {
         row={row}
         style={style}
         num={num}
+        last={last}
       />
     )
   );
   const renderDirections4 = directionsRow4.map(
-    ({ id, icon, content, row, style, num }) => (
+    ({ id, icon, content, row, style, num, last }) => (
       <PopupIcon
         key={id}
         icon={icon}
@@ -207,11 +224,12 @@ const Directions = () => {
         row={row}
         style={style}
         num={num}
+        last={last}
       />
     )
   );
   const renderDirections5 = directionsRow5.map(
-    ({ id, icon, content, row, style, num }) => (
+    ({ id, icon, content, row, style, num, last }) => (
       <PopupIcon
         key={id}
         icon={icon}
@@ -219,6 +237,7 @@ const Directions = () => {
         row={row}
         style={style}
         num={num}
+        last={last}
       />
     )
   );
