@@ -6,6 +6,7 @@
     outline: none;
     width: 110px !important;
     height: 40px !important;
+    cursor: pointer !important;
 }
 
 .custom-select__control:hover {
