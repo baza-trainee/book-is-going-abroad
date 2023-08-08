@@ -6,7 +6,7 @@ const NavButton = ({ icon, text, link }) => {
   function scroll(className) {
     const section = document.querySelectorAll(`[class*=${className}]`);
     if (section.length > 0) {
-      section[0].scrollIntoView({ behavior: 'smooth' });
+      section[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
   return (
