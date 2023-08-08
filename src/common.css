@@ -73,10 +73,12 @@
 
   --input-placeholder-color: #9B9B9B;
   --input-padding: 16px;
-  --input-border: 1px solid #B8B8B8;
+  --input-border: 1px solid #b8b8b8;
   --input-border-radius: 14px;
-  --input-border-color-focus: #000;
+  --input-border-focus: 1px solid #000;
   --input-error-color: #E24B4B;
+  --input-error-border: 1px solid #E24B4B;
+  --input-success-border: 1px solid #3EB369;
   --input-line-height: 30px;
   --input-font-size: 15px;
   --input-font-family: medium, sans-serif;
