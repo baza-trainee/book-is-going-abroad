@@ -85,31 +85,30 @@
   font-weight: 400;
   border-radius: var(--input-border-radius);
   border: var(--input-border);
-  background: var(--bg-primary-color);
-  
+  background: var(--bg-primary-color);  
   cursor: pointer;
 }
 
-.select-city-wrapper.open .address-select-inputs {
+.select-city-wrapper.open .address-select-inputs, 
+.select-address-wrapper.open .address-select-inputs{
   position: absolute;
-  z-index: 20;
   border-radius: 14px;
   border: 1px solid #b8b8b8;
   background: white;
   width: 100%;
   top: 60px;
-  right: 0;
+  right: 0;  
+  overflow-y: auto;
+}
+
+.select-city-wrapper.open .address-select-inputs {
+  z-index: 20;
+  max-height: 324px;
 }
 
 .select-address-wrapper.open .address-select-inputs {
-  position: absolute;
   z-index: 15;
-  border-radius: 14px;
-  border: 1px solid #b8b8b8;
-  background: white;
-  width: 100%;
-  top: 60px;
-  right: 0;
+  max-height: 274px;
 }
 
 .select-title {
@@ -119,7 +118,7 @@
 
 .select-city-wrapper.open .address-select-inputs label:hover,
 .select-address-wrapper.open .address-select-inputs label:hover {
-  background-color: #b8b8b8;
+  background-color: rgba(0, 87, 183, 0.20);
   border-radius: 14px;
 }
 
