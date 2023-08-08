@@ -1,4 +1,5 @@
 .feedback-form {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -10,9 +11,14 @@
   margin-bottom: 9px;
 }
 
-.feedback-form input:focus,
-.feedback-form textarea:focus {
-  border-color: var(--input-border-color-focus);
+.feedback-form input,
+.feedback-form textarea {
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  -webkit-border-radius: var(--input-border-radius);
+  -moz-border-radius: var(--input-border-radius);
+  -ms-border-radius: var(--input-border-radius);
+  -o-border-radius: var(--input-border-radius);
 }
 
 .feedback-form textarea {
@@ -30,13 +36,20 @@
   font-weight: 500;
   color: var(--input-placeholder-color);
   padding: var(--input-padding);
-  border: var(--input-border);
-  border-radius: var(--input-border-radius);
-  -webkit-border-radius: var(--input-border-radius);
-  -moz-border-radius: var(--input-border-radius);
-  -ms-border-radius: var(--input-border-radius);
-  -o-border-radius: var(--input-border-radius);
 }
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: var(--input-border-focus);
+}
+
+input.invalid {
+  border: var(--input-error-border);
+}
+
+/* input.success {
+  border: var(--input-success-border);
+} */
 
 .feedback-button {
   font-family: var(--body-text-font-family);
@@ -54,4 +67,49 @@
   font-family: var(--input-font-family);
   font-size: var(--input-font-size);
   line-height: var(--input-line-height);
+}
+
+.feedback-button:disabled,
+.feedback-button:disabled:hover,
+.feedback-button:disabled:active {
+  background-color: #ccc;
+  color: rgb(76, 75, 75);
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.notification {
+  position: absolute;
+  bottom: 60%;
+  right: -50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: var(--button-hover-bg-color);
+  color: #fff;
+  border-radius: 14px;
+  z-index: 9999;
+  animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.feedback-button {
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+
+  cursor: pointer;
+  transition: all 0.8s ease;
+
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-default-bg-color);
+}
+
+.feedback-button:hover {
+  border-color: var(--button-hover-border-color);
+  background-color: var(--button-hover-bg-color);
+}
+
+.feedback-button:active {
+  border-color: var(--button-pressing-border-color);
+  background-color: var(--button-pressing-bg-color);
 }

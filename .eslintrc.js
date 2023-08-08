@@ -39,7 +39,7 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'max-len': [
       1,
-      150,
+      250,
       2,
       {
         ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
