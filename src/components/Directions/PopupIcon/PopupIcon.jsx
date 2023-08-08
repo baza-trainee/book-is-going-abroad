@@ -19,7 +19,8 @@ const PopupIcon = (props) => {
         setActive={setModalActive}
         icon={props.icon}
         text={props.content}
-        num={props.num}></Modal>
+        num={props.num}
+        last={props.last}></Modal>
     </div>
   );
 };

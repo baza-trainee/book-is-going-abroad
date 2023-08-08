@@ -4,7 +4,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import Select from 'react-select';
 import './langSelect.css';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function LangSelect() {
   const options = [
@@ -14,6 +14,27 @@ export default function LangSelect() {
   ];
 
   const [currentLang, setCurrentLang] = useState('ua');
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
+
+  const selectRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (selectRef.current && !selectRef.current.contains(event.target)) {
+        setIsSelectOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setIsSelectOpen(!isSelectOpen);
+  };
+
   const getValue = () =>
     currentLang ? options.find((c) => c.value === currentLang) : '';
 
@@ -22,12 +43,14 @@ export default function LangSelect() {
   };
 
   return (
-    <div>
+    <div ref={selectRef} onClick={handleClick}>
       <Select
+        menuIsOpen={isSelectOpen}
         onChange={onChange}
         options={options}
         classNamePrefix="custom-select"
-        value={getValue()}></Select>
+        value={getValue()}
+      />
     </div>
   );
 }
