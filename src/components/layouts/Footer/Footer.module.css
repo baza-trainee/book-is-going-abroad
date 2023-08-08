@@ -29,8 +29,8 @@
 }
 
 .footer-org-name {
-  width: 170px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 170px;
   text-align: center;
   text-transform: uppercase;
   color: var(--footer-primary-text-color);

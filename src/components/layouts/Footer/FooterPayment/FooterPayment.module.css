@@ -11,19 +11,3 @@
   justify-content: space-between;
   gap: 5px;
 }
-
-.footer-button {
-  padding: 12px 47px;
-  font-size: var(--button-font-size);
-  align-self: center;
-}
-
-.footer-button:hover {
-  border-color: var(--button-pressing-border-color);
-  background-color: var(--button-pressing-bg-color);
-}
-
-.footer-button:active {
-  border-color: var(--button-hover-border-color);
-  background-color: var(--button-hover-bg-color);
-}
