@@ -1,4 +1,3 @@
-import Button from '../../../UI/Button.jsx';
 import styles from './FooterPayment.module.css';
 import liqpay from './liqpay-icon.svg';
 import mastercard from './mastercard-icon.svg';
@@ -25,7 +24,6 @@ const FooterPayment = () => (
         />
         <img className={styles['payment-visa-img']} src={visa} alt="visa" />
       </div>
-      <Button className={styles['footer-button']}>Фондувати</Button>
     </div>
 );
 

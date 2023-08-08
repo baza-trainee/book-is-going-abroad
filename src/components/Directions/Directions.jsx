@@ -2,6 +2,7 @@
 /* eslint-disable quotes */
 /* eslint-disable max-len */
 /* eslint-disable comma-dangle */
+
 import Container from '../layouts/Container/Container.jsx';
 import PopupIcon from './PopupIcon/PopupIcon.jsx';
 import icon1 from './PopupIcon/Group 1.png';
@@ -21,16 +22,15 @@ import icon14 from './PopupIcon/Group 14.png';
 import styles from './Directions.module.css';
 
 const Directions = () => {
-  const text6 =
-    'Створення обліку заявок від біженців на необхідну їм допомогу, та за можливістю виконання їх';
-
   const directionsRow1 = [
     {
-      id: 1,
+      id: '1',
       icon: icon1,
       content:
         'Збір нової та вживаної дитячої літератури (книжок, журналів, учбової літератури) в Україні, доставка за межи країни та розповсюджування через дружні волонтерські організації дітям біженцям з України',
       row: '__firstRow',
+      style: 'one',
+      num: '1.',
     },
     {
       id: 2,
@@ -38,6 +38,8 @@ const Directions = () => {
       content:
         'Друк нових книг для дітей на українській мові, та передача цих книг дітям біженцям з України, які знаходяться в даний час за кордоном',
       row: '__firstRow',
+      style: 'two',
+      num: '2.',
     },
     {
       id: 3,
@@ -45,6 +47,8 @@ const Directions = () => {
       content:
         'Викуп нових книг зі складів, та книгарень для дітей на українській мові, та передача цих книг дітям біженцям з України, які знаходяться в даний час за кордоном',
       row: '__firstRow',
+      style: 'three',
+      num: '3.',
     },
   ];
 
@@ -54,6 +58,8 @@ const Directions = () => {
       icon: icon4,
       content: 'Видавнича діяльність дитячої літератури',
       row: '__secondRow',
+      style: 'four',
+      num: '4.',
     },
     {
       id: 5,
@@ -61,13 +67,18 @@ const Directions = () => {
       content:
         'Створення власного логістичного транспорту доставки книжок за кордон, та саме доставка до маленьких місць, де на даний час знаходяться біженці з України',
       row: '__secondRow',
+      style: 'five',
+      num: '5.',
     },
     {
       id: 6,
       icon: icon6,
       // eslint-disable-next-line quotes
-      content: text6,
+      content:
+        'Створення обліку заявок від біженців на необхідну їм допомогу, та за можливістю виконання їх',
       row: '__secondRow',
+      style: 'six',
+      num: '6.',
     },
   ];
 
@@ -78,12 +89,16 @@ const Directions = () => {
       content:
         'Психологічна підтримка книжкою рідною, українською мовою буде саме тим якорем, за який маленькі діти можуть вчепитися і мати його як частину звичного оточення, своєї Батьківщини',
       row: '__thirdRow',
+      style: 'seven',
+      num: '7.',
     },
     {
       id: 8,
       icon: icon8,
       content: 'Забезпечити книжками кожного з маленьких дітей-переселенців',
       row: '__thirdRow',
+      style: 'eight',
+      num: '8.',
     },
     {
       id: 9,
@@ -91,6 +106,8 @@ const Directions = () => {
       content:
         'Адресна допомога усім необхідним постраждалим переселенцям за межами країни та в Україні',
       row: '__thirdRow',
+      style: 'nine',
+      num: '9.',
     },
   ];
 
@@ -101,6 +118,8 @@ const Directions = () => {
       content:
         'Створення пунктів допомоги на території України та за її межами для громадянам України постраждалих від військових дій',
       row: '__fourthRow',
+      style: 'ten',
+      num: '10.',
     },
     {
       id: 11,
@@ -108,6 +127,8 @@ const Directions = () => {
       content:
         'Сприяння обороноздатності та мобілізаційній готовності країни, захисту населення у надзвичайних ситуаціях мирного і воєнного часу',
       row: '__fourthRow',
+      style: 'eleven',
+      num: '11.',
     },
   ];
 
@@ -118,6 +139,8 @@ const Directions = () => {
       content:
         'Сприяти створенню позитивного іміджу та репутації волонтерської діяльності у широкої громадськості, інвесторів, керівників організацій, органів державної влади України тощо',
       row: '__fifthRow',
+      style: 'twelve',
+      num: '12.',
     },
     {
       id: 13,
@@ -125,6 +148,8 @@ const Directions = () => {
       content:
         'Створення обмінного фонду книжок в місцях тимчасового мешкання українців за кордоном, де кожен українець, та дитина зможе поміняти прочитану книгу на іншу',
       row: '__fifthRow',
+      style: 'thirteen',
+      num: '13.',
     },
     {
       id: 14,
@@ -132,24 +157,71 @@ const Directions = () => {
       content:
         'Надання допомоги громадянам, які постраждали внаслідок надзвичайної ситуації техногенного чи природного характеру, під час дії особливого періоду, правових режимів надзвичайного чи воєнного стану, здійснення заходів із забезпечення національної безпеки і оборони, біженцям, внутрішньо переміщеним особам',
       row: '__fifthRow',
+      style: 'fourteen',
+      num: '14.',
     },
   ];
 
-  const renderDirections1 = directionsRow1.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} icon={icon} content={content} row={row} />
-  ));
-  const renderDirections2 = directionsRow2.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} icon={icon} content={content} row={row} />
-  ));
-  const renderDirections3 = directionsRow3.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} icon={icon} content={content} row={row} />
-  ));
-  const renderDirections4 = directionsRow4.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} icon={icon} content={content} row={row} />
-  ));
-  const renderDirections5 = directionsRow5.map(({ id, icon, content, row }) => (
-    <PopupIcon key={id} icon={icon} content={content} row={row} />
-  ));
+  const renderDirections1 = directionsRow1.map(
+    ({ id, icon, content, row, style, num }) => (
+      <PopupIcon
+        key={id}
+        icon={icon}
+        content={content}
+        row={row}
+        style={style}
+        num={num}
+      />
+    )
+  );
+  const renderDirections2 = directionsRow2.map(
+    ({ id, icon, content, row, style, num }) => (
+      <PopupIcon
+        key={id}
+        icon={icon}
+        content={content}
+        row={row}
+        style={style}
+        num={num}
+      />
+    )
+  );
+  const renderDirections3 = directionsRow3.map(
+    ({ id, icon, content, row, style, num }) => (
+      <PopupIcon
+        key={id}
+        icon={icon}
+        content={content}
+        row={row}
+        style={style}
+        num={num}
+      />
+    )
+  );
+  const renderDirections4 = directionsRow4.map(
+    ({ id, icon, content, row, style, num }) => (
+      <PopupIcon
+        key={id}
+        icon={icon}
+        content={content}
+        row={row}
+        style={style}
+        num={num}
+      />
+    )
+  );
+  const renderDirections5 = directionsRow5.map(
+    ({ id, icon, content, row, style, num }) => (
+      <PopupIcon
+        key={id}
+        icon={icon}
+        content={content}
+        row={row}
+        style={style}
+        num={num}
+      />
+    )
+  );
 
   return (
     <section className={styles.directionWrapper}>

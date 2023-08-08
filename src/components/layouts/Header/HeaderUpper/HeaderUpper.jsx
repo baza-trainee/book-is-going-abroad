@@ -1,5 +1,9 @@
+/* eslint-disable no-confusing-arrow */
+/* eslint-disable no-unused-vars */
+/* eslint-disable comma-dangle */
 import styles from '../Header.module.css';
 import logo from './Logo.svg';
+import LangSelect from './LangSelect/LangSelect.jsx';
 
 export default function HeaderUpper() {
   return (
@@ -13,12 +17,7 @@ export default function HeaderUpper() {
       </p>
 
       <div className={styles.headerLanguage}>
-        <div className={styles.selectWrapper}>
-          <select className={styles.langSelect} name="/" id="/">
-            <option value="ua">UA</option>
-            <option value="en">EN</option>
-          </select>
-        </div>
+        <LangSelect />
       </div>
     </header>
   );

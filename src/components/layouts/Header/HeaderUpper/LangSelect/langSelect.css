@@ -1,0 +1,124 @@
+.custom-select__control {
+    background-color: var(--header-secondary-bg-color) !important;
+    color: white !important;
+    border-radius: 14px !important;
+    border: none;
+    outline: none;
+    width: 110px !important;
+    height: 40px !important;
+}
+
+.custom-select__control:hover {
+    background-color: var(--button-default-bg-color) !important;
+}
+
+.custom-select__control--menu-is-open {
+    background-color: var(--button-default-bg-color) !important;
+}
+
+.custom-select__indicator-separator {
+    display: none !important;
+}
+
+.custom-select__indicators {
+    cursor: pointer !important;
+}
+
+.custom-select__value-container {
+    text-align: center !important;
+    height: 40px !important;
+}
+
+.custom-select__value-container::before {
+    position: absolute;
+    top: 52%;
+    left: 10px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    content: '';
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-image: url('../earth-lang.svg');
+    background-repeat: no-repeat;
+}
+
+.custom-select__single-value {
+    color: #fff !important;
+    font-size: var(--select-lang-font-size) !important;
+    text-align: center !important;
+    width: 30px !important;
+    margin-left: 32px !important;
+    margin-top: 1px !important;
+    padding-top: 1px !important;
+    vertical-align: bottom !important;
+}
+
+.custom-select__menu {
+    background-color: #fff !important;
+    color: #252525 !important;
+    border-radius: 14px !important;
+    font-size: var(--select-lang-font-size) !important;
+    box-shadow: 0px 4px 20px 0px #00000066 !important;
+    animation: myAnim .2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+    0% {
+        transform: scaleY(0.4);
+        transform-origin: 100% 0%;
+    }
+
+    100% {
+        transform: scaleY(1);
+        transform-origin: 100% 0%;
+    }
+}
+
+.custom-select__option {
+    background-color: #fff !important;
+    color: #252525 !important;
+    border-radius: 14px !important;
+    font-size: var(--select-lang-font-size) !important;
+}
+
+.custom-select__option--is-focused {
+    cursor: pointer !important;
+    color: #252525 !important;
+    text-decoration: underline;
+    font-size: var(--select-lang-font-size) !important;
+}
+
+.custom-select__input-container {
+    display: none !important;
+}
+
+.custom-select__input {
+    display: none !important;
+}
+
+.custom-select__placeholder {
+    display: none !important;
+}
+
+.custom-select__indicator::before {
+    position: absolute;
+    top: 47%;
+    right: 16px;
+    display: block;
+    width: 12px;
+    height: 6px;
+    content: '';
+    transform: translateY(-5%);
+    pointer-events: none;
+    background-image: url('../arrow.svg');
+    background-repeat: no-repeat;
+}
+
+.custom-select__indicator {
+    padding-left: 10px !important;
+}
+
+.custom-select__indicator svg {
+    opacity: 0;
+}
