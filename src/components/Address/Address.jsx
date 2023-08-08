@@ -229,9 +229,9 @@ const Address = () => {
                       name="city"
                       value={city}
                       checked={city === selectedCity}
-                      onClick={(e) => {
-                        handleCityChange(e);
+                      onChange={(e) => {
                         toggleCitySelect();
+                        handleCityChange(e);
                       }}
                     />
                     {city}
@@ -266,9 +266,9 @@ const Address = () => {
                       name="address"
                       value={address.address}
                       checked={address.address === selectedAddress}
-                      onClick={(e) => {
-                        handleAddressChange(e);
+                      onChange={(e) => {
                         toggleAddressSelect();
+                        handleAddressChange(e);
                       }}
                     />
                     {address.address}
