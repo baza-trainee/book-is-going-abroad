@@ -28,7 +28,7 @@ const Contact = () => {
 
       <ContactItem
         title="Оформити"
-        text="Запит на отримання гуманіторної допомоги"
+        text="Запит на отримання гуманітарної допомоги"
         action="ЗАПОВНИТИ ФОРМУ"
         onClick={GoogleFormNeed}
       />

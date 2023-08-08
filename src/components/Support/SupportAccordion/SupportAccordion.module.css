@@ -1,0 +1,39 @@
+.support-accordion-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.support-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width:558px;
+  gap: 12px;
+}
+
+.accordion-header {
+  width: 100%;
+  max-width:558px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 28px 24px;
+  background-color: #FD0;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+
+.accordion-description {
+  padding: 24px 44px;
+  border: 1px solid #000;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+

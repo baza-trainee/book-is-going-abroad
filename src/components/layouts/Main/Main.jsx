@@ -7,6 +7,7 @@ import Directions from '../../Directions/Directions.jsx';
 import Feedback from '../../Feedback/Feedback.jsx';
 // eslint-disable-next-line import/no-unresolved
 import styles from './Main.module.css';
+import Support from '../../Support/Support.jsx';
 
 const Main = () => (
   // eslint-disable-next-line react/prop-types
@@ -17,6 +18,7 @@ const Main = () => (
     <Address />
     <Directions />
     <Feedback />
+    <Support />
   </main>
 );
 
