@@ -247,11 +247,21 @@ const Directions = () => {
       <Container className={styles.directionContainer}>
         <h2 className={styles.sectionTitle}>Основні напрями діяльності</h2>
         <div className={styles.iconsWrapper}>
-          <div className={styles.listWrapper1}>{renderDirections1}</div>
-          <div className={styles.listWrapper2}>{renderDirections2}</div>
-          <div className={styles.listWrapper3}>{renderDirections3}</div>
-          <div className={styles.listWrapper4}>{renderDirections4}</div>
-          <div className={styles.listWrapper5}>{renderDirections5}</div>
+          <div className={styles.listWrapper1} data-testid="row1">
+            {renderDirections1}
+          </div>
+          <div className={styles.listWrapper2} data-testid="row2">
+            {renderDirections2}
+          </div>
+          <div className={styles.listWrapper3} data-testid="row3">
+            {renderDirections3}
+          </div>
+          <div className={styles.listWrapper4} data-testid="row4">
+            {renderDirections4}
+          </div>
+          <div className={styles.listWrapper5} data-testid="row5">
+            {renderDirections5}
+          </div>
         </div>
       </Container>
     </section>
