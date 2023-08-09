@@ -7,14 +7,14 @@
 }
 
 .footer-phones li,
-.footer-email a {
+.footer-email p {
   font-size: var(--footer-font-size);
   font-family: var(--footer-text-font-family);
   color: var(--footer-primary-text-color);
   line-height: var(--footer-line-height);
 }
 
-.footer-email a:hover {
+.footer-email p:hover {
   color: var(--footer-primary-text-color);
 }
 
@@ -45,9 +45,24 @@
   cursor: pointer;
 }
 
+@keyframes slide-top {
+  0% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 25%;
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+
+  100% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
 .notification {
   position: absolute;
-  bottom: 200px;
+  bottom: 190px;
   right: -55px;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -56,4 +71,5 @@
   border-radius: 14px;
   z-index: 9999;
   animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }

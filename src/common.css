@@ -1,7 +1,7 @@
 :root {
   --section-padding-primary: 80px 0;
   --bg-primary-color: #fff;
-  --text-primary-color: #000;
+  --text-primary-color: #252525;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --header-primary-bg-color: #F2F7FF;
