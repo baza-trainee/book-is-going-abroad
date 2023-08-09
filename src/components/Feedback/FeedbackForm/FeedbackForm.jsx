@@ -65,7 +65,7 @@ const FeedbackForm = () => {
     setEnteredNameTouched(true);
     setEnteredEmailTouched(true);
 
-    if (!enteredNameIsValid && !enteredEmailIsValid) {
+    if (!formIsValid) {
       return;
     }
 
