@@ -2,7 +2,8 @@
   background-image: url('../../assets/img/hero/slider.png');
   background-size: cover;
   background-position-y: 55%;
-  padding-top: 161px;
+  /* padding-top: 161px; */
+  margin-top: 161px;
 }
 
 .heroWrapper {
