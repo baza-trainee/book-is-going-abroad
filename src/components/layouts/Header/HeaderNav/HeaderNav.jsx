@@ -13,32 +13,32 @@ export default function HeaderNav() {
       id: 1,
       text: 'Адреси',
       icon: <AddressIcon />,
-      link: 'Address_address__zK4bg',
+      link: 'address',
     },
     {
       id: 2,
       text: 'Активності',
       icon: <FluentIcon />,
-      link: 'Activity_activity__dpoiR',
+      link: 'activity',
     },
     {
       id: 3,
       text: 'Ціль проекту',
       icon: <QuestionIcon />,
-      link: 'Features_features__tgxvX',
+      link: 'features',
     },
     {
       id: 4,
       text: 'Партнери',
       icon: <PartnerIcon />,
-      link: '/',
+      link: 'feedback',
     },
     // eslint-disable-next-line comma-dangle
     {
       id: 5,
       text: "Зв'язатися",
       icon: <FrameIcon />,
-      link: 'Feedback_feedback__rqx-U',
+      link: 'feedback',
     },
   ];
 
