@@ -20,7 +20,8 @@ const PopupIcon = (props) => {
         icon={props.icon}
         text={props.content}
         num={props.num}
-        last={props.last}></Modal>
+        last={props.last}
+        needToMove={props.needToMove}></Modal>
     </div>
   );
 };

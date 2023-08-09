@@ -30,8 +30,9 @@ const Directions = () => {
         'Збір нової та вживаної дитячої літератури (книжок, журналів, учбової літератури) в Україні, доставка за межи країни та розповсюджування через дружні волонтерські організації дітям біженцям з України',
       row: '__firstRow',
       style: 'one',
-      num: '1.',
+      num: '1',
       last: false,
+      needToMove: true,
     },
     {
       id: 2,
@@ -40,8 +41,9 @@ const Directions = () => {
         'Друк нових книг для дітей на українській мові, та передача цих книг дітям біженцям з України, які знаходяться в даний час за кордоном',
       row: '__firstRow',
       style: 'two',
-      num: '2.',
+      num: '2',
       last: false,
+      needToMove: false,
     },
     {
       id: 3,
@@ -50,8 +52,9 @@ const Directions = () => {
         'Викуп нових книг зі складів, та книгарень для дітей на українській мові, та передача цих книг дітям біженцям з України, які знаходяться в даний час за кордоном',
       row: '__firstRow',
       style: 'three',
-      num: '3.',
+      num: '3',
       last: true,
+      needToMove: false,
     },
   ];
 
@@ -62,8 +65,9 @@ const Directions = () => {
       content: 'Видавнича діяльність дитячої літератури',
       row: '__secondRow',
       style: 'four',
-      num: '4.',
+      num: '4',
       last: false,
+      needToMove: false,
     },
     {
       id: 5,
@@ -72,8 +76,9 @@ const Directions = () => {
         'Створення власного логістичного транспорту доставки книжок за кордон, та саме доставка до маленьких місць, де на даний час знаходяться біженці з України',
       row: '__secondRow',
       style: 'five',
-      num: '5.',
+      num: '5',
       last: false,
+      needToMove: false,
     },
     {
       id: 6,
@@ -83,8 +88,9 @@ const Directions = () => {
         'Створення обліку заявок від біженців на необхідну їм допомогу, та за можливістю виконання їх',
       row: '__secondRow',
       style: 'six',
-      num: '6.',
+      num: '6',
       last: true,
+      needToMove: false,
     },
   ];
 
@@ -96,8 +102,9 @@ const Directions = () => {
         'Психологічна підтримка книжкою рідною, українською мовою буде саме тим якорем, за який маленькі діти можуть вчепитися і мати його як частину звичного оточення, своєї Батьківщини',
       row: '__thirdRow',
       style: 'seven',
-      num: '7.',
+      num: '7',
       last: false,
+      needToMove: false,
     },
     {
       id: 8,
@@ -105,8 +112,9 @@ const Directions = () => {
       content: 'Забезпечити книжками кожного з маленьких дітей-переселенців',
       row: '__thirdRow',
       style: 'eight',
-      num: '8.',
+      num: '8',
       last: false,
+      needToMove: false,
     },
     {
       id: 9,
@@ -115,8 +123,9 @@ const Directions = () => {
         'Адресна допомога усім необхідним постраждалим переселенцям за межами країни та в Україні',
       row: '__thirdRow',
       style: 'nine',
-      num: '9.',
+      num: '9',
       last: true,
+      needToMove: false,
     },
   ];
 
@@ -128,8 +137,9 @@ const Directions = () => {
         'Створення пунктів допомоги на території України та за її межами для громадянам України постраждалих від військових дій',
       row: '__fourthRow',
       style: 'ten',
-      num: '10.',
+      num: '10',
       last: false,
+      needToMove: false,
     },
     {
       id: 11,
@@ -138,8 +148,9 @@ const Directions = () => {
         'Сприяння обороноздатності та мобілізаційній готовності країни, захисту населення у надзвичайних ситуаціях мирного і воєнного часу',
       row: '__fourthRow',
       style: 'eleven',
-      num: '11.',
+      num: '11',
       last: false,
+      needToMove: false,
     },
   ];
 
@@ -151,8 +162,9 @@ const Directions = () => {
         'Сприяти створенню позитивного іміджу та репутації волонтерської діяльності у широкої громадськості, інвесторів, керівників організацій, органів державної влади України тощо',
       row: '__fifthRow',
       style: 'twelve',
-      num: '12.',
+      num: '12',
       last: false,
+      needToMove: false,
     },
     {
       id: 13,
@@ -161,8 +173,9 @@ const Directions = () => {
         'Створення обмінного фонду книжок в місцях тимчасового мешкання українців за кордоном, де кожен українець, та дитина зможе поміняти прочитану книгу на іншу',
       row: '__fifthRow',
       style: 'thirteen',
-      num: '13.',
+      num: '13',
       last: false,
+      needToMove: false,
     },
     {
       id: 14,
@@ -171,13 +184,14 @@ const Directions = () => {
         'Надання допомоги громадянам, які постраждали внаслідок надзвичайної ситуації техногенного чи природного характеру, під час дії особливого періоду, правових режимів надзвичайного чи воєнного стану, здійснення заходів із забезпечення національної безпеки і оборони, біженцям, внутрішньо переміщеним особам',
       row: '__fifthRow',
       style: 'fourteen',
-      num: '14.',
+      num: '14',
       last: true,
+      needToMove: false,
     },
   ];
 
   const renderDirections1 = directionsRow1.map(
-    ({ id, icon, content, row, style, num, last }) => (
+    ({ id, icon, content, row, style, num, last, needToMove }) => (
       <PopupIcon
         key={id}
         icon={icon}
@@ -186,6 +200,7 @@ const Directions = () => {
         style={style}
         num={num}
         last={last}
+        needToMove={needToMove}
       />
     )
   );
@@ -229,7 +244,7 @@ const Directions = () => {
     )
   );
   const renderDirections5 = directionsRow5.map(
-    ({ id, icon, content, row, style, num, last }) => (
+    ({ id, icon, content, row, style, num, last, needToMove }) => (
       <PopupIcon
         key={id}
         icon={icon}
@@ -238,6 +253,7 @@ const Directions = () => {
         style={style}
         num={num}
         last={last}
+        needToMove={needToMove}
       />
     )
   );
