@@ -13,9 +13,9 @@ const AccordionSection = ({ section, isActiveSection, setActiveIndex, sectionInd
   return (
     <div className={styles['support-accordion']}>
       <div className={styles['accordion-header']} onClick={toggleSection}>
-        <h4>{section.title}</h4>
+        <h4 className={styles['accordion-title']}>{section.title}</h4>
         {isActiveSection ? (
-          <img src={arrowIcon} />
+          <img className={styles['accordion-arrow-back']} src={arrowIcon} />
         ) : (
           <img
             className={styles['accordion-arrow-transform']}
@@ -35,7 +35,7 @@ const AccordionSection = ({ section, isActiveSection, setActiveIndex, sectionInd
 
 // eslint-disable-next-line react/prop-types
 const SupportAccordion = ({ sections }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState();
 
   return (
     <div className={styles['support-accordion-wrapper']}>

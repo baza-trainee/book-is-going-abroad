@@ -49,7 +49,7 @@ const FooterContacts = () => {
       <ul className={styles['footer-phones']}>{RenderContacts}</ul>
       <div className={styles['footer-email']} onClick={() => handleCopy(emailLink)}>
         <img src={email} />
-        <a className={styles['footer-email-link']} href="mailto:child.help.book@gmail.com">{emailLink}</a>
+        <p className={styles['footer-email-text']}>{emailLink}</p>
       </div>
     </div>
   );
