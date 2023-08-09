@@ -31,7 +31,7 @@ export default function HeaderNav() {
       id: 4,
       text: 'Партнери',
       icon: <PartnerIcon />,
-      link: 'partners',
+      link: 'feedback',
     },
     // eslint-disable-next-line comma-dangle
     {
@@ -43,7 +43,7 @@ export default function HeaderNav() {
   ];
 
   const RenderButtons = navButtonsArr.map(({ id, icon, text, link }) => (
-    <NavButton key={id} icon={icon} text={text} link={link} />
+    <NavButton key={id} icon={icon} text={text} link={link} block="center" />
   ));
 
   return (
