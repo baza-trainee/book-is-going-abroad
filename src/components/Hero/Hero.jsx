@@ -3,6 +3,7 @@ import Container from '../layouts/Container/Container.jsx';
 import Button from '../UI/Button.jsx';
 import Hotline from './Hotline/hotline.jsx';
 import Contact from './Contact/Contact.jsx';
+import { scroll } from '../layouts/Header/HeaderNav/NavButtons.jsx';
 
 const Hero = () => (
   <section className={styles.hero}>
@@ -14,7 +15,11 @@ const Hero = () => (
           Сайт для тих, хто допомогає Україні
         </h6>
 
-        <Button className={styles.heroBtn}>Підтримати</Button>
+        <Button
+          className={styles.heroBtn}
+          onClick={() => scroll('support', 'end')}>
+          Підтримати
+        </Button>
 
         <Hotline />
 
