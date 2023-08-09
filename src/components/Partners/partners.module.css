@@ -1,0 +1,18 @@
+.partners {
+    padding: var(--section-padding-primary);
+    padding-bottom: 0;
+}
+
+.partnersTitle {
+    font-family: var(--heading-text-font-family);
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.partnersLogoWrapper {
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+}
