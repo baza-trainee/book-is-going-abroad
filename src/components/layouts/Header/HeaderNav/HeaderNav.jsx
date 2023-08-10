@@ -43,7 +43,7 @@ export default function HeaderNav() {
   ];
 
   const RenderButtons = navButtonsArr.map(({ id, icon, text, link }) => (
-    <NavButton key={id} icon={icon} text={text} link={link} />
+    <NavButton key={id} icon={icon} text={text} link={link} block="center" />
   ));
 
   return (
