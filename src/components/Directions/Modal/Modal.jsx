@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable import/no-duplicates */
 /* eslint-disable react/prop-types */
@@ -7,7 +8,15 @@ import styles from './modal.module.css';
 import './hideIcon.css';
 import './showButtonModal.css';
 
-export default function Modal({ active, setActive, icon, text, num, last }) {
+export default function Modal({
+  active,
+  setActive,
+  icon,
+  text,
+  num,
+  last,
+  needToMove,
+}) {
   const modalClassName = `${active ? styles.modalActive : styles.modal} ${
     last && active ? styles.modalLast : ''
   }`;
@@ -15,7 +24,9 @@ export default function Modal({ active, setActive, icon, text, num, last }) {
     last ? styles.modalContentLast : styles.modalContent
   }`;
   const spanClassName = `${last ? styles.spanNumLast : styles.spanNum}`;
-  const miniIconClassName = `${last ? styles.miniIconLast : styles.miniIcon}`;
+  const miniIconClassName = `${last ? styles.miniIconLast : styles.miniIcon} ${
+    needToMove ? styles.miniIconMove : ''
+  }`;
   const modalTextWrapperClassName = `${
     last ? styles.modalTextWrapperLast : styles.modalTextWrapper
   }`;

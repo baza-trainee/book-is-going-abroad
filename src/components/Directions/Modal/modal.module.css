@@ -24,7 +24,7 @@
 .modalContent {
     border-radius: 14px;
     background-color: #fff;
-    width: 550px;
+    width: 585px;
     box-shadow: 2px 5px 7px 0px #00000040;
     transform: scale(1);
     margin: 1px;
@@ -43,21 +43,26 @@
 }
 
 .miniIcon {
-    transform: scale(0.9) translateX(-30px) translateY(-20px);
+    transform: scale(0.9) translateX(-50px) translateY(-20px);
     pointer-events: none;
 }
 
 .miniIconLast {
-    transform: scale(0.9) translateX(30px) translateY(-20px);
+    transform: scale(0.9) translateX(50px) translateY(-50px);
     pointer-events: none;
     display: flex;
+}
+
+.miniIconMove {
+    transform: scale(0.9) translateX(-80px) translateY(-60px);
+    pointer-events: none;
 }
 
 .modalTextWrapper {
     display: flex;
     pointer-events: none;
     align-items: center;
-    margin-left: -40px;
+    margin-left: -65px;
 }
 
 .modalTextWrapperLast {
@@ -65,7 +70,7 @@
     pointer-events: none;
     align-items: center;
     margin-left: 45px;
-    margin-right: -65px;
+    margin-right: -75px;
     width: 340px;
 }
 
@@ -85,7 +90,7 @@
     position: absolute;
     color: #0EA9FF;
     font-size: 35px;
-    margin: 5px 0 0 10px;
+    margin: 5px 0 0 3px;
     pointer-events: none;
 }
 
@@ -95,6 +100,6 @@
     left: 0px;
     color: #0EA9FF;
     font-size: 35px;
-    margin: 5px 0 0 10px;
+    margin: 5px 0 0 3px;
     pointer-events: none;
 }
