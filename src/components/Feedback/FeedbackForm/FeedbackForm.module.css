@@ -27,14 +27,14 @@
   height: 100%;
 }
 
-.feedback-form input[placeholder],
-.feedback-form textarea[placeholder] {
+.feedback-form input,
+.feedback-form textarea {
   font-family: var(--body-text-font-family);
   font-size: var(--body2-font-size);
   line-height: var(--body2-line-height);
   font-style: normal;
   font-weight: 500;
-  color: var(--input-placeholder-color);
+  color: var(--input-text-color);
   padding: var(--input-padding);
 }
 
@@ -46,10 +46,6 @@
 input.invalid {
   border: var(--input-error-border);
 }
-
-/* input.success {
-  border: var(--input-success-border);
-} */
 
 .feedback-button {
   font-family: var(--body-text-font-family);
