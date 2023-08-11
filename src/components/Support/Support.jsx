@@ -6,10 +6,10 @@ import styles from './Support.module.css';
 import supportHeart from '../../assets/img/support/supportHeart.png';
 import monobankIcon from '../../assets/img/support/monobankIcon.png';
 
-const accordionData1UAHContent1 = <p className={styles['accordion-description']}>Найменування отримувача:<br />БО МБФ ДОПОМОГА ДІТЯМ<br />Код одержувача:<br />44691208<br />IBAN:<br />UA683052990000026001030124624<br />Назва банку:<br />АТ КБ «ПриватБанк»</p>;
-const accordionData1BanksContent1 = <p className={styles['accordion-description']}>Рахунок у банку-кореспонденті<br />400886700401<br />SWIFT:<br />COBADEFF<br />Банк-кореспондент:<br />COMMERZBANK AG, FRANKFURT AM MAIN,<br />GERMANY</p>;
-const accordionData1BanksContent2 = <p className={styles['accordion-description']}>Найменування отримувача:<br />БО МБФ ДОПОМОГА ДІТЯМ<br />SWIFT:<br />CHASDEFX<br />Банк-кореспондент:<br />J.P.MORGAN AG, FRANKFURT AM MAIN,<br />GERMANY</p>;
-const accordionData2Content1 = <p className={styles['accordion-description']}>Найменування отримувача:<br />БО МБФ ДОПОМОГА ДІТЯМ<br />SWIFT:<br />PBANUA2X<br />IBAN:<br />UA633052990000026000040127388<br />Назва банку:<br />АТ КБ «ПриватБанк», вул. Грушевсього, 1-<br />Д, Київ, 01001, Україна<br />Адреса отримувача<br />03067, Україна, Київ, вул. Олексія Тихого<br />55/13, офіс 6</p>;
+const accordionData1UAHContent1 = <p className={styles['accordion-description']}>Найменування отримувача:<br />БО МБФ ДОПОМОГА ДІТЯМ<br /><br />Код одержувача:<br />44691208<br /><br />IBAN:<br />UA683052990000026001030124624<br /><br />Назва банку:<br />АТ КБ «ПриватБанк»</p>;
+const accordionData1BanksContent1 = <p className={styles['accordion-description']}>Рахунок у банку-кореспонденті<br />400886700401<br /><br />SWIFT:<br />COBADEFF<br /><br />Банк-кореспондент:<br />COMMERZBANK AG, FRANKFURT AM MAIN,<br />GERMANY</p>;
+const accordionData1BanksContent2 = <p className={styles['accordion-description']}>Найменування отримувача:<br />БО МБФ ДОПОМОГА ДІТЯМ<br /><br />SWIFT:<br />CHASDEFX<br /><br />Банк-кореспондент:<br />J.P.MORGAN AG, FRANKFURT AM MAIN,<br />GERMANY</p>;
+const accordionData2Content1 = <p className={styles['accordion-description']}>Найменування отримувача:<br />БО МБФ ДОПОМОГА ДІТЯМ<br /><br />SWIFT:<br />PBANUA2X<br /><br />IBAN:<br />UA633052990000026000040127388<br /><br />Назва банку:<br />АТ КБ «ПриватБанк», вул. Грушевсього, 1-<br />Д, Київ, 01001, Україна<br /><br />Адреса отримувача<br />03067, Україна, Київ, вул. Олексія Тихого<br />55/13, офіс 6</p>;
 const monobankImg = <img className={styles['accordion-description-img']} src={monobankIcon} alt="monobankIcon" />;
 
 const accordionData1 = [
