@@ -31,7 +31,7 @@ export default function HeaderNav() {
       id: 4,
       text: 'Партнери',
       icon: <PartnerIcon />,
-      link: 'feedback',
+      link: 'partners',
     },
     // eslint-disable-next-line comma-dangle
     {
