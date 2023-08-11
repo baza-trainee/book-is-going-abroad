@@ -54,37 +54,37 @@ const Address = () => {
     },
     {
       city: 'Київ',
-      address: 'вул. Жюля Верна, 13Б, ЦРБ ЦБС Свічадо, +380984324166',
+      address: 'вул. Жюля Верна, 13Б, ЦРБ ЦБС Свічадо | +380984324166',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.6842662400836!2d30.364166718862474!3d50.43423584134286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cb82452c5a03%3A0xd1a6059ca43619ac!2z0KbQtdC90YLRgNCw0LvRjNC90LAg0YDQsNC50L7QvdC90LAg0LHRltCx0LvRltC-0YLQtdC60LAg0KHQstGW0YfQsNC00L4!5e0!3m2!1suk!2sua!4v1690992563785!5m2!1suk!2sua'
     },
     {
       city: 'Неграші',
-      address: 'вул. Шевченка, 23А, +380677267663',
+      address: 'вул. Шевченка, 23А | 08122 | +380677267663',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d534.8585121514122!2d30.075038661243415!3d50.38090726226629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b4bd13a59c037%3A0x50fb8cb67858dc1!2z0JHRg9C00LjQvdC-0Log0LrRg9C70YzRgtGD0YDQuA!5e0!3m2!1suk!2sua!4v1690992746919!5m2!1suk!2sua'
     },
     {
       city: 'Музичі',
-      address: 'вул. Музична, 2Б, +380507168173',
+      address: 'вул. Музична, 2Б | 08125 | +380507168173',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d636.3586573236723!2d30.11070757612311!3d50.35844964924475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b4b29acbdba27%3A0xa506af680c1eed7b!2z0LLRg9C7LiDQnNGD0LfQuNGH0L3QsCwgMtCRLCDQnNGD0LfQuNGH0ZYsINCa0LjRl9Cy0YHRjNC60LAg0L7QsdC7LiwgMDgxMjU!5e0!3m2!1suk!2sua!4v1690992991181!5m2!1suk!2sua'
     },
     {
       city: 'Гореничі',
-      address: 'вул. Соборна, 203, +380967965393',
+      address: 'вул. Соборна, 203 | 08114 | +380967965393',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.609926131048!2d30.204768097452998!3d50.41427877991103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b356dd58e97f7%3A0x22527ef09d520937!2z0KPQn9CmINCg0ZbQt9C00LLQsCDQn9GA0LXRgdCy0Y_RgtC-0Zcg0JHQvtCz0L7RgNC-0LTQuNGG0ZYsINCy0YPQu9C40YbRjyDQodC-0LHQvtGA0L3QsCwgMjAzLCDQk9C-0YDQtdC90LjRh9GWLCDQmtC40ZfQstGB0YzQutCwINC-0LHQuy4sIDA4MTE0!5e0!3m2!1suk!2sua!4v1690993051101!5m2!1suk!2sua'
     },
     {
       city: 'Лука',
-      address: 'вул. Шевченка, 24, +380674093918',
-      link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.3327317571346!2d24.031105945056236!3d49.83623921016621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add600d574941%3A0x5be2d1f651a92a3f!2sMakarus!5e0!3m2!1suk!2sua!4v1690993432847!5m2!1suk!2sua'
+      address: 'вул. Шевченка, 24 | 08114 | +380674093918',
+      link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.0084072228323!2d30.16728267854148!3d50.36761326064852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b4addfd64e2ab%3A0x5455211d5435cdb1!2z0LLRg9C70LjRhtGPINCo0LXQstGH0LXQvdC60LAsINCa0LjRl9Cy0YHRjNC60LAg0L7QsdC7Lg!5e0!3m2!1suk!2sua!4v1691757262533!5m2!1suk!2sua'
     },
     {
       city: 'Білогородка',
-      address: 'вул. Володимирська, 60А, +380982742655',
+      address: 'вул. Володимирська, 60А | 0840 | +380982742655',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1512.4271166396056!2d30.23208251791339!3d50.392858285113824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b3554ceb61691%3A0x82d45592df4ce741!2z0LLRg9C70LjRhtGPINCS0L7Qu9C-0LTQuNC80LjRgNGB0YzQutCwLCA2MCwg0JHRltC70L7Qs9C-0YDQvtC00LrQsCwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LsuLCAwODE0MA!5e0!3m2!1suk!2sua!4v1690993216616!5m2!1suk!2sua'
     },
     {
       city: 'Святопетрівське',
-      address: 'вул. Центральна, 38, +380973541907',
+      address: 'вул. Центральна, 38 | 08141 | +380973541907',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.9263643027506!2d30.313426752428473!3d50.39068906507875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ca5fa60f32e9%3A0xa476ce7f2a208e8f!2z0LLRg9C70LjRhtGPINCm0LXQvdGC0YDQsNC70YzQvdCwLCAzOCwg0KHQstGP0YLQvtC_0LXRgtGA0ZbQstGB0YzQutC1LCDQmtC40ZfQstGB0YzQutCwINC-0LHQuy4sIDA4MTQx!5e0!3m2!1suk!2sua!4v1690993272604!5m2!1suk!2sua'
     },
     {
