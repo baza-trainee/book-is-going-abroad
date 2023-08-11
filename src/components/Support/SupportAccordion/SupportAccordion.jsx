@@ -4,7 +4,12 @@ import { useState } from 'react';
 import styles from './SupportAccordion.module.css';
 import arrowIcon from './arrowIcon.svg';
 
-const AccordionSection = ({ section, isActiveSection, setActiveIndex, sectionIndex }) => {
+const AccordionSection = ({
+  section,
+  isActiveSection,
+  setActiveIndex,
+  sectionIndex
+}) => {
   const toggleSection = () => {
     const nextIndex = isActiveSection ? null : sectionIndex;
     setActiveIndex(nextIndex);
@@ -15,18 +20,18 @@ const AccordionSection = ({ section, isActiveSection, setActiveIndex, sectionInd
       <div className={styles['accordion-header']} onClick={toggleSection}>
         <h4 className={styles['accordion-title']}>{section.title}</h4>
         {isActiveSection ? (
-          <img className={styles['accordion-arrow-back']} src={arrowIcon} />
-        ) : (
           <img
             className={styles['accordion-arrow-transform']}
             src={arrowIcon}
           />
+        ) : (
+          <img className={styles['accordion-arrow-back']} src={arrowIcon} />
         )}
       </div>
       {isActiveSection && (
         <div className={styles['accordion-description']}>
-          <p>{section.content1}</p>
-          <p>{section.content2}</p>
+          {section.content1}
+          {section.content2}
         </div>
       )}
     </div>
@@ -38,7 +43,7 @@ const SupportAccordion = ({ sections }) => {
   const [activeIndex, setActiveIndex] = useState();
 
   return (
-    <div className={styles['support-accordion-wrapper']}>
+    <div className={styles['support-accordions']}>
       {sections.map((section, index) => (
         <AccordionSection
           key={index}

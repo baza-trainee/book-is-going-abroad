@@ -41,3 +41,29 @@
   line-height: var(--body2-line-height);
   color: var(--text-primary-color);
 }
+
+.support-accordion-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.accordion-description {
+  margin-top: 12px;
+}
+
+.accordion-description,
+.accordion-description-img {
+  padding: 24px 44px;
+  border: 1px solid #000;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+
+.accordion-description-img {
+  margin-top: 12px;
+  padding: 24px 154px;
+}
