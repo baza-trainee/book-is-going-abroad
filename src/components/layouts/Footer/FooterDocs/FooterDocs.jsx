@@ -1,14 +1,15 @@
-// import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import FooterDocsItem from './FooterDocsItem/FooterDocsItem.jsx';
 
 import styles from './FooterDocs.module.css';
+import pdfPrivacyPolicy from './docs/privacy-policy.pdf';
+import pdfRegulations from './docs/regulations.pdf';
+import pdfSiteUsageRules from './docs/site-usage-rules.pdf';
 
 const docsNameArray = [
-  { id: 1, text: 'Статут' },
-  { id: 2, text: 'Політика Конфіденційності' },
-  { id: 3, text: 'Умови Використання Сайту' }
+  { id: 1, text: 'Статут', pdf: pdfRegulations },
+  { id: 2, text: 'Політика Конфіденційності', pdf: pdfPrivacyPolicy },
+  { id: 3, text: 'Умови Використання Сайту', pdf: pdfSiteUsageRules }
 ];
 
 const linkToAddress = 'address';
@@ -20,6 +21,18 @@ export function scroll(className, block) {
     section[0].scrollIntoView({ behavior: 'smooth', block });
   }
 }
+
+// eslint-disable-next-line react/prop-types
+export const FooterDocsItem = ({ text, pdf }) => (
+  <li>
+    <a
+      target="_blank"
+      href={pdf}
+      rel="noopener noreferrer">
+      <p>{text}</p>
+    </a>
+  </li>
+);
 
 const FooterDocs = () => {
   const navigate = useNavigate();
@@ -43,8 +56,8 @@ const FooterDocs = () => {
     }
   };
 
-  const RenderDocsItems = docsNameArray.map(({ id, text }) => (
-    <FooterDocsItem key={id} text={text} />
+  const RenderDocsItems = docsNameArray.map(({ id, text, pdf }) => (
+    <FooterDocsItem key={id} text={text} pdf={pdf} />
   ));
 
   return (

@@ -5,7 +5,7 @@
   gap: 8px;
 }
 
-.footer-docs li p,
+.footer-docs li a,
 .footer-docs button {
   font-size: var(--footer-font-size);
   font-family: var(--footer-text-font-family);
