@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Container from '../layouts/Container/Container.jsx';
 import styles from './Gallery.module.css';
 
@@ -35,7 +37,7 @@ const images = [
   { src: photo11, alt: 'Photo 11' },
   { src: photo12, alt: 'Photo 12' },
   { src: photo13, alt: 'Photo 13' },
-  { src: photo14, alt: 'Photo 4' },
+  { src: photo14, alt: 'Photo 14' },
   { src: photo15, alt: 'Photo 15' },
   { src: photo16, alt: 'Photo 16' },
   { src: photo17, alt: 'Photo 17' },
@@ -43,19 +45,48 @@ const images = [
   { src: photo19, alt: 'Photo 19' }
 ];
 
-const Gallery = () => (
-  <section className={styles.gallery}>
-    <Container className={styles['gallery-container']}>
-      <h2 className={styles['gallery-title']}>Активності нашої організації</h2>
-      <div className={styles['gallery-wrapper']}>
-      {images.map((image, index) => (
-        <div className={styles['gallery-row']} key={index}>
-          <img src={image.src} alt={image.alt} />
-          </div>
-      ))}
-      </div>
-    </Container>
-  </section>
-);
+const Gallery = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [activeImage, setActiveImage] = useState(null);
 
+  const openModal = (imageIndex) => {
+    setActiveImage(imageIndex);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setActiveImage(null);
+  };
+
+  return (
+    <section className={styles.gallery}>
+      <Container className={styles['gallery-container']}>
+        <h2 className={styles['gallery-title']}>
+          Активності нашої організації
+        </h2>
+        <div className={styles['gallery-wrapper']}>
+          {images.map((image, index) => (
+            <div
+              className={styles['gallery-img-wrapper']}
+              onClick={() => openModal(index)}
+              key={index}>
+              <img src={image.src} alt={image.alt} />
+            </div>
+          ))}
+        </div>
+        {modalOpen && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modal}>
+            <img src={images[activeImage].src} alt={images[activeImage].alt} />
+            <span className={styles.closeModal} onClick={closeModal}>
+              &times;
+            </span>
+          </div>
+        </div>
+        )};
+      </Container>
+    </section>
+  );
+};
 export default Gallery;
