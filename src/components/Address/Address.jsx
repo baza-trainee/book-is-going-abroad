@@ -199,7 +199,7 @@ const Address = () => {
   }, []);
 
   return (
-    <section className={styles.address}>
+    <section className={styles.address} id='address'>
       <Container className={styles['address-container']}>
         <h2 className={styles['address-title']}>
           Адреси видачі та прийому гуманітарної допомоги

@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 57px;
 }
 
 .footer-logo {
@@ -30,7 +30,7 @@
 
 .footer-org-name {
   width: 100%;
-  max-width: 170px;
+  max-width: 183px;
   text-align: center;
   text-transform: uppercase;
   color: var(--footer-primary-text-color);

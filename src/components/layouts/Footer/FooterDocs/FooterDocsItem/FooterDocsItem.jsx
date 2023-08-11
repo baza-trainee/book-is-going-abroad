@@ -1,9 +1,9 @@
 // eslint-disable-next-line react/prop-types
 const FooterDocsItem = ({ text }) => (
   <li>
-    <a href="/" download>
+    <p>
       {text}
-    </a>
+    </p>
   </li>
 );
 
