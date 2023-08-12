@@ -9,6 +9,7 @@
 
 .directionWrapper {
     padding: var(--section-padding-primary);
+    padding-bottom: 40px;
 }
 
 .iconsWrapper {
