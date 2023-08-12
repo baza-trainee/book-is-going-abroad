@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import styles from './FooterDocs.module.css';
-import pdfPrivacyPolicy from './docs/privacy-policy.pdf';
-import pdfRegulations from './docs/regulations.pdf';
-import pdfSiteUsageRules from './docs/site-usage-rules.pdf';
+import pdfPrivacyPolicy from '../../../../assets/docs/privacy-policy.pdf';
+import pdfRegulations from '../../../../assets/docs/regulations.pdf';
+import pdfSiteUsageRules from '../../../../assets/docs/site-usage-rules.pdf';
 
 const docsNameArray = [
   { id: 1, text: 'Статут', pdf: pdfRegulations },
