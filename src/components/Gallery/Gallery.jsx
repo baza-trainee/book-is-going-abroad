@@ -76,15 +76,19 @@ const Gallery = () => {
           ))}
         </div>
         {modalOpen && (
-        <div className={styles.modalOverlay}>
-          <div className={styles.modal}>
-            <img src={images[activeImage].src} alt={images[activeImage].alt} />
-            <span className={styles.closeModal} onClick={closeModal}>
-              &times;
-            </span>
+          <div className={styles.modalOverlay} onClick={closeModal}>
+            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+              <img
+                src={images[activeImage].src}
+                alt={images[activeImage].alt}
+              />
+              <span className={styles.closeModal} onClick={closeModal}>
+                &times;
+              </span>
+            </div>
           </div>
-        </div>
-        )};
+        )}
+        ;
       </Container>
     </section>
   );

@@ -1,15 +1,9 @@
-.support-accordion-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.support-accordion {
+.support-accordions {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 558px;
-  gap: 12px;
+  gap: 24px;
 }
 
 .accordion-header {
@@ -52,14 +46,4 @@
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
-}
-
-.accordion-description {
-  padding: 24px 44px;
-  border: 1px solid #000;
-  border-radius: 14px;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  -ms-border-radius: 14px;
-  -o-border-radius: 14px;
 }

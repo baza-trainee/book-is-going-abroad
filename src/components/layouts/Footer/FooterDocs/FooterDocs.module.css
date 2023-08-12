@@ -5,14 +5,22 @@
   gap: 8px;
 }
 
-.footer-docs li a {
+.footer-docs li a,
+.footer-docs button {
   font-size: var(--footer-font-size);
   font-family: var(--footer-text-font-family);
   color: var(--footer-primary-text-color);
   transition: transform 0.1s ease-in-out;
   line-height: var(--footer-line-height);
+  cursor: pointer;
 }
 
-.footer-docs li:hover {
+.footer-docs li:hover,
+.footer-docs button:hover {
   transform: scale(1.1);
+}
+
+.footer-docs button {
+  background: none;
+  padding: 0;
 }

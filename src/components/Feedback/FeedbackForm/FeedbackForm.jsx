@@ -26,12 +26,16 @@ const FeedbackForm = () => {
     }
   }, [showSuccessSendMessage]);
 
-  const enteredNameIsValid = enteredName.trim() !== '';
+  const nameRegex = /^[A-Za-z\s'-]{2,}$/;
+
+  const enteredNameIsValid = nameRegex.test(enteredName.trim());
   const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
   // eslint-disable-next-line operator-linebreak
-  const emailRegex =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  // const emailRegex =
+  //   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailRegex = /^[A-Za-z0-9._%+-]+@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   const enteredEmailIsValid = emailRegex.test(enteredEmail.trim());
   const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
 
@@ -80,7 +84,7 @@ const FeedbackForm = () => {
   const emailInputClasses = emailInputIsInvalid ? 'invalid' : '';
 
   const invalidName = (
-    <p className={styles['input-error']}>*Не введенe ім&apos;я.</p>
+    <p className={styles['input-error']}>*Не введенe ім&apos;я або некоректно введенe ім&apos;я.</p>
   );
   const invalidEmail = (
     <p className={styles['input-error']}>
