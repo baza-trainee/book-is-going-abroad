@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import XRegExp from 'xregexp';
 
 import SuccessSendMessage from './index';
 // import Button from '../../UI/Button.jsx';
@@ -9,6 +11,8 @@ const FeedbackForm = () => {
   const [enteredNameTouched, setEnteredNameTouched] = useState(false);
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
+  const [enteredMessage, setEnteredMessage] = useState('');
+  const [enteredMessageTouched, setEnteredMessageTouched] = useState(false);
   const [showSuccessSendMessage, setShowSuccessSendMessage] = useState(false);
 
   const successSendMessageHandler = () => {
@@ -26,23 +30,24 @@ const FeedbackForm = () => {
     }
   }, [showSuccessSendMessage]);
 
-  const nameRegex = /^[A-Za-z\s'-]{2,}$/;
+  const nameRegex = XRegExp('^(?!.*[%^*|~{};\\"<>])[\\p{L}ʼ\\-]{2,30}$');
 
   const enteredNameIsValid = nameRegex.test(enteredName.trim());
   const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
-  // eslint-disable-next-line operator-linebreak
-  // const emailRegex =
-  //   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const emailRegex = /^[A-Za-z0-9._%+-]+@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailRegex = /^(?=[a-zA-Z0-9])[a-zA-Z0-9.-]{1,64}@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+){1,}$/;
 
   const enteredEmailIsValid = emailRegex.test(enteredEmail.trim());
   const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
 
-  let formIsValid = false;
-  // eslint-disable-next-line
+  const textareaRegex = XRegExp('^[\\p{L}\\d\\s]{5,5000}$');
 
-  if (enteredNameIsValid && enteredEmailIsValid) {
+  const enteredMessageIsValid = textareaRegex.test(enteredMessage.trim());
+  const messageInputIsInvalid = !enteredMessageIsValid && enteredMessageTouched;
+
+  let formIsValid = false;
+
+  if (enteredNameIsValid && enteredEmailIsValid && enteredMessageIsValid) {
     formIsValid = true;
   }
 
@@ -50,17 +55,24 @@ const FeedbackForm = () => {
     setEnteredName(event.target.value);
   };
 
-  const emailInputChangeHandler = (event) => {
-    setEnteredEmail(event.target.value);
-  };
-
   const nameInputBlurHandler = () => {
     setEnteredNameTouched(true);
   };
 
-  // eslint-disable-next-line no-unused-vars
-  const emailInputBlurHandler = (event) => {
+  const emailInputChangeHandler = (event) => {
+    setEnteredEmail(event.target.value);
+  };
+
+  const emailInputBlurHandler = () => {
     setEnteredEmailTouched(true);
+  };
+
+  const messageInputChangeHandler = (event) => {
+    setEnteredMessage(event.target.value);
+  };
+
+  const messageInputBlurHandler = () => {
+    setEnteredMessageTouched(true);
   };
 
   const formSubmissionHandler = (event) => {
@@ -68,6 +80,7 @@ const FeedbackForm = () => {
 
     setEnteredNameTouched(true);
     setEnteredEmailTouched(true);
+    setEnteredMessageTouched(true);
 
     if (!formIsValid) {
       return;
@@ -77,18 +90,31 @@ const FeedbackForm = () => {
     setEnteredNameTouched(false);
     setEnteredEmail('');
     setEnteredEmailTouched(false);
+    setEnteredMessage('');
+    setEnteredMessageTouched(false);
   };
 
   const nameInputClasses = nameInputIsInvalid ? 'invalid' : '';
 
   const emailInputClasses = emailInputIsInvalid ? 'invalid' : '';
 
+  const messageTextareaClass = messageInputIsInvalid ? 'invalid' : '';
+
   const invalidName = (
-    <p className={styles['input-error']}>*Не введенe ім&apos;я або некоректно введенe ім&apos;я.</p>
+    <p className={styles['input-error']}>
+      *Не введенe ім&apos;я або некоректно введенe ім&apos;я.
+    </p>
   );
+
   const invalidEmail = (
     <p className={styles['input-error']}>
       *Не введена або некоректно введена електронна пошта
+    </p>
+  );
+
+  const invalidMessage = (
+    <p className={styles['input-error']}>
+      *Не введене або некоректно введене повідомлення
     </p>
   );
 
@@ -117,7 +143,15 @@ const FeedbackForm = () => {
         onBlur={emailInputBlurHandler}
       />
       {emailInputIsInvalid && invalidEmail}
-      <textarea type="text" placeholder="Повідомлення" />
+      <textarea
+        className={styles[messageTextareaClass]}
+        type="text"
+        placeholder="Повідомлення"
+        value={enteredMessage}
+        onChange={messageInputChangeHandler}
+        onBlur={messageInputBlurHandler}
+      />
+      {messageInputIsInvalid && invalidMessage}
       <button
         disabled={!formIsValid}
         className={styles['feedback-button']}
@@ -125,7 +159,9 @@ const FeedbackForm = () => {
         onClick={successSendMessageHandler}>
         Надіслати
       </button>
-      {showSuccessSendMessage && !formIsValid && <SuccessSendMessage message='Повідомлення надіслано!' />}
+      {showSuccessSendMessage && !formIsValid && (
+        <SuccessSendMessage message="Повідомлення надіслано!" />
+      )}
     </form>
   );
 };
