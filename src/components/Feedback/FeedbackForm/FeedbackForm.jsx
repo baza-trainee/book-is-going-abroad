@@ -102,7 +102,7 @@ const FeedbackForm = () => {
 
   const invalidName = (
     <p className={styles['input-error']}>
-      *Не введенe ім&apos;я або некоректно введенe ім&apos;я.
+      *Не введенe ім&apos;я або некоректно введенe ім&apos;я
     </p>
   );
 
@@ -114,7 +114,7 @@ const FeedbackForm = () => {
 
   const invalidMessage = (
     <p className={styles['input-error']}>
-      *Не введене або некоректно введене повідомлення
+      *Повідомлення не може бути довше за 5000 символів
     </p>
   );
 
