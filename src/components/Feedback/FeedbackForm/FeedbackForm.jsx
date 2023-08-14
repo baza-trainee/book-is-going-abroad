@@ -40,7 +40,7 @@ const FeedbackForm = () => {
   const enteredEmailIsValid = emailRegex.test(enteredEmail.trim());
   const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
 
-  const textareaRegex = XRegExp('^[\\p{L}\\d\\s]{5,5000}$');
+  const textareaRegex = XRegExp('^[\\p{L}\\d\\s]{0,5000}$');
 
   const enteredMessageIsValid = textareaRegex.test(enteredMessage.trim());
   const messageInputIsInvalid = !enteredMessageIsValid && enteredMessageTouched;
