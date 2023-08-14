@@ -48,87 +48,6 @@
     line-height: var(--name-organization-line-height);
 }
 
-.selectWrapper {
-    position: relative;
-}
-
-.selectWrapper::before {
-    position: absolute;
-    top: 53%;
-    right: 70px;
-
-    display: block;
-
-    width: 28px;
-    height: 28px;
-
-    content: '';
-
-    transform: translateY(-50%);
-
-    pointer-events: none;
-
-    background-image: url('./HeaderUpper/earth-lang.svg');
-    background-repeat: no-repeat;
-}
-
-.selectWrapper::after {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-
-    display: block;
-
-    width: 12px;
-    height: 6px;
-
-    content: '';
-
-    transform: translateY(-50%);
-
-    pointer-events: none;
-
-    background-image: url('./HeaderUpper/arrow.svg');
-    background-repeat: no-repeat;
-}
-
-.langSelect {
-    width: 110px;
-    height: 40px;
-
-    padding: 8px 10.5px 8px 16px;
-
-    appearance: none;
-
-    cursor: pointer;
-
-    color: var(--button-text-color);
-
-    border: none;
-    border-color: var(--button-pressing-bg-color);
-    border-radius: var(--button-border-radius);
-
-    outline: none;
-
-    background-color: var(--button-hover-bg-color);
-
-    font-family: var(--body-text-font-family);
-    font-size: var(--select-lang-font-size);
-    line-height: 29.9px;
-    font-weight: 500;
-}
-
-.langSelect:hover {
-    background-color: var(--button-default-bg-color);
-}
-
-.langSelect option {
-    color: var(--button-default-bg-color);
-
-    background-color: #fff;
-    text-align: center;
-}
-
 /* NAV */
 
 .navWrapper {
@@ -176,4 +95,132 @@
     font-family: var(--header-text-font-family);
     font-size: var(--header-font-size);
     line-height: var(--header-line-height);
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+    .headerWrapper {
+        background: var(--bg-primary-color);
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .header {
+        margin: 0 auto;
+        padding: 10px 15px;
+    }
+
+    .logoWrapper {
+        width: 66px;
+    }
+
+    .headerTitle {
+        font-size: 9px;
+        line-height: 10.89px;
+        width: 173px;
+    }
+
+    .burger {
+        width: 30px;
+        height: 20px;
+        position: relative;
+    }
+
+    .burger span {
+        position: absolute;
+        width: 30px;
+        background-color: var(--header-secondary-bg-color);
+        height: 3px;
+        top: 9px;
+        border-radius: 50px;
+        right: 0;
+    }
+
+    .burger::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        top: 0;
+        right: 0;
+        background-color: var(--header-secondary-bg-color);
+        border-radius: 50px;
+    }
+
+    .burger::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        background-color: var(--header-secondary-bg-color);
+        border-radius: 50px;
+    }
+
+    .headerLanguage {
+        position: absolute;
+        z-index: 9999;
+    }
+
+    .close {
+        position: absolute;
+        top: 21px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-image: url('./HeaderNav/close.svg');
+    }
+
+    .navWrapper {
+        width: 100%;
+        flex-direction: column;
+
+        margin: 0 auto;
+        padding: 75px 16px 13px 16px;
+
+        background: #fff;
+        position: absolute;
+        top: 0;
+
+        border-bottom-right-radius: 14px;
+        border-bottom-left-radius: 14px;
+    }
+
+    .navBtnWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        justify-content: space-between;
+
+        max-width: 1140px;
+        margin: 0 auto;
+
+        gap: 40px;
+        border-top: 2px solid black;
+        padding-top: 20px;
+    }
+
+    .navBtn {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        padding: 0;
+
+        color: var(--text-primary-color);
+        border: none;
+        outline: none;
+        background: none;
+    }
+
+    .navBtnText {
+        margin-top: 3px;
+
+        font-family: var(--header-text-font-family);
+        font-size: var(--header-font-size);
+        line-height: var(--header-line-height);
+        font-weight: 600;
+    }
 }

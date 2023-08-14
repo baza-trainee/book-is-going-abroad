@@ -123,3 +123,10 @@
 .custom-select__indicator svg {
     opacity: 0;
 }
+
+/* @media screen and (min-width: 320px) and (max-width: 426px) {
+    .custom-select__control {
+        position: relative;
+        z-index: 9999;
+    }
+} */

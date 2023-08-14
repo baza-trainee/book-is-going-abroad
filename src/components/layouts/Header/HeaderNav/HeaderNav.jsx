@@ -3,37 +3,32 @@ import styles from '../Header.module.css';
 
 import NavButton from './NavButtons.jsx';
 
-export default function HeaderNav() {
+export default function HeaderNav(burgerActive) {
   const navButtonsArr = [
     {
       id: 1,
       text: 'Адреси',
-
       link: 'address',
     },
     {
       id: 2,
       text: 'Активності',
-
       link: 'activity',
     },
     {
       id: 3,
       text: 'Ціль проекту',
-
       link: 'features',
     },
     {
       id: 4,
       text: 'Партнери',
-
       link: 'partners',
     },
     // eslint-disable-next-line comma-dangle
     {
       id: 5,
       text: "Зв'язатися",
-
       link: 'feedback',
     },
   ];
@@ -43,8 +38,10 @@ export default function HeaderNav() {
   ));
 
   return (
-    <nav className={styles.navWrapper}>
+    <nav
+      className={`${styles.navWrapper} ${burgerActive ? styles.active : ''}`}>
       <div className={styles.navBtnWrapper}>{RenderButtons}</div>
+      <div className={styles.close}></div>
     </nav>
   );
 }
