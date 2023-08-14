@@ -9,7 +9,7 @@ const Address = () => {
   const addresses = [
     {
       city: 'Київ',
-      address: 'вул. Краснова, 10, Бібліотека для дітей № 104 «Промінець»',
+      address: 'вул. Краснова, 10, Бібліотека для дітей № 104 "Промінець"',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.028528230678!2d30.371247139042286!3d50.45866220048677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc8d8d63a823%3A0x26d5697814583ac5!2z0JHRltCx0LvRltC-0YLQtdC60LAg0LTQu9GPINC00ZbRgtC10LkgItCf0YDQvtC80ZbQvdC10YbRjCI!5e0!3m2!1suk!2sua!4v1690991493142!5m2!1suk!2sua'
     },
     {
