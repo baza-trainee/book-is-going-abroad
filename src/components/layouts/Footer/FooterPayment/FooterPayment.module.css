@@ -1,13 +1,42 @@
 .footer-payment {
   display: flex;
-  flex-direction: column;
-  gap: 17px;
   width: 300px;
   max-width: 100%;
-}
-
-.payment-items {
-  display: flex;
   justify-content: space-between;
   gap: 5px;
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .footer-payment {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 96px;
+    order: 2;
+  }
+
+  .payment-liqpay-img {
+    width: 96px;
+    height: 20px;
+  }
+
+  .payment-mastercard-img {
+    width: 36px;
+    height: 25px;
+  }
+  
+  .payment-privat-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .payment-visa-img {
+    width: 62px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+
 }

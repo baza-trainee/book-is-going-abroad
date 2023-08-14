@@ -5,26 +5,16 @@ import privat from './privat-24-icon.svg';
 import visa from './visa-icon.svg';
 
 const FooterPayment = () => (
-    <div className={styles['footer-payment']}>
-      <div className={styles['payment-items']}>
-        <img
-          className={styles['payment-liqpay-img']}
-          src={liqpay}
-          alt="liqpay"
-        />
-        <img
-          className={styles['payment-mastercard-img']}
-          src={mastercard}
-          alt="mastercard"
-        />
-        <img
-          className={styles['payment-privat-img']}
-          src={privat}
-          alt="privat"
-        />
-        <img className={styles['payment-visa-img']} src={visa} alt="visa" />
-      </div>
-    </div>
+  <div className={styles['footer-payment']}>
+    <img className={styles['payment-liqpay-img']} src={liqpay} alt="liqpay" />
+    <img
+      className={styles['payment-mastercard-img']}
+      src={mastercard}
+      alt="mastercard"
+    />
+    <img className={styles['payment-privat-img']} src={privat} alt="privat" />
+    <img className={styles['payment-visa-img']} src={visa} alt="visa" />
+  </div>
 );
 
 export default FooterPayment;

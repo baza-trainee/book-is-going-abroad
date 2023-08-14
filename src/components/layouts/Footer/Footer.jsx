@@ -20,16 +20,23 @@ const Footer = () => {
       <Container>
         <div className={styles['footer-container']}>
           <div className={styles['footer-wrapper']}>
-            <Link to="/" onClick={handleLogoClick}>
-              <img className={styles['footer-logo']} src={logo} alt="logo" />
-            </Link>
-            <p className={styles['footer-org-name']}>
-              БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
-              ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
-            </p>
-            <FooterPayment />
-            <FooterDocs />
-            <FooterContacts />
+            <div className={styles['footer-wrapper-organization']}>
+              <Link
+                to="/"
+                onClick={handleLogoClick}
+                className={styles['footer-logo']}>
+                <img src={logo} alt="logo" />
+              </Link>
+              <p className={styles['footer-org-name']}>
+                БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
+                ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
+              </p>
+            </div>
+            <div className={styles['footer-wrapper-content']}>
+              <FooterPayment />
+              <FooterDocs />
+              <FooterContacts />
+            </div>
           </div>
           <div>
             <p className={styles['footer-copywriter']}>
