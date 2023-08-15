@@ -47,3 +47,41 @@
   -o-transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
+
+.accordion-description {
+  margin-top: 12px;
+  padding: 24px 44px;
+  border: 1px solid #000;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+
+@media screen and (max-width: 1170px) {
+  .support-accordions,
+  .accordion-header {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .support-accordions,
+  .accordion-header {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .accordion-header {
+    padding: 5px 20px;
+  }
+  .accordion-title {
+    font-size: var(--h4-mob-font-size);
+  }
+
+  .accordion-description {
+    padding: 12px 12px;
+  }
+}

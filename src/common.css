@@ -50,7 +50,11 @@
   --h5-line-height: 41.4px;
   --h6-font-size: 25px;
   --h6-line-height: 34.4px;
-  
+
+  /* stylelint-disable-next-line custom-property-empty-line-before */
+  --h2-mob-font-size: 26px;
+  --h4-mob-font-size: 20px;
+  --h2-mob-line-height: 42px;
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --body-text-font-family: medium, sans-serif;
   --body1-font-size: 24px;
@@ -59,6 +63,9 @@
   --body2-line-height: 26.2px;
   --body3-font-size: 16px;
   --body3-line-height: 22.1px;
+  
+  /* stylelint-disable-next-line custom-property-empty-line-before */
+  --body2-mob-font-size: 16px;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --select-lang-font-size: 20px;
