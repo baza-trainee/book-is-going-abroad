@@ -50,6 +50,10 @@
   --h5-line-height: 41.4px;
   --h6-font-size: 25px;
   --h6-line-height: 34.4px;
+
+  /* stylelint-disable-next-line custom-property-empty-line-before */
+  --h2-mob-font-size: 26px;
+  --h4-mob-font-size: 20px;
   
   /* stylelint-disable-next-line custom-property-empty-line-before */
   --body-text-font-family: medium, sans-serif;

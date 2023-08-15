@@ -8,8 +8,13 @@
 .phones-list li {
   display: flex;
   gap: 7px;
-  align-items: flex-start;
+  align-items: center;
 }
+
+.phones-list img {
+  padding: 0 0 5px 0;
+}
+
 
 .phones-list li:hover {
   cursor: pointer;
