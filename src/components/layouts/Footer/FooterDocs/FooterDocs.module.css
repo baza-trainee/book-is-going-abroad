@@ -29,28 +29,11 @@
   .footer-docs {
     order: 1;
   }
-  
-  .footer-docs li a,
-  .footer-docs button {
-    font-size: var(--footer-font-size);
-    font-family: var(--footer-text-font-family);
-    color: var(--footer-primary-text-color);
-    transition: transform 0.1s ease-in-out;
-    line-height: var(--footer-line-height);
-    cursor: pointer;
-  }
-  
-  .footer-docs li:hover,
-  .footer-docs button:hover {
-    transform: scale(1.1);
-  }
-  
-  .footer-docs button {
-    background: none;
-    padding: 0;
-  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 426px) {
-
+  .footer-docs {
+    width: 155px;
+    gap: 16px;
+  }
 }

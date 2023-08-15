@@ -38,7 +38,7 @@ const Footer = () => {
               <FooterContacts />
             </div>
           </div>
-          <div>
+          <div className={styles['footer-wrapper-copywriter']}>
             <p className={styles['footer-copywriter']}>
               Розробка BazaTraineeUkraine © 2023 Всі права захищені
             </p>
