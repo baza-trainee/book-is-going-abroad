@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable comma-dangle */
 import styles from '../Header.module.css';
 
 import NavButton from './NavButtons.jsx';
 
-export default function HeaderNav(burgerActive) {
+export default function HeaderNav({ burgerActive, setBurgerActive }) {
   const navButtonsArr = [
     {
       id: 1,
@@ -33,6 +34,10 @@ export default function HeaderNav(burgerActive) {
     },
   ];
 
+  function toggleBurger() {
+    setBurgerActive((prevState) => !prevState);
+  }
+
   const RenderButtons = navButtonsArr.map(({ id, text, link }) => (
     <NavButton key={id} text={text} link={link} block="center" />
   ));
@@ -41,7 +46,7 @@ export default function HeaderNav(burgerActive) {
     <nav
       className={`${styles.navWrapper} ${burgerActive ? styles.active : ''}`}>
       <div className={styles.navBtnWrapper}>{RenderButtons}</div>
-      <div className={styles.close}></div>
+      <div className={styles.close} onClick={toggleBurger}></div>
     </nav>
   );
 }

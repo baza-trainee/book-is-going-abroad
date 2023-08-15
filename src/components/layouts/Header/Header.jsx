@@ -7,13 +7,16 @@ const Header = () => {
   const [burgerActive, setBurgerActive] = useState(false);
 
   return (
-    <div className={styles.headerWrapper}>
+    <section className={styles.headerWrapper}>
       <HeaderUpper
         setBurgerActive={setBurgerActive}
         burgerActive={burgerActive}
       />
-      <HeaderNav burgerActive={burgerActive} />
-    </div>
+      <HeaderNav
+        setBurgerActive={setBurgerActive}
+        burgerActive={burgerActive}
+      />
+    </section>
   );
 };
 

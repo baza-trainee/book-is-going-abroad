@@ -117,16 +117,90 @@
 }
 
 .custom-select__indicator {
-    padding-left: 10px !important;
+    padding: 0 !important;
 }
 
 .custom-select__indicator svg {
     opacity: 0;
 }
 
-/* @media screen and (min-width: 320px) and (max-width: 426px) {
+@media screen and (min-width: 426px) and (max-width: 600px) {
     .custom-select__control {
-        position: relative;
-        z-index: 9999;
+        width: 87px !important;
     }
-} */
+
+    .custom-select__value-container::before {
+        top: 48%;
+        left: 5px;
+        width: 26px;
+        height: 26px;
+        content: '';
+        transform: translateY(-50%);
+    }
+
+    .custom-select__single-value {
+        width: 30px !important;
+        margin-left: 22px !important;
+        margin-top: 1px !important;
+        padding-top: 1px !important;
+    }
+
+    .custom-select__indicator {
+        padding-left: 0px !important;
+    }
+
+    .custom-select__indicator::before {
+        position: absolute;
+        top: 47%;
+        right: 9px;
+        display: block;
+        width: 12px;
+        height: 6px;
+        content: '';
+        transform: translateY(-5%);
+        pointer-events: none;
+        background-image: url('../arrow.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 790px) {
+    .custom-select__control {
+        width: 87px !important;
+    }
+
+    .custom-select__value-container::before {
+        top: 48%;
+        left: 5px;
+        width: 26px;
+        height: 26px;
+        content: '';
+        transform: translateY(-50%);
+    }
+
+    .custom-select__single-value {
+        width: 30px !important;
+        margin-left: 24px !important;
+        margin-top: 1px !important;
+        padding-top: 1px !important;
+    }
+
+    .custom-select__indicator {
+        padding: 0 !important;
+    }
+
+
+    .custom-select__indicator::before {
+        position: absolute;
+        top: 45%;
+        right: 6px;
+        display: block;
+        width: 12px;
+        height: 6px;
+        content: '';
+        transform: translateY(-5%);
+        pointer-events: none;
+        background-image: url('../arrow.svg');
+        background-repeat: no-repeat;
+    }
+}

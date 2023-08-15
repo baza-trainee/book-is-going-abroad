@@ -32,7 +32,10 @@ export default function HeaderUpper({ setBurgerActive, burgerActive }) {
         ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
       </p>
 
-      <div className={styles.headerLanguage}>
+      <div
+        className={`${styles.headerLanguage} ${
+          burgerActive ? styles.active : ''
+        }`}>
         <LangSelect />
       </div>
 
