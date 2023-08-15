@@ -15,7 +15,7 @@
   }
 }
 
-@media screen and (min-width: 427px) and (max-width: 769px) {
+@media screen and (min-width: 426px) and (max-width: 770px) {
   .footer-payment {
     flex-direction: column;
     align-items: center;
@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 426px) {
+@media screen and (max-width: 426px) {
   .footer-payment {
     margin-bottom: 27px;
   }
