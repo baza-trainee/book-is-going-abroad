@@ -4,6 +4,8 @@
   align-items: flex-start;
   gap: 4px;
   position: relative;
+  width: 100%;
+  max-width: 152px;
 }
 
 .footer-phones li,
@@ -74,51 +76,15 @@
   -webkit-animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@media screen and (min-width: 427px) and (max-width: 769px) {
+@media screen and (min-width: 426px) and (max-width: 770px) {
   .footer-contacts {
     order: 3;
   }
-  
-  .footer-phones li,
-  .footer-email p {
-    font-size: var(--footer-font-size);
-    font-family: var(--footer-text-font-family);
-    color: var(--footer-primary-text-color);
-    line-height: var(--footer-line-height);
-  }
-  
-  .footer-email p:hover {
-    color: var(--footer-primary-text-color);
-  }
-  
-  .footer-phones {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-  
-  .footer-phones li,
-  .footer-email {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    transition: transform 0.1s ease-in-out;
-  }
-  
-  .footer-email {
-    align-items: flex-start;
-    width: 142px;
-    max-width: 100%;
-  }
-  
-  .footer-phones li:hover,
-  .footer-email:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
 }
 
-/* @media screen and ((min-width: 320px) and (max-width: 426px) {
-
-} */
+@media screen and (max-width: 426px) {
+  .footer-contacts {
+    width: 100%;
+    max-width: 155px;
+  }
+}
