@@ -19,20 +19,22 @@ export default function LangSelect() {
   const selectRef = useRef(null);
 
   useEffect(() => {
-    function handleClickOutside(event) {
+    function handleClickOrTouchOutside(event) {
       if (selectRef.current && !selectRef.current.contains(event.target)) {
         setIsSelectOpen(false);
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOrTouchOutside);
+
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOrTouchOutside);
     };
   }, []);
 
-  const handleClick = () => {
-    setIsSelectOpen(!isSelectOpen);
+  const toggleSelect = () => {
+    setIsSelectOpen((prevState) => !prevState);
+    console.log('click');
   };
 
   const getValue = () =>
@@ -43,7 +45,14 @@ export default function LangSelect() {
   };
 
   return (
-    <div ref={selectRef} onClick={handleClick}>
+    <div
+      className="langWrapper"
+      ref={selectRef}
+      onClick={toggleSelect}
+      onTouchStart={(event) => {
+        event.stopPropagation();
+        setIsSelectOpen(true);
+      }}>
       <Select
         menuIsOpen={isSelectOpen}
         onChange={onChange}

@@ -10,7 +10,7 @@ export function scroll(className, block) {
   }
 }
 
-const NavButton = ({ icon, text, link, block }) => {
+const NavButton = ({ icon, text, link, block, closeMenu }) => {
   const navigate = useNavigate();
   const [scrollAfterRedirect, setScrollAfterRedirect] = useState(false);
 
@@ -26,9 +26,11 @@ const NavButton = ({ icon, text, link, block }) => {
   const changePathAndScroll = () => {
     if (window.location.pathname === '/') {
       scroll(link, block);
+      closeMenu();
     } else {
       navigate('/#top');
       setScrollAfterRedirect(true);
+      closeMenu();
     }
   };
 
