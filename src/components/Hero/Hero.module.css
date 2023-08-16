@@ -1,7 +1,7 @@
 .hero {
   background-size: cover;
   background-position-y: 55%;
-  margin-top: 159px;
+  margin-top: 156px;
   transition: background-image .4s ease-in-out;
 }
 
@@ -163,7 +163,7 @@
     background-size: cover;
     background-position-y: 55%;
     background-position-x: 38%;
-    margin-top: 159px;
+    margin-top: 72px;
     transition: background-image .4s ease-in-out;
     width: 100vw;
   }
@@ -242,6 +242,10 @@
 }
 
 @media screen and (min-width: 426px) and (max-width: 675px) {
+  .hero {
+    margin-top: 156px !important;
+  }
+
   .container {
     padding: 0 10px;
   }
@@ -277,6 +281,10 @@
 }
 
 @media screen and (min-width: 675px) and (max-width: 769px) {
+  .hero {
+    margin-top: 157px !important;
+  }
+
   .container {
     padding: 0 10px;
   }

@@ -20,7 +20,7 @@ const Hero = () => {
       const nextIndex = (slideIndex + 1) % slides.length;
       setBackgroundSlide(slides[nextIndex]);
       setSlideIndex(nextIndex);
-    }, 8000);
+    }, 3000);
 
     return () => clearInterval(interval);
   });
