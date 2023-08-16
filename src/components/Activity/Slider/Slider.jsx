@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+// eslint-disable-next-line import/extensions
+import useWindowSize from '../useWindowSize.js';
 import Button from '../../UI/Button.jsx';
 import styles from './Slider.module.css';
 import slide1 from '../../../assets/img/activity-slider/slide1.jpg';
 import slide2 from '../../../assets/img/activity-slider/slide2.jpg';
 import slide3 from '../../../assets/img/activity-slider/slide3.jpg';
+import slide1Small from '../../../assets/img/activity-slider/slide1-small.jpg';
+import slide2Small from '../../../assets/img/activity-slider/slide2-small.jpg';
+import slide3Small from '../../../assets/img/activity-slider/slide3-small.jpg';
 import arrowPrev from './arrow-prev.svg';
 import arrowNext from './arrow-next.svg';
 
@@ -12,6 +17,10 @@ const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const slides = [slide1, slide2, slide3];
+  const slidesSmall = [slide1Small, slide2Small, slide3Small];
+
+  const windowSize = useWindowSize();
+  const { width } = windowSize;
 
   const handleSlideChange = (index) => {
     setActiveSlide(index);
@@ -36,7 +45,7 @@ const Slider = () => {
             className={`${styles.slide} ${
               index === activeSlide ? `${styles.active}` : ''
             }`}>
-            <img src={slide} alt={`Slide ${index + 1}`} />
+            <img src={width > 769 ? slide : slidesSmall[index]} alt={`Slide ${index + 1}`} />
           </div>
         ))}
         <div className={styles['slider-arrows']}>
@@ -63,7 +72,7 @@ const Slider = () => {
           />
         ))}
       </div>
-      <NavLink to="/gallery">
+      <NavLink className={styles['slider-btn-link']} to="/gallery">
         <Button className={styles['slider-btn']}>Переглянути</Button>
       </NavLink>
     </div>

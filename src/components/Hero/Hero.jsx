@@ -30,7 +30,7 @@ const Hero = () => {
       className={styles.hero}
       style={{ backgroundImage: `url(${backgroundSlide})` }}>
       <div className={styles['hero-slider']}>
-        <Container>
+        <Container className={styles.container}>
           <div className={styles.heroWrapper}>
             <h1 className={styles.heroTitle}>ПОРТАЛ ГУМАНІТАРНОЇ ДОПОМОГИ</h1>
 

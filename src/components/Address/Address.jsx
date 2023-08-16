@@ -213,9 +213,16 @@ const Address = () => {
                 styles['address-select']
               } ${isCitySelectOpen ? styles.open : ''}`}>
               <div className={styles['select-title']}>{selectedCity}</div>
-              <div className={styles['address-select-inputs']}>
+              <div className={styles['address-select-inputs']} onClick={(e) => {
+                toggleCitySelect();
+                handleCityChange(e);
+              }}>
                 {uniqueCities.map((city, index) => (
-                  <label key={index} value={city}>
+                  <label key={index} value={city}
+                    onClick={() => {
+                      setIsCitySelectOpen(false);
+                      setIsAddressSelectOpen(false);
+                    }}>
                     <img
                       src={
                         city === selectedCity
@@ -248,11 +255,14 @@ const Address = () => {
                 isAddressSelectOpen ? styles.open : ''
               }`}>
                 <div className={styles['select-title']}>{selectedAddress}</div>
-              <div className={styles['address-select-inputs']}>
+              <div className={styles['address-select-inputs']} onClick={(e) => {
+                toggleAddressSelect();
+                handleAddressChange(e);
+              }}>
                 {addresses
                   .filter((address) => address.city === selectedCity)
                   .map((address, index) => (
-                  <label key={index} value={address.address}>
+                  <label key={index} value={address.address} >
                     <img
                       src={
                         address.address === selectedAddress
