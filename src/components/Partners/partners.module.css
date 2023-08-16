@@ -13,6 +13,25 @@
 
 .partnersLogoWrapper {
     display: flex;
-    gap: 150px;
-    justify-content: center;
+    justify-content: space-around;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+    .partnersTitle {
+        font-size: 26px;
+        line-height: 35.88px;
+        margin-bottom: 40px;
+    }
+
+    .partnersLogoWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 156px;
+    }
 }
