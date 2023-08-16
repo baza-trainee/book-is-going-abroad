@@ -13,13 +13,13 @@ import styles from './Main.module.css';
 const Main = () => (
   // eslint-disable-next-line react/prop-types
   <main className={styles.main}>
-    {/* <Hero />
+    <Hero />
     <Features />
     <Activity />
     <Address />
     <Directions />
     <Partners />
-    <Feedback /> */}
+    <Feedback />
     <Support />
   </main>
 );
