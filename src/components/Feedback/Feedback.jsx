@@ -9,12 +9,12 @@ const Feedback = () => (
     <Container>
       <div className={styles['feedback-wrapper']}>
         <h2 className={styles['feedback-title']}>Зворотній зв’язок</h2>
-        <div className={styles['feedback-content-wrapper']}>
-          <div className={styles['feedback-form-wrapper']}>
+        <div className={styles['feedback-wrapper-content']}>
+          <div className={styles['feedback-wrapper-form']}>
             <h4 className={styles['feedback-subtitle']}>Напишіть нам</h4>
             <FeedbackForm />
           </div>
-          <div className={styles['feedback-phones-wrapper']}>
+          <div className={styles['feedback-wrapper-phones']}>
             <h4 className={styles['feedback-subtitle']}>Зателефонуйте нам</h4>
             <FeedbackPhones />
           </div>
