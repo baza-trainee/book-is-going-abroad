@@ -22,21 +22,18 @@ const Contact = () => {
       <ContactItem
         title="Повідомити"
         text="Про бажання надати гуманітарну допомогу"
-        action="ЗАПОВНИТИ ФОРМУ"
         onClick={GoogleFormInform}
       />
 
       <ContactItem
         title="Оформити"
         text="Запит на отримання гуманітарної допомоги"
-        action="ЗАПОВНИТИ ФОРМУ"
         onClick={GoogleFormNeed}
       />
 
       <ContactItem
         title="Хочу"
         text="До вашої волонтерської команди"
-        action="ЗАПОВНИТИ ФОРМУ"
         onClick={GoogleFormWork}
       />
     </div>
