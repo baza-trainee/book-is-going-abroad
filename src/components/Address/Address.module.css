@@ -14,6 +14,7 @@
   font-weight: 600;
   color: var(--feedback-divider-color);
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .address-map-wrapper {
@@ -160,4 +161,58 @@
 
 .address-map iframe {
   width: 100%;
+}
+
+@media (max-width: 1120px) {
+  .address-map-wrapper {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .address-map-wrapper {
+    flex-direction: column;
+  }
+
+  .address-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .select-city-wrapper {
+    margin: 0;
+  }
+
+  .address-map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .address-select {
+    width: 48%;
+  }
+}
+
+@media (max-width: 426px) {
+  .address-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .address-inputs {
+    flex-direction: column;
+  }
+
+  .address-select {
+    width: 100%;
+    max-width: 328px;
+  }
+
+  .select-city-wrapper {
+    margin-bottom: 20px;
+  }
 }
