@@ -6,8 +6,8 @@ import phoneNum from './feedback-phone-icon.svg';
 
 const contactsArray = [
   { id: 1, phone: '+38 044 209 53 02', icon: phoneNum },
-  { id: 2, phone: '+38 098 683 85 21', icon: phoneNum },
-  { id: 3, phone: '+38 098 306 84 84', icon: phoneNum },
+  { id: 2, phone: '+38 098 306 84 84', icon: phoneNum },
+  { id: 3, phone: '+38 098 683 85 21', icon: phoneNum },
   { id: 4, phone: '+38 063 499 37 69', icon: phoneNum }
 ];
 
