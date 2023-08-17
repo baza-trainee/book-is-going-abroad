@@ -1,19 +1,23 @@
+/* eslint-disable operator-linebreak */
 import styles from '../Hero.module.css';
 import ContactItem from './ContactItem/ContactItem.jsx';
 
 const Contact = () => {
   const GoogleFormInform = () => {
-    const url = 'https://www.google.com';
+    const url =
+      'https://docs.google.com/forms/d/e/1FAIpQLScRci2XdSHH7rjXyerkOWscKGf0EILxzSbiMSzD2Q6PEM5-3Q/viewform';
     window.open(url, '_blank');
   };
 
   const GoogleFormNeed = () => {
-    const url = 'https://www.google.com';
+    const url =
+      'https://docs.google.com/forms/d/e/1FAIpQLSersXKfIVsb6QqG6nGtAuyG8U-bluzKcabLY6rHpYsWT6va_Q/viewform';
     window.open(url, '_blank');
   };
 
   const GoogleFormWork = () => {
-    const url = 'https://www.google.com';
+    const url =
+      'https://docs.google.com/forms/d/e/1FAIpQLScQprVPJ3Ka5FRxrORQJMKPGLxnUml16T4QTqUfoVzvgOQmvA/viewform';
     window.open(url, '_blank');
   };
 
