@@ -29,3 +29,19 @@
   font-size: var(--button-font-size);
   font-weight: 600;
 }
+
+@media (max-width: 506px) {
+  .not-found-page {
+    padding-top: 220px;
+  }
+}
+
+@media (max-width: 426px) {
+  .not-found-page {
+    padding-top: 74px;
+  }
+
+  .not-found-page-img-wrapper {
+    width: 100%;
+  }
+}
