@@ -39,7 +39,13 @@ export default function HeaderNav({ burgerActive, setBurgerActive }) {
   }
 
   const RenderButtons = navButtonsArr.map(({ id, text, link }) => (
-    <NavButton key={id} text={text} link={link} block="center" />
+    <NavButton
+      key={id}
+      text={text}
+      link={link}
+      block="center"
+      closeMenu={toggleBurger}
+    />
   ));
 
   return (
