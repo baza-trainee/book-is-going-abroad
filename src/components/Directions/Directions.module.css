@@ -99,7 +99,642 @@
     display: none;
 }
 
-@media screen and (max-width:426px) {
+
+@media screen and (max-width:1340px) {
+    .directionContainer {
+        width: 98%;
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .directionWrapper {
+        padding: var(--section-padding-primary);
+        padding-bottom: 40px;
+    }
+
+    .iconsWrapper {
+        position: relative;
+        padding-left: 0px;
+        margin: 0 auto;
+    }
+
+    .sectionTitle {
+        font-family: var(--heading-text-font-family);
+        text-align: center;
+        font-size: var(--h2-font-size);
+        line-height: var(--h2-line-height);
+        margin-bottom: 40px;
+    }
+
+    .listWrapper1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .listWrapper2 {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        margin: 0 auto;
+        position: static;
+        width: max-content;
+        /* padding-left: 50px; */
+    }
+
+    .listWrapper3 {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: -280px;
+    }
+
+    .listWrapper4 {
+        display: flex;
+        flex-wrap: wrap;
+        position: static;
+        /* left: 180px;
+        top: 480px; */
+        margin: 0 auto;
+        margin-top: -80px;
+        width: max-content;
+    }
+
+    .listWrapper5 {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: -165px;
+    }
+
+    .iconWrapper__firstRow {
+        position: relative;
+        margin-right: 30px;
+    }
+
+    .iconWrapper__secondRow {
+        position: relative;
+        left: 150px;
+        bottom: 100px;
+    }
+
+    .iconWrapper__secondRow:not(:last-child) {
+        position: relative;
+        left: 120px;
+        bottom: 100px;
+        margin-right: 25px;
+    }
+
+    .iconWrapper__thirdRow {
+        position: relative;
+        margin-right: 35px;
+        top: 50px;
+    }
+
+    .iconWrapper__thirdRow:last-child {
+        position: relative;
+        margin-left: 35px;
+        top: 50px;
+    }
+
+    .iconWrapper__fourthRow {
+        position: relative;
+        margin-right: 80px;
+    }
+
+    .iconWrapper__fifthRow {
+        position: relative;
+        margin-right: 30px;
+        top: 80px;
+    }
+
+    .iconWrapper__fifthRow:last-child {
+        position: relative;
+        margin-left: 30px;
+    }
+
+    .expandButton {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1023px) {
+    .expandedWrapper {
+        display: block;
+    }
+
+    .expandButton {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 49px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle {
+        font-family: var(--heading-text-font-family);
+        text-align: center;
+        font-size: 26px;
+        width: 400px;
+        line-height: 35.88px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .directionWrapper {
+
+        padding: 40 20px;
+    }
+
+    .iconsWrapper {
+        position: relative;
+        padding-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .listWrapper1 {
+        display: flex;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper2 {
+        display: flex;
+        margin-left: 0px;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper3 {
+        display: flex;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper4 {
+        display: flex;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper5 {
+        display: flex;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .iconWrapper__firstRow {
+        /* position: relative; */
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow:not(:last-child) {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin-top: 20px;
+        margin-right: 0px;
+        display: block;
+    }
+
+    .iconWrapper__thirdRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        display: block;
+        top: 0px;
+    }
+
+    .iconWrapper__fourthRow {
+        position: relative;
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__fifthRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        top: 0px;
+    }
+
+    .iconWrapper__fifthRow:last-child {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .expandedWrapper {
+        display: block;
+    }
+
+    .expandButton {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 49px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle {
+        font-family: var(--heading-text-font-family);
+        text-align: center;
+        font-size: 26px;
+        width: 400px;
+        line-height: 35.88px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .directionWrapper {
+
+        padding: 40 20px;
+    }
+
+    .iconsWrapper {
+        position: relative;
+        padding-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .listWrapper1 {
+        display: flex;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper2 {
+        display: flex;
+        margin-left: 0px;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper3 {
+        display: flex;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper4 {
+        display: flex;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper5 {
+        display: flex;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .iconWrapper__firstRow {
+        /* position: relative; */
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow:not(:last-child) {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin-top: 20px;
+        margin-right: 0px;
+        display: block;
+    }
+
+    .iconWrapper__thirdRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        display: block;
+        top: 0px;
+    }
+
+    .iconWrapper__fourthRow {
+        position: relative;
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__fifthRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        top: 0px;
+    }
+
+    .iconWrapper__fifthRow:last-child {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .expandedWrapper {
+        display: block;
+    }
+
+    .expandButton {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 49px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle {
+        font-family: var(--heading-text-font-family);
+        text-align: center;
+        font-size: 26px;
+        width: 400px;
+        line-height: 35.88px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .directionWrapper {
+
+        padding: 40 20px;
+    }
+
+    .iconsWrapper {
+        position: relative;
+        padding-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .listWrapper1 {
+        display: flex;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper2 {
+        display: flex;
+        margin-left: 0px;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper3 {
+        display: flex;
+        position: relative;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper4 {
+        display: flex;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .listWrapper5 {
+        display: flex;
+        pointer-events: none;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .iconWrapper__firstRow {
+        /* position: relative; */
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow:not(:last-child) {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin-top: 20px;
+        margin-right: 0px;
+        display: block;
+    }
+
+    .iconWrapper__thirdRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        display: block;
+        top: 0px;
+    }
+
+    .iconWrapper__fourthRow {
+        position: relative;
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__fifthRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        top: 0px;
+    }
+
+    .iconWrapper__fifthRow:last-child {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .expandedWrapper {
+        display: block;
+    }
+
+    .expandButton {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 49px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle {
+        font-family: var(--heading-text-font-family);
+        text-align: center;
+        font-size: 26px;
+        width: 400px;
+        line-height: 35.88px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .directionWrapper {
+
+        padding: 40 20px;
+    }
+
+    .iconsWrapper {
+        position: relative;
+        padding-left: 0px;
+    }
+
+    .listWrapper1 {
+        display: block;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .listWrapper2 {
+        display: block;
+        margin-left: 0px;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .listWrapper3 {
+        display: block;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .listWrapper4 {
+        display: block;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        pointer-events: none;
+    }
+
+    .listWrapper5 {
+        display: block;
+        pointer-events: none;
+    }
+
+    .iconWrapper__firstRow {
+        /* position: relative; */
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow:not(:last-child) {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin-top: 20px;
+        margin-right: 0px;
+        display: block;
+    }
+
+    .iconWrapper__thirdRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        display: block;
+        top: 0px;
+    }
+
+    .iconWrapper__fourthRow {
+        position: relative;
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__fifthRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        top: 0px;
+    }
+
+    .iconWrapper__fifthRow:last-child {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width:480px) {
     .expandedWrapper {
         display: block;
     }
@@ -119,6 +754,126 @@
         font-size: 26px;
         width: 350px;
         line-height: 35.88px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .directionWrapper {
+
+        padding: 40 20px;
+    }
+
+    .iconsWrapper {
+        position: relative;
+        padding-left: 0px;
+    }
+
+    .listWrapper1 {
+        display: block;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .listWrapper2 {
+        display: block;
+        margin-left: 0px;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .listWrapper3 {
+        display: block;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .listWrapper4 {
+        display: block;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        pointer-events: none;
+    }
+
+    .listWrapper5 {
+        display: block;
+        pointer-events: none;
+    }
+
+    .iconWrapper__firstRow {
+        /* position: relative; */
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__secondRow:not(:last-child) {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin-top: 20px;
+        margin-right: 0px;
+        display: block;
+    }
+
+    .iconWrapper__thirdRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        display: block;
+        top: 0px;
+    }
+
+    .iconWrapper__fourthRow {
+        position: relative;
+        margin-right: 0px;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .iconWrapper__fifthRow {
+        position: relative;
+        margin-right: 0px;
+        margin-top: 20px;
+        top: 0px;
+    }
+
+    .iconWrapper__fifthRow:last-child {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 426px) {
+    .expandedWrapper {
+        display: block;
+    }
+
+    .expandButton {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 49px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle {
+        font-family: var(--heading-text-font-family);
+        text-align: center;
+        font-size: 26px;
+        width: 350px;
+        line-height: 35.88px;
+        margin: 0 auto;
         margin-bottom: 40px;
     }
 

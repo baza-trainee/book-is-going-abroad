@@ -9,9 +9,9 @@ const PopupIcon = (props) => {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    setIsDesktop(window.innerWidth > 767);
+    setIsDesktop(window.innerWidth > 1023);
 
-    if (window.innerWidth <= 767) {
+    if (window.innerWidth <= 1023) {
       setModalActive(true);
     }
   }, []);

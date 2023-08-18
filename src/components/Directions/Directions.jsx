@@ -25,12 +25,12 @@ import arrow from '../Features/features-arrow.svg';
 
 const Directions = () => {
   const [showAllDirections, setShowAllDirections] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
   const [arrowRotation, setArrowRotation] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1023);
     };
 
     window.addEventListener('resize', handleResize);
