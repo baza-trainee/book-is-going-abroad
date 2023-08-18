@@ -2,7 +2,7 @@
 /* eslint-disable quotes */
 /* eslint-disable max-len */
 /* eslint-disable comma-dangle */
-
+import React, { useState, useEffect } from 'react';
 import Container from '../layouts/Container/Container.jsx';
 import PopupIcon from './PopupIcon/PopupIcon.jsx';
 import icon1 from './PopupIcon/Group 1.png';
@@ -20,8 +20,25 @@ import icon12 from './PopupIcon/Group 12.png';
 import icon13 from './PopupIcon/Group 13.png';
 import icon14 from './PopupIcon/Group 14.png';
 import styles from './Directions.module.css';
+import Button from '../UI/Button.jsx';
+import arrow from '../Features/features-arrow.svg';
 
 const Directions = () => {
+  const [showAllDirections, setShowAllDirections] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [arrowRotation, setArrowRotation] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const directionsRow1 = [
     {
       id: '1',
@@ -62,7 +79,7 @@ const Directions = () => {
     {
       id: 4,
       icon: icon4,
-      content: 'Видавнича діяльність дитячої літератури',
+      content: ' Видавнича \n діяльність дитячої літератури',
       row: '__secondRow',
       style: 'four',
       num: '4',
@@ -258,6 +275,11 @@ const Directions = () => {
     )
   );
 
+  const toggleDirections = () => {
+    setShowAllDirections(!showAllDirections);
+    setArrowRotation((prevRotation) => prevRotation + 180);
+  };
+
   return (
     <section className={styles.directionWrapper}>
       <Container className={styles.directionContainer}>
@@ -266,18 +288,65 @@ const Directions = () => {
           <div className={styles.listWrapper1} data-testid="row1">
             {renderDirections1}
           </div>
-          <div className={styles.listWrapper2} data-testid="row2">
-            {renderDirections2}
-          </div>
-          <div className={styles.listWrapper3} data-testid="row3">
-            {renderDirections3}
-          </div>
-          <div className={styles.listWrapper4} data-testid="row4">
-            {renderDirections4}
-          </div>
-          <div className={styles.listWrapper5} data-testid="row5">
-            {renderDirections5}
-          </div>
+          {isMobile && (
+            <>
+              {showAllDirections ? (
+                <>
+                  <div className={styles.listWrapper2} data-testid="row2">
+                    {renderDirections2}
+                  </div>
+                  <div className={styles.listWrapper3} data-testid="row3">
+                    {renderDirections3}
+                  </div>
+                  <div className={styles.listWrapper4} data-testid="row4">
+                    {renderDirections4}
+                  </div>
+                  <div className={styles.listWrapper5} data-testid="row5">
+                    {renderDirections5}
+                  </div>
+                  <Button
+                    onClick={toggleDirections}
+                    className={styles.expandButton}>
+                    Зменьшити
+                    <img
+                      src={arrow}
+                      alt="Arrow"
+                      className={styles['features-arrow']}
+                      style={{ transform: `rotate(${arrowRotation}deg)` }}
+                    />
+                  </Button>
+                </>
+              ) : (
+                <Button
+                  onClick={toggleDirections}
+                  className={styles.expandButton}>
+                  Збільшити
+                  <img
+                    src={arrow}
+                    alt="Arrow"
+                    className={styles['features-arrow']}
+                    style={{ transform: `rotate(${arrowRotation}deg)` }}
+                  />
+                </Button>
+              )}
+            </>
+          )}
+          {!isMobile && (
+            <>
+              <div className={styles.listWrapper2} data-testid="row2">
+                {renderDirections2}
+              </div>
+              <div className={styles.listWrapper3} data-testid="row3">
+                {renderDirections3}
+              </div>
+              <div className={styles.listWrapper4} data-testid="row4">
+                {renderDirections4}
+              </div>
+              <div className={styles.listWrapper5} data-testid="row5">
+                {renderDirections5}
+              </div>
+            </>
+          )}
         </div>
       </Container>
     </section>

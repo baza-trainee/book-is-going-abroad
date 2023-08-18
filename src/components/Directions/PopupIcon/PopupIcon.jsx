@@ -1,10 +1,26 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../Directions.module.css';
 import Modal from '../Modal/Modal.jsx';
 
 const PopupIcon = (props) => {
   const [modalActive, setModalActive] = useState(false);
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    setIsDesktop(window.innerWidth > 767);
+
+    if (window.innerWidth <= 767) {
+      setModalActive(true);
+    }
+  }, []);
+
+  const handleMouseOver = () => {
+    if (!modalActive && isDesktop) {
+      setModalActive(true);
+    }
+  };
 
   return (
     <div className={styles[`${'iconWrapper'}${props.row}`]}>
@@ -13,7 +29,7 @@ const PopupIcon = (props) => {
         className={modalActive ? 'hideIcon' : 'showIcon'}></img>
       <div
         className={`showModal ${props.style}`}
-        onMouseOver={() => setModalActive(true)}></div>
+        onMouseOver={handleMouseOver}></div>
       <Modal
         active={modalActive}
         setActive={setModalActive}

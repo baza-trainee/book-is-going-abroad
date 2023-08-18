@@ -29,6 +29,7 @@
     transform: scale(1);
     margin: 1px;
     display: flex;
+    align-items: center;
 }
 
 .modalContentLast {
@@ -40,6 +41,7 @@
     margin: 1px;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
 }
 
 .miniIcon {
@@ -48,7 +50,7 @@
 }
 
 .miniIconLast {
-    transform: scale(0.9) translateX(50px) translateY(-50px);
+    transform: scale(0.9) translateX(60px) translateY(-50px);
     pointer-events: none;
     display: flex;
 }
@@ -58,7 +60,7 @@
     pointer-events: none;
 }
 
-.modalTextWrapper {
+/* .modalTextWrapper {
     display: flex;
     pointer-events: none;
     align-items: center;
@@ -72,26 +74,29 @@
     margin-left: 45px;
     margin-right: -75px;
     width: 340px;
-}
+} */
 
 .modalText {
     line-height: 22.08px;
     font-size: 16px;
     padding-right: 10px;
+    margin-left: -60px;
 }
 
 .modalTextLast {
     line-height: 22.08px;
     font-size: 16px;
-    padding-left: 10px;
+    padding-left: 40px;
+    margin-right: -100px;
 }
 
 .spanNum {
     position: absolute;
     color: #0EA9FF;
     font-size: 35px;
-    margin: 5px 0 0 3px;
+    margin: 5px 0 0 5px;
     pointer-events: none;
+    align-self: flex-start;
 }
 
 .spanNumLast {
@@ -100,6 +105,122 @@
     left: 0px;
     color: #0EA9FF;
     font-size: 35px;
-    margin: 5px 0 0 3px;
+    margin: 5px 0 0 5px;
     pointer-events: none;
+}
+
+@media screen and (max-width:426px) {
+
+    .modalActive {
+        transform: scale(1);
+        position: static;
+        top: 0px;
+        z-index: 9998;
+        opacity: 1;
+    }
+
+    .modalLast {
+        transform: scale(1);
+        position: static;
+        top: 0px;
+        left: 0px;
+        z-index: 9998;
+        opacity: 1;
+    }
+
+    .modalContent {
+        width: 350px;
+        min-height: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .modalContentLast {
+        width: 350px;
+        padding: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .miniIcon {
+        transform: scale(1) translateX(0px) translateY(10px);
+        margin-left: -25px;
+        margin-top: 0px;
+        width: 156px;
+        height: 149px;
+        pointer-events: none;
+        shape-outside: inset();
+        float: left;
+    }
+
+    .miniIconLast {
+        transform: scale(1) translateX(0px) translateY(10px);
+        margin-left: -25px;
+        margin-top: -20px;
+        width: 156px;
+        height: 158px;
+        pointer-events: none;
+        shape-outside: inset();
+        float: left;
+    }
+
+    .miniIconMove {
+        transform: scale(1) translateX(0px) translateY(10px);
+        margin-left: -25px;
+        margin-top: -15px;
+        width: 156px;
+        height: 149px;
+        pointer-events: none;
+        shape-outside: inset();
+        float: left;
+    }
+
+    /* .modalTextWrapper {
+        display: flex;
+        pointer-events: none;
+        align-items: center;
+        margin-left: -180px;
+    }
+
+    .modalTextWrapperLast {
+        display: flex;
+        pointer-events: none;
+        align-items: center;
+        margin-left: 45px;
+        margin-right: -75px;
+        width: 340px;
+    } */
+
+    .modalText {
+        line-height: 21px;
+        font-size: 16px;
+        padding: 20px 10px 20px 25px;
+        margin-left: 0px;
+    }
+
+    .modalTextLast {
+        line-height: 21px;
+        font-size: 16px;
+        padding: 20px 10px 20px 25px;
+        margin-right: 0px;
+    }
+
+    .spanNum {
+        position: absolute;
+        color: #0EA9FF;
+        font-size: 26px;
+        margin: 5px 0 0 5px;
+        pointer-events: none;
+    }
+
+    .spanNumLast {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: #0EA9FF;
+        font-size: 26px;
+        margin: 5px 0 0 3px;
+        pointer-events: none;
+
+    }
 }

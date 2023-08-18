@@ -41,9 +41,9 @@ export default function Modal({
         onMouseOut={() => setActive(false)}>
         <span className={spanClassName}>{num}</span>
         <img src={icon} className={miniIconClassName}></img>
-        <div className={modalTextWrapperClassName}>
-          <p className={modalTextClassName}>{text}</p>
-        </div>
+        {/* <div className={modalTextWrapperClassName}> */}
+        <p className={modalTextClassName}>{text}</p>
+        {/* </div> */}
       </div>
     </div>
   );

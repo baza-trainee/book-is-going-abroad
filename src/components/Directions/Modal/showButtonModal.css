@@ -109,3 +109,9 @@
     top: 50px;
     left: 45px;
 }
+
+@media screen and (max-width:426px) {
+    .showModal {
+        display: none;
+    }
+}

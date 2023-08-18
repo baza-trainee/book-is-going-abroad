@@ -3,5 +3,12 @@
 }
 
 .hideIcon {
+    /* display: none; */
     transform: scale(0);
+}
+
+@media screen and (max-width:426px) {
+    .hideIcon {
+        display: contents;
+    }
 }
