@@ -29,7 +29,7 @@ const Address = () => {
     },
     {
       city: 'Київ',
-      address: 'вул. Симиренка, 5А, Бібілотека Джерело',
+      address: 'вул. Симиренка, 5А, Бібліотека Джерело',
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.5675129842944!2d30.39868017697301!3d50.41189719013842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cbe71de4a0bb%3A0x53654b69bfeb1a0!2z0JHRltCx0LvRltC-0YLQtdC60LAgItCU0LbQtdGA0LXQu9C-Ig!5e0!3m2!1suk!2sua!4v1690991967903!5m2!1suk!2sua'
     },
     {
