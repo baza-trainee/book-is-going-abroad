@@ -80,11 +80,29 @@
   .footer-contacts {
     order: 3;
   }
+
+  .footer-phones li:hover,
+  .footer-email:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 426px) {
   .footer-contacts {
     width: 100%;
     max-width: 155px;
+  }
+
+  .footer-phones li:hover,
+  .footer-email:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
 }

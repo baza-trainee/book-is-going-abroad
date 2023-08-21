@@ -102,6 +102,14 @@
     max-width: 100%;
     gap: 20px;
   }
+
+  .footer-logo:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 426px) {
@@ -134,5 +142,13 @@
 
   .footer-wrapper-copywriter {
     text-align: center;
+  }
+
+  .footer-logo:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
 }
