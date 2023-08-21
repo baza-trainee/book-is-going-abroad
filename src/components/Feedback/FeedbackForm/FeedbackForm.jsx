@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
+import axios from 'axios';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import XRegExp from 'xregexp';
 
-import SuccessSendMessage from './index';
-// import Button from '../../UI/Button.jsx';
+import SuccessSendMessage from './successSendMessage';
+import ErrorSendMessage from './errorSendMessage';
 import styles from './FeedbackForm.module.css';
 
 const FeedbackForm = () => {
@@ -14,6 +16,24 @@ const FeedbackForm = () => {
   const [enteredMessage, setEnteredMessage] = useState('');
   const [enteredMessageTouched, setEnteredMessageTouched] = useState(false);
   const [showSuccessSendMessage, setShowSuccessSendMessage] = useState(false);
+  const [showErrorSendMessage, setShowErrorSendMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const errorSendMessageHandler = (error) => {
+    setErrorMessage(`Повідомлення не надіслано! Причина ${error.message}`);
+    setShowErrorSendMessage(true);
+  };
+
+  // eslint-disable-next-line consistent-return
+  useEffect(() => {
+    if (showErrorSendMessage) {
+      const timer = setTimeout(() => {
+        setShowErrorSendMessage(false);
+      }, 4000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [showErrorSendMessage]);
 
   const successSendMessageHandler = () => {
     setShowSuccessSendMessage(true);
@@ -75,7 +95,7 @@ const FeedbackForm = () => {
     setEnteredMessageTouched(true);
   };
 
-  const formSubmissionHandler = (event) => {
+  const formSubmissionHandler = async (event) => {
     event.preventDefault();
 
     setEnteredNameTouched(true);
@@ -84,6 +104,30 @@ const FeedbackForm = () => {
 
     if (!formIsValid) {
       return;
+    }
+
+    try {
+      const response = await axios.post('url', {
+        name: enteredName,
+        email: enteredEmail,
+        message: enteredMessage
+      });
+
+      if (response.status === 200) {
+        setEnteredName('');
+        setEnteredNameTouched(false);
+        setEnteredEmail('');
+        setEnteredEmailTouched(false);
+        setEnteredMessage('');
+        setEnteredMessageTouched(false);
+        successSendMessageHandler();
+      } else {
+        console.log(response.data);
+        errorSendMessageHandler(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+      errorSendMessageHandler(error);
     }
 
     setEnteredName('');
@@ -156,12 +200,14 @@ const FeedbackForm = () => {
         disabled={!formIsValid}
         className={styles['feedback-button']}
         type="submit"
-        onClick={successSendMessageHandler}>
+        // onClick={successSendMessageHandler}
+      >
         Надіслати
       </button>
       {showSuccessSendMessage && !formIsValid && (
         <SuccessSendMessage message="Повідомлення надіслано!" />
       )}
+      {showErrorSendMessage && <ErrorSendMessage message={errorMessage} />}
     </form>
   );
 };
