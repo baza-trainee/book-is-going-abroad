@@ -326,9 +326,15 @@
 
     .iconWrapper__thirdRow {
         position: relative;
-        margin-right: 0px;
         margin-top: 20px;
+        margin-right: 0px;
         display: block;
+        top: 0px;
+    }
+
+    .iconWrapper__thirdRow:last-child {
+        position: relative;
+        margin-left: 0px;
         top: 0px;
     }
 
@@ -657,7 +663,7 @@
 
     .listWrapper2 {
         display: block;
-        margin-left: 0px;
+        /* margin-left: 0px; */
         position: relative;
         pointer-events: none;
     }
@@ -776,7 +782,7 @@
 
     .listWrapper2 {
         display: block;
-        margin-left: 0px;
+        /* margin-left: 0px; */
         position: relative;
         pointer-events: none;
     }
@@ -898,6 +904,7 @@
         margin-left: 0px;
         position: relative;
         pointer-events: none;
+        margin: 0 auto;
     }
 
     .listWrapper3 {
