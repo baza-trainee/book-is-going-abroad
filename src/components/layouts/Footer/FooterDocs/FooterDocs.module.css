@@ -18,6 +18,10 @@
 .footer-docs li:hover,
 .footer-docs button:hover {
   transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .footer-docs button {
@@ -29,11 +33,29 @@
   .footer-docs {
     order: 1;
   }
+
+  .footer-docs li:hover,
+  .footer-docs button:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
 }
 
 @media screen and (max-width: 426px) {
   .footer-docs {
     width: 155px;
     gap: 16px;
+  }
+
+  .footer-docs li:hover,
+  .footer-docs button:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
 }
