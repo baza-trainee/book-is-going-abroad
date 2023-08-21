@@ -53,7 +53,7 @@
   font-size: var(--footer-font-size);
 }
 
-@media screen and (min-width: 790px) and (max-width: 1170px) {
+@media screen and (min-width: 800px) and (max-width: 1170px) {
   .footer-wrapper {
     justify-content: center;
     gap: 45px;
@@ -65,15 +65,15 @@
   }
 }
 
-@media screen and (min-width: 770px) and (max-width: 790px) {
+@media screen and (min-width: 770px) and (max-width: 800px) {
   .footer-wrapper {
     justify-content: center;
-    gap: 30px;
+    gap: 28px;
   }
 
   .footer-wrapper-organization,
   .footer-wrapper-content {
-    gap: 30px;
+    gap: 28px;
   }
 }
 
