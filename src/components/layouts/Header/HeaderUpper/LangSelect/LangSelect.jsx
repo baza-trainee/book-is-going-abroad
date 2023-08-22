@@ -4,7 +4,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import Select from 'react-select';
 import './langSelect.css';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
+import { TranslateContext } from '../../../../../contexts/translate-context';
 
 export default function LangSelect() {
   const options = [
@@ -13,7 +14,8 @@ export default function LangSelect() {
     { value: 'de', label: 'DE' },
   ];
 
-  const [currentLang, setCurrentLang] = useState('ua');
+  const { handleLanguageChange, currentLocale } = useContext(TranslateContext);
+
   const [isSelectOpen, setIsSelectOpen] = useState(false);
 
   const selectRef = useRef(null);
@@ -34,15 +36,10 @@ export default function LangSelect() {
 
   const toggleSelect = () => {
     setIsSelectOpen((prevState) => !prevState);
-    console.log('click');
   };
 
   const getValue = () =>
-    currentLang ? options.find((c) => c.value === currentLang) : '';
-
-  const onChange = (newValue) => {
-    setCurrentLang(newValue.value);
-  };
+    currentLocale ? options.find((c) => c.value === currentLocale) : '';
 
   return (
     <div
@@ -55,7 +52,7 @@ export default function LangSelect() {
       }}>
       <Select
         menuIsOpen={isSelectOpen}
-        onChange={onChange}
+        onChange={handleLanguageChange}
         options={options}
         classNamePrefix="custom-select"
         value={getValue()}

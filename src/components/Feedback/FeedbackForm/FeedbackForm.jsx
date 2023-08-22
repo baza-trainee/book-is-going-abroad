@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved
 import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import XRegExp from 'xregexp';
