@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/repositories/book-is-going-abroad
+    - /bin/bash -c 'npm install'
+    - /bin/bash -c 'npm run build'
+    - /bin/cp -r ./build/* $DEPLOYPATH
+  version: 1
