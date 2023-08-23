@@ -1,35 +1,39 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable comma-dangle */
+import { useContext } from 'react';
+import { TranslateContext } from '../../../../contexts/translate-context';
 import styles from '../Header.module.css';
 
 import NavButton from './NavButtons.jsx';
 
 export default function HeaderNav({ burgerActive, setBurgerActive }) {
+  const { translate } = useContext(TranslateContext);
+
   const navButtonsArr = [
     {
       id: 1,
-      text: 'Адреси',
+      text: translate('header.addresses'),
       link: 'address',
     },
     {
       id: 2,
-      text: 'Активності',
+      text: translate('header.activity'),
       link: 'activity',
     },
     {
       id: 3,
-      text: 'Ціль проекту',
+      text: translate('header.goalsProject'),
       link: 'features',
     },
     {
       id: 4,
-      text: 'Партнери',
+      text: translate('header.partners'),
       link: 'partners',
     },
     // eslint-disable-next-line comma-dangle
     {
       id: 5,
-      text: "Зв'язатися",
+      text: translate('header.contactUs'),
       link: 'feedback',
     },
   ];

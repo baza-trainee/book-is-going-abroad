@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import styles from './Hero.module.css';
 import Container from '../layouts/Container/Container.jsx';
 import Button from '../UI/Button.jsx';
@@ -8,10 +8,12 @@ import { scroll } from '../layouts/Header/HeaderNav/NavButtons.jsx';
 import slide1 from '../../assets/img/hero-backgrounds/slider1.jpg';
 import slide2 from '../../assets/img/hero-backgrounds/slider2.jpg';
 import slide3 from '../../assets/img/hero-backgrounds/slider3.jpg';
+import { TranslateContext } from '../../contexts/translate-context';
 
 const slides = [slide1, slide2, slide3];
 
 const Hero = () => {
+  const { translate } = useContext(TranslateContext);
   const [backgroundSlide, setBackgroundSlide] = useState(slides[0]);
   const [slideIndex, setSlideIndex] = useState(0);
 
@@ -32,16 +34,16 @@ const Hero = () => {
       <div className={styles['hero-slider']}>
         <Container className={styles.container}>
           <div className={styles.heroWrapper}>
-            <h1 className={styles.heroTitle}>ПОРТАЛ ГУМАНІТАРНОЇ ДОПОМОГИ</h1>
+            <h1 className={styles.heroTitle}>{translate('hero.title')}</h1>
 
             <h6 className={styles.heroTitleDescription}>
-              Сайт для тих, хто допомогає Україні
+              {translate('hero.subtitle')}
             </h6>
 
             <Button
               className={styles.heroBtn}
               onClick={() => scroll('support', 'end')}>
-              Підтримати
+              {translate('hero.donate')}
             </Button>
 
             <Hotline />
