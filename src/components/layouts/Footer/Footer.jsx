@@ -1,13 +1,17 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Container/Container.jsx';
 import FooterPayment from './FooterPayment/FooterPayment.jsx';
 import FooterDocs from './FooterDocs/FooterDocs.jsx';
 import FooterContacts from './FooterContacts/FooterContacts.jsx';
+import { TranslateContext } from '../../../contexts/translate-context';
 
 import styles from './Footer.module.css';
 import logo from '../../../assets/img/footer/logo-footer.png';
 
 const Footer = () => {
+  const { translate } = useContext(TranslateContext);
+
   function handleLogoClick() {
     if (window.location.pathname === '/') {
       window.location.href = '/#top';
@@ -38,9 +42,9 @@ const Footer = () => {
               <FooterContacts />
             </div>
           </div>
-          <div className={styles['footer-wrapper-copywriter']}>
-            <p className={styles['footer-copywriter']}>
-              Розробка Baza Trainee Ukraine © 2023 Всі права захищені
+          <div className={styles['footer-wrapper-copyright']}>
+            <p className={styles['footer-copyright']}>
+              {translate('footer.copyright')}
             </p>
           </div>
         </div>

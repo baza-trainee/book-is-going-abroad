@@ -64,7 +64,7 @@
     "support.banks2": "Банк-кореспондент",
     "footer.copyright": "Розробка Baza Trainee Ukraine © 2023 Всі права захищені",
     "footer.addresses": "Адреси",
-    "footer.regulationa": "Статут",
+    "footer.regulations": "Статут",
     "footer.policy": "Політика Конфіденційності",
     "footer.terms": "Умови Використання Сайту"
   },
@@ -133,7 +133,7 @@
     "support.banks2": "Correspondents Bank",
     "footer.copyright": "Developed by Baza Trainee Ukraine © 2023 All rights reserved",
     "footer.addresses": "Addresses",
-    "footer.regulationa": "Regulations",
+    "footer.regulations": "Regulations",
     "footer.policy": "Privacy Policy",
     "footer.terms": "Terms of Use"
   },
@@ -202,7 +202,7 @@
     "support.banks2": "Korrespondenzbank",
     "footer.copyright": "Entwickelt von BazaTraineeUkraine © 2023 Alle Rechte vorbehalten",
     "footer.addresses": "Adressen",
-    "footer.regulationa": "Vorschriften",
+    "footer.regulations": "Vorschriften",
     "footer.policy": "Datenschutzrichtlinie",
     "footer.terms": "Nutzungsbedingungen der Website"
   }

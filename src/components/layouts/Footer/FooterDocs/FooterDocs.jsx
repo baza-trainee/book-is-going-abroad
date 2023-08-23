@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TranslateContext } from '../../../../contexts/translate-context';
 
 import styles from './FooterDocs.module.css';
 import pdfPrivacyPolicy from '../../../../assets/docs/privacy-policy.pdf';
 import pdfRegulations from '../../../../assets/docs/regulations.pdf';
 import pdfSiteUsageRules from '../../../../assets/docs/site-usage-rules.pdf';
-
-const docsNameArray = [
-  { id: 1, text: 'Статут', pdf: pdfRegulations },
-  { id: 2, text: 'Політика Конфіденційності', pdf: pdfPrivacyPolicy },
-  { id: 3, text: 'Умови Використання Сайту', pdf: pdfSiteUsageRules }
-];
 
 const linkToAddress = 'address';
 const blockCenter = 'center';
@@ -37,6 +32,13 @@ export const FooterDocsItem = ({ text, pdf }) => (
 const FooterDocs = () => {
   const navigate = useNavigate();
   const [scrollAfterRedirect, setScrollAfterRedirect] = useState(false);
+  const { translate } = useContext(TranslateContext);
+
+  const docsNameArray = [
+    { id: 1, text: translate('footer.regulations'), pdf: pdfRegulations },
+    { id: 2, text: translate('footer.policy'), pdf: pdfPrivacyPolicy },
+    { id: 3, text: translate('footer.terms'), pdf: pdfSiteUsageRules }
+  ];
 
   useEffect(() => {
     if (scrollAfterRedirect) {
@@ -63,7 +65,7 @@ const FooterDocs = () => {
   return (
     <ul className={styles['footer-docs']}>
       <button onClick={changePathAndScroll}>
-        <p>Адреси</p>
+        <p>{translate('footer.addresses')}</p>
       </button>
       {RenderDocsItems}
     </ul>
