@@ -74,7 +74,8 @@
     "footer.regulations": "Статут",
     "footer.policy": "Політика Конфіденційності",
     "footer.terms": "Умови Використання Сайту",
-    "404.button" : "На головну"
+    "404.button" : "На головну",
+    "copyMessage": "Скопійовано!"
   },
   "en": {
     "header.addresses": "Addresses",
@@ -151,7 +152,8 @@
     "footer.regulations": "Regulations",
     "footer.policy": "Privacy Policy",
     "footer.terms": "Terms of Use",
-    "404.button" : "Homepage"
+    "404.button" : "Homepage",
+    "copyMessage": "Text copied!"
   },
   "de": {
     "header.addresses": "Adressen",
@@ -228,6 +230,7 @@
     "footer.regulations": "Vorschriften",
     "footer.policy": "Datenschutzrichtlinie",
     "footer.terms": "Nutzungsbedingungen der Website",
-    "404.button" : "Startseite"
+    "404.button" : "Startseite",
+    "copyMessage": "Text kopiert!"
   }
 }

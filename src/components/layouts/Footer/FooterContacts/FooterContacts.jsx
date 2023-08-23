@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 
 import CopyNotification from './index';
+import { TranslateContext } from '../../../../contexts/translate-context';
 
 import styles from './FooterContacts.module.css';
 import phoneNum from './phone-icon.svg';
@@ -17,6 +18,7 @@ const emailLink = 'child.help.book@\ngmail.com';
 
 const FooterContacts = () => {
   const [showCopyNotification, setShowCopyNotification] = useState(false);
+  const { translate } = useContext(TranslateContext);
 
   const handleCopy = (phone) => {
     navigator.clipboard.writeText(phone);
@@ -44,7 +46,7 @@ const FooterContacts = () => {
   return (
     <div className={styles['footer-contacts']}>
       {showCopyNotification && (
-        <CopyNotification message="Скопійовано!" />
+        <CopyNotification message={translate('copyMessage')} />
       )}
       <ul className={styles['footer-phones']}>{RenderContacts}</ul>
       <div className={styles['footer-email']} onClick={() => handleCopy(emailLink)}>
