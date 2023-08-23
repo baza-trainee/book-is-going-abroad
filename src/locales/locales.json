@@ -46,6 +46,11 @@
     "feedback.email": "Email*",
     "feedback.message": "Повідомлення",
     "feedback.send": "Надіслати",
+    "feedback.errorName": "*Не введенe ім'я або некоректно введенe ім'я",
+    "feedback.errorEmail": "*Не введена або некоректно введена електронна пошта",
+    "feedback.errorMessage": "*Повідомлення не може бути довше за 5000 символів",
+    "feedback.errorSend": "Повідомлення не надіслано! Причина ",
+    "feedback.successSend": "Повідомлення надіслано!",
     "support.title": "Ваша поміч - цінна",
     "support.description": "Ми щиро вдячні вам за вашу зацікавленість та бажання допомогти нам поліпшити життя дітей, які постраждали внаслідок конфлікту. Ваші донати відіграють надзвичайно важливу роль у нашій місії, спрямованій на забезпечення дітей необхідною допомогою та підтримкою, яка допоможе їм знайти надію та відновитися після травматичного досвіду війни.",
     "support.banks": "БАНКИ КОРЕСПОНДЕНТИ",
@@ -68,7 +73,8 @@
     "footer.addresses": "Адреси",
     "footer.regulations": "Статут",
     "footer.policy": "Політика Конфіденційності",
-    "footer.terms": "Умови Використання Сайту"
+    "footer.terms": "Умови Використання Сайту",
+    "404.button" : "На головну"
   },
   "en": {
     "header.addresses": "Addresses",
@@ -117,6 +123,11 @@
     "feedback.email": "Email*",
     "feedback.message": "Message",
     "feedback.send": "Send",
+    "feedback.errorName": "*The name is missing or invalid",
+    "feedback.errorEmail": "*The mail is missing or invalid",
+    "feedback.errorMessage": "*The message is limited to 5000 characters",
+    "feedback.errorSend": "Message not sent! Error: ",
+    "feedback.successSend": "Message sent!",
     "support.title": "Your support is valuable",
     "support.description": "We sincerely thank you for your interest and desire to help us improve the lives of children affected by the conflict. Your donations play a vital role in our mission to provide children with the help and support they need to help them find hope and recover from the traumatic experiences of war.",
     "support.banks": "CORRESPONDENTS BANKS",
@@ -139,7 +150,8 @@
     "footer.addresses": "Addresses",
     "footer.regulations": "Regulations",
     "footer.policy": "Privacy Policy",
-    "footer.terms": "Terms of Use"
+    "footer.terms": "Terms of Use",
+    "404.button" : "Homepage"
   },
   "de": {
     "header.addresses": "Adressen",
@@ -188,6 +200,11 @@
     "feedback.email": "Email*",
     "feedback.message": "Nachricht",
     "feedback.send": "Senden",
+    "feedback.errorName": "*Der Name fehlt oder ist ungültig",
+    "feedback.errorEmail": "*Die E-Mail fehlt oder ist ungültig",
+    "feedback.errorMessage": "*Die Nachricht ist auf 5000 Zeichen begrenzt",
+    "feedback.errorSend": "Nachricht nicht gesendet! Fehler: ",
+    "feedback.successSend": "Nachricht gesendet!",
     "support.title": "Ihre Hilfe ist wertvoll",
     "support.description": "Wir danken Ihnen aufrichtig für Ihr Interesse und Ihren Wunsch, uns dabei zu helfen, das Leben der vom Konflikt betroffenen Kinder zu verbessern. Ihre Spenden spielen eine wichtige Rolle bei unserer Mission, Kindern die Hilfe und Unterstützung zu bieten, die sie brauchen, damit sie Hoffnung finden und sich von den traumatischen Erfahrungen des Krieges erholen können.",
     "support.banks": "KORRESPONDENZBANKEN",
@@ -210,6 +227,7 @@
     "footer.addresses": "Adressen",
     "footer.regulations": "Vorschriften",
     "footer.policy": "Datenschutzrichtlinie",
-    "footer.terms": "Nutzungsbedingungen der Website"
+    "footer.terms": "Nutzungsbedingungen der Website",
+    "404.button" : "Startseite"
   }
 }
