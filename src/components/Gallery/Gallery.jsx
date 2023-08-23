@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import Container from '../layouts/Container/Container.jsx';
+// eslint-disable-next-line import/extensions
+import { TranslateContext } from '../../contexts/translate-context.js';
+
 import styles from './Gallery.module.css';
 
 import photo1 from '../../assets/img/gallery/photo1.jpg';
@@ -49,6 +52,8 @@ const Gallery = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
 
+  const { translate } = useContext(TranslateContext);
+
   const openModal = (imageIndex) => {
     setActiveImage(imageIndex);
     setModalOpen(true);
@@ -63,7 +68,7 @@ const Gallery = () => {
     <section className={styles.gallery}>
       <Container className={styles['gallery-container']}>
         <h2 className={styles['gallery-title']}>
-          Активності нашої організації
+          {translate('activity.title')}
         </h2>
         <div className={styles['gallery-wrapper']}>
           {images.map((image, index) => (
