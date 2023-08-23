@@ -46,7 +46,7 @@
   line-height: var(--name-organization-line-height);
 }
 
-.footer-copywriter {
+.footer-copyright {
   color: var(--footer-primary-text-color);
   line-height: var(--body3-line-height);
   font-family: var(--body-text-font-family);
@@ -140,7 +140,7 @@
     display: flex;
   }
 
-  .footer-wrapper-copywriter {
+  .footer-wrapper-copyright {
     text-align: center;
   }
 
