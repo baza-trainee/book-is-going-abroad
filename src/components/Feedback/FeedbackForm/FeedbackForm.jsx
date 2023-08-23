@@ -23,7 +23,8 @@ const FeedbackForm = () => {
   const { translate } = useContext(TranslateContext);
 
   const errorSendMessageHandler = (error) => {
-    setErrorMessage(`Повідомлення не надіслано! Причина ${error.message}`);
+    const errorMes = `${translate('feedback.errorSend')} ${error.message}`;
+    setErrorMessage(errorMes);
     setShowErrorSendMessage(true);
   };
 
@@ -149,19 +150,19 @@ const FeedbackForm = () => {
 
   const invalidName = (
     <p className={styles['input-error']}>
-      *Не введенe ім&apos;я або некоректно введенe ім&apos;я
+      {translate('feedback.errorName')}
     </p>
   );
 
   const invalidEmail = (
     <p className={styles['input-error']}>
-      *Не введена або некоректно введена електронна пошта
+      {translate('feedback.errorEmail')}
     </p>
   );
 
   const invalidMessage = (
     <p className={styles['input-error']}>
-      *Повідомлення не може бути довше за 5000 символів
+      {translate('feedback.errorMessage')}
     </p>
   );
 
@@ -208,7 +209,7 @@ const FeedbackForm = () => {
         {translate('feedback.send')}
       </button>
       {showSuccessSendMessage && !formIsValid && (
-        <SuccessSendMessage message="Повідомлення надіслано!" />
+        <SuccessSendMessage message={translate('feedback.successSend')} />
       )}
       {showErrorSendMessage && <ErrorSendMessage message={errorMessage} />}
     </form>
