@@ -122,11 +122,11 @@ const FeedbackForm = () => {
         setEnteredMessageTouched(false);
         successSendMessageHandler();
       } else {
-        console.log(response.data);
+        // console.log(response.data);
         errorSendMessageHandler(response.data);
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       errorSendMessageHandler(error);
     }
 
