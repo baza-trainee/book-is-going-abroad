@@ -391,57 +391,45 @@
     .iconsWrapper {
         position: relative;
         padding-left: 0px;
-        display: flex;
-        flex-wrap: wrap;
     }
 
     .listWrapper1 {
-        display: flex;
+        display: block;
         position: relative;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper2 {
-        display: flex;
-        margin-left: 0px;
+        display: block;
+        /* margin-left: 0px; */
         position: relative;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper3 {
-        display: flex;
+        display: block;
         position: relative;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper4 {
-        display: flex;
+        display: block;
         position: relative;
         left: 0px;
         top: 0px;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper5 {
-        display: flex;
+        display: block;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .iconWrapper__firstRow {
         /* position: relative; */
         margin-right: 0px;
         display: block;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .iconWrapper__secondRow {
@@ -449,14 +437,14 @@
         left: 0px;
         bottom: 0px;
         display: block;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .iconWrapper__secondRow:not(:last-child) {
         position: relative;
         left: 0px;
         bottom: 0px;
-        margin-top: 20px;
+        margin-top: 40px;
         margin-right: 0px;
         display: block;
     }
@@ -464,7 +452,7 @@
     .iconWrapper__thirdRow {
         position: relative;
         margin-right: 0px;
-        margin-top: 20px;
+        margin-top: 40px;
         display: block;
         top: 0px;
     }
@@ -473,19 +461,19 @@
         position: relative;
         margin-right: 0px;
         display: block;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .iconWrapper__fifthRow {
         position: relative;
         margin-right: 0px;
-        margin-top: 20px;
+        margin-top: 40px;
         top: 0px;
     }
 
     .iconWrapper__fifthRow:last-child {
         position: relative;
-        margin-top: 20px;
+        margin-top: 40px;
         margin-left: 0px;
     }
 }
@@ -522,57 +510,45 @@
     .iconsWrapper {
         position: relative;
         padding-left: 0px;
-        display: flex;
-        flex-wrap: wrap;
     }
 
     .listWrapper1 {
-        display: flex;
+        display: block;
         position: relative;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper2 {
-        display: flex;
-        margin-left: 0px;
+        display: block;
+        /* margin-left: 0px; */
         position: relative;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper3 {
-        display: flex;
+        display: block;
         position: relative;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper4 {
-        display: flex;
+        display: block;
         position: relative;
         left: 0px;
         top: 0px;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .listWrapper5 {
-        display: flex;
+        display: block;
         pointer-events: none;
-        gap: 10px;
-        margin: 0 auto;
     }
 
     .iconWrapper__firstRow {
         /* position: relative; */
         margin-right: 0px;
         display: block;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .iconWrapper__secondRow {
@@ -580,14 +556,14 @@
         left: 0px;
         bottom: 0px;
         display: block;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .iconWrapper__secondRow:not(:last-child) {
         position: relative;
         left: 0px;
         bottom: 0px;
-        margin-top: 20px;
+        margin-top: 40px;
         margin-right: 0px;
         display: block;
     }
@@ -595,7 +571,7 @@
     .iconWrapper__thirdRow {
         position: relative;
         margin-right: 0px;
-        margin-top: 20px;
+        margin-top: 40px;
         display: block;
         top: 0px;
     }
@@ -604,19 +580,19 @@
         position: relative;
         margin-right: 0px;
         display: block;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .iconWrapper__fifthRow {
         position: relative;
         margin-right: 0px;
-        margin-top: 20px;
+        margin-top: 40px;
         top: 0px;
     }
 
     .iconWrapper__fifthRow:last-child {
         position: relative;
-        margin-top: 20px;
+        margin-top: 40px;
         margin-left: 0px;
     }
 }
