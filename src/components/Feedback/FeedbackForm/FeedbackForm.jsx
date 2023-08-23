@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved
 import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import XRegExp from 'xregexp';
+import { TranslateContext } from '../../../contexts/translate-context';
 
 import SuccessSendMessage from './successSendMessage';
 import ErrorSendMessage from './errorSendMessage';
@@ -18,6 +19,8 @@ const FeedbackForm = () => {
   const [showSuccessSendMessage, setShowSuccessSendMessage] = useState(false);
   const [showErrorSendMessage, setShowErrorSendMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
+  const { translate } = useContext(TranslateContext);
 
   const errorSendMessageHandler = (error) => {
     setErrorMessage(`Повідомлення не надіслано! Причина ${error.message}`);
@@ -170,7 +173,7 @@ const FeedbackForm = () => {
       <input
         className={styles[nameInputClasses]}
         type="text"
-        placeholder="Ім’я*"
+        placeholder={translate('feedback.name')}
         value={enteredName}
         required
         onChange={nameInputChangeHandler}
@@ -180,7 +183,7 @@ const FeedbackForm = () => {
       <input
         className={styles[emailInputClasses]}
         type="email"
-        placeholder="Email*"
+        placeholder={translate('feedback.email')}
         value={enteredEmail}
         required
         onChange={emailInputChangeHandler}
@@ -190,7 +193,7 @@ const FeedbackForm = () => {
       <textarea
         className={styles[messageTextareaClass]}
         type="text"
-        placeholder="Повідомлення"
+        placeholder={translate('feedback.message')}
         value={enteredMessage}
         onChange={messageInputChangeHandler}
         onBlur={messageInputBlurHandler}
@@ -202,7 +205,7 @@ const FeedbackForm = () => {
         type="submit"
         // onClick={successSendMessageHandler}
       >
-        Надіслати
+        {translate('feedback.send')}
       </button>
       {showSuccessSendMessage && !formIsValid && (
         <SuccessSendMessage message="Повідомлення надіслано!" />
