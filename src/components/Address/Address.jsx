@@ -1,7 +1,9 @@
 /* eslint-disable global-require */
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 
 import Container from '../layouts/Container/Container.jsx';
+// eslint-disable-next-line import/extensions
+import { TranslateContext } from '../../contexts/translate-context.js';
 
 import styles from './Address.module.css';
 
@@ -98,6 +100,8 @@ const Address = () => {
       link: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1268.0914752528035!2d30.242075239461627!3d50.53076763627751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b3229c32ab167%3A0xfc8098a3509e1add!2z0KHQsNC90LDRgtC-0YDRltC5ICLQlNGD0LHQutC4Ig!5e0!3m2!1suk!2sua!4v1690993327311!5m2!1suk!2sua'
     }
   ];
+
+  const { translate } = useContext(TranslateContext);
 
   const [selectedCity, setSelectedCity] = useState('Київ');
   const [selectedAddress, setSelectedAddress] = useState('');
@@ -207,7 +211,7 @@ const Address = () => {
     <section className={styles.address} id='address'>
       <Container className={styles['address-container']}>
         <h2 className={styles['address-title']}>
-          Адреси видачі та прийому гуманітарної допомоги
+          {translate('addresses.title')}
         </h2>
         <div className={styles['address-map-wrapper']}>
           <div className={styles['address-inputs']}>
