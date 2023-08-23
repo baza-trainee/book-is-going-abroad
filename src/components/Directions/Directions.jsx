@@ -297,7 +297,7 @@ const Directions = () => {
                   <Button
                     onClick={toggleDirections}
                     className={styles.expandButton}>
-                    Зменьшити
+                    {translate('features.increase')}
                     <img
                       src={arrow}
                       alt="Arrow"
@@ -310,7 +310,7 @@ const Directions = () => {
                 <Button
                   onClick={toggleDirections}
                   className={styles.expandButton}>
-                  Збільшити
+                  {translate('features.reduce')}
                   <img
                     src={arrow}
                     alt="Arrow"
