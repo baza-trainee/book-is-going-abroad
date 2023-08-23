@@ -64,6 +64,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  width: 78px;
+  height: 16px;
 }
 
 .dot {
