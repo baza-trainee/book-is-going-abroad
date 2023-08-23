@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from '../Hero.module.css';
 import CopyNotififaction from './index';
+import { TranslateContext } from '../../../contexts/translate-context';
 
 export default function Hotline() {
+  const { translate } = useContext(TranslateContext);
   const phones = [
     { id: 1, number: '+38 044 209 53 02' },
     { id: 2, number: '+38 098 683 85 21' },
@@ -41,7 +43,7 @@ export default function Hotline() {
 
   return (
     <div className={styles.hotlineWrapper}>
-      <h6 className={styles.hotlineTitle}>Гаряча лінія</h6>
+      <h6 className={styles.hotlineTitle}>{translate('hero.hotline')}</h6>
       <div className={styles.hotlinePhonesWrapper}>{renderPhones}</div>
       {showCopyNotification && <CopyNotififaction message="Скопійовано!" />}
     </div>

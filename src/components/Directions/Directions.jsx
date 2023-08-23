@@ -2,7 +2,7 @@
 /* eslint-disable quotes */
 /* eslint-disable max-len */
 /* eslint-disable comma-dangle */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Container from '../layouts/Container/Container.jsx';
 import PopupIcon from './PopupIcon/PopupIcon.jsx';
 import icon1 from './PopupIcon/Group 1.png';
@@ -22,8 +22,10 @@ import icon14 from './PopupIcon/Group 14.png';
 import styles from './Directions.module.css';
 import Button from '../UI/Button.jsx';
 import arrow from '../Features/features-arrow.svg';
+import { TranslateContext } from '../../contexts/translate-context';
 
 const Directions = () => {
+  const { translate } = useContext(TranslateContext);
   const [showAllDirections, setShowAllDirections] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
   const [arrowRotation, setArrowRotation] = useState(0);
@@ -43,8 +45,7 @@ const Directions = () => {
     {
       id: '1',
       icon: icon1,
-      content:
-        'Збір нової та вживаної дитячої літератури (книжок, журналів, учбової літератури) в Україні, доставка за межи країни та розповсюджування через дружні волонтерські організації дітям біженцям з України',
+      content: translate('directions.text1'),
       row: '__firstRow',
       style: 'one',
       num: '1',
@@ -54,8 +55,7 @@ const Directions = () => {
     {
       id: 2,
       icon: icon2,
-      content:
-        'Друк нових книг для дітей на українській мові, та передача цих книг дітям біженцям з України, які знаходяться в даний час за кордоном',
+      content: translate('directions.text2'),
       row: '__firstRow',
       style: 'two',
       num: '2',
@@ -65,8 +65,7 @@ const Directions = () => {
     {
       id: 3,
       icon: icon3,
-      content:
-        'Викуп нових книг зі складів, та книгарень для дітей на українській мові, та передача цих книг дітям біженцям з України, які знаходяться в даний час за кордоном',
+      content: translate('directions.text3'),
       row: '__firstRow',
       style: 'three',
       num: '3',
@@ -79,7 +78,7 @@ const Directions = () => {
     {
       id: 4,
       icon: icon4,
-      content: ' Видавнича \n діяльність дитячої літератури',
+      content: translate('directions.text4'),
       row: '__secondRow',
       style: 'four',
       num: '4',
@@ -89,8 +88,7 @@ const Directions = () => {
     {
       id: 5,
       icon: icon5,
-      content:
-        'Створення власного логістичного транспорту доставки книжок за кордон, та саме доставка до маленьких місць, де на даний час знаходяться біженці з України',
+      content: translate('directions.text5'),
       row: '__secondRow',
       style: 'five',
       num: '5',
@@ -101,8 +99,7 @@ const Directions = () => {
       id: 6,
       icon: icon6,
       // eslint-disable-next-line quotes
-      content:
-        'Створення обліку заявок від біженців на необхідну їм допомогу, та за можливістю виконання їх',
+      content: translate('directions.text6'),
       row: '__secondRow',
       style: 'six',
       num: '6',
@@ -115,8 +112,7 @@ const Directions = () => {
     {
       id: 7,
       icon: icon7,
-      content:
-        'Психологічна підтримка книжкою рідною, українською мовою буде саме тим якорем, за який маленькі діти можуть вчепитися і мати його як частину звичного оточення, своєї Батьківщини',
+      content: translate('directions.text7'),
       row: '__thirdRow',
       style: 'seven',
       num: '7',
@@ -126,7 +122,7 @@ const Directions = () => {
     {
       id: 8,
       icon: icon8,
-      content: 'Забезпечити книжками кожного з маленьких дітей-переселенців',
+      content: translate('directions.text8'),
       row: '__thirdRow',
       style: 'eight',
       num: '8',
@@ -136,8 +132,7 @@ const Directions = () => {
     {
       id: 9,
       icon: icon9,
-      content:
-        'Адресна допомога усім необхідним постраждалим переселенцям за межами країни та в Україні',
+      content: translate('directions.text9'),
       row: '__thirdRow',
       style: 'nine',
       num: '9',
@@ -150,8 +145,7 @@ const Directions = () => {
     {
       id: 10,
       icon: icon10,
-      content:
-        'Створення пунктів допомоги на території України та за її межами для громадянам України постраждалих від військових дій',
+      content: translate('directions.text10'),
       row: '__fourthRow',
       style: 'ten',
       num: '10',
@@ -161,8 +155,7 @@ const Directions = () => {
     {
       id: 11,
       icon: icon11,
-      content:
-        'Сприяння обороноздатності та мобілізаційній готовності країни, захисту населення у надзвичайних ситуаціях мирного і воєнного часу',
+      content: translate('directions.text11'),
       row: '__fourthRow',
       style: 'eleven',
       num: '11',
@@ -175,8 +168,7 @@ const Directions = () => {
     {
       id: 12,
       icon: icon12,
-      content:
-        'Сприяти створенню позитивного іміджу та репутації волонтерської діяльності у широкої громадськості, інвесторів, керівників організацій, органів державної влади України тощо',
+      content: translate('directions.text12'),
       row: '__fifthRow',
       style: 'twelve',
       num: '12',
@@ -186,8 +178,7 @@ const Directions = () => {
     {
       id: 13,
       icon: icon13,
-      content:
-        'Створення обмінного фонду книжок в місцях тимчасового мешкання українців за кордоном, де кожен українець, та дитина зможе поміняти прочитану книгу на іншу',
+      content: translate('directions.text13'),
       row: '__fifthRow',
       style: 'thirteen',
       num: '13',
@@ -197,8 +188,7 @@ const Directions = () => {
     {
       id: 14,
       icon: icon14,
-      content:
-        'Надання допомоги громадянам, які постраждали внаслідок надзвичайної ситуації техногенного чи природного характеру, під час дії особливого періоду, правових режимів надзвичайного чи воєнного стану, здійснення заходів із забезпечення національної безпеки і оборони, біженцям, внутрішньо переміщеним особам',
+      content: translate('directions.text14'),
       row: '__fifthRow',
       style: 'fourteen',
       num: '14',
@@ -283,7 +273,7 @@ const Directions = () => {
   return (
     <section className={styles.directionWrapper}>
       <Container className={styles.directionContainer}>
-        <h2 className={styles.sectionTitle}>Основні напрями діяльності</h2>
+        <h2 className={styles.sectionTitle}>{translate('directions.title')}</h2>
         <div className={styles.iconsWrapper}>
           <div className={styles.listWrapper1} data-testid="row1">
             {renderDirections1}
