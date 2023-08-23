@@ -1,5 +1,6 @@
 {
   "name": "book-is-going-abroad",
+  "homepage": "http://openbookhands.site/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
