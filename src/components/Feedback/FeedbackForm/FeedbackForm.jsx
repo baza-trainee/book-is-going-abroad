@@ -111,7 +111,7 @@ const FeedbackForm = () => {
     }
 
     try {
-      const response = await axios.post('https://visitinggrandpasvillage.pythonanywhere.com//api/contact/', {
+      const response = await axios.post('http://openbookhands.site/admin/', {
         name: enteredName,
         email: enteredEmail,
         message: enteredMessage
