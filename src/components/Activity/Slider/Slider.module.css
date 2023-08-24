@@ -48,7 +48,7 @@
 
 .slider-arrow-prev,
 .slider-arrow-next {
-  padding: 18px;
+  padding: 17px;
   position: absolute;
 }
 
@@ -86,6 +86,16 @@
 .slider-btn {
   padding: 12px 38px;
   font-weight: 600;
+}
+
+@media (max-width: 769px) {
+  .slider-arrow-prev {
+    left: -18px;
+  }
+  
+  .slider-arrow-next {
+    right: -18px;
+  }
 }
 
 @media (max-width: 426px) {
