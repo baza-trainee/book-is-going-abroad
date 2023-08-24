@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved
+// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import XRegExp from 'xregexp';
@@ -204,7 +204,7 @@ const FeedbackForm = () => {
         disabled={!formIsValid}
         className={styles['feedback-button']}
         type="submit"
-        onClick={successSendMessageHandler}
+        // onClick={successSendMessageHandler}
       >
         {translate('feedback.send')}
       </button>
