@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import CopyNotification from './index';
+import { TranslateContext } from '../../../contexts/translate-context';
 
 import styles from './FeedbackPhones.module.css';
 import phoneNum from './feedback-phone-icon.svg';
@@ -12,6 +13,7 @@ const contactsArray = [
 ];
 
 const FeedbackPhones = () => {
+  const { translate } = useContext(TranslateContext);
   const [showCopyNotification, setShowCopyNotification] = useState(false);
 
   const handleCopy = (phone) => {
@@ -39,7 +41,7 @@ const FeedbackPhones = () => {
 
   return (
     <ul className={styles['phones-list']}>
-      {showCopyNotification && <CopyNotification message="Скопійовано!" />}
+      {showCopyNotification && <CopyNotification message={translate('copyMessage')} />}
       {RenderContacts}
     </ul>
   );
