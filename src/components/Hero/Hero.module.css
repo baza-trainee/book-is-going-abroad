@@ -123,7 +123,8 @@
 .contactItem {
   background-color: #F2F7FFCC;
   border-radius: 14px;
-  padding: 20px 25px;
+  padding: 20px 20px;
+  text-align: center;
 }
 
 .contactTitle {
@@ -134,6 +135,7 @@
   line-height: var(--h5-line-height);
   margin: 0;
   padding-bottom: 7px;
+  text-align: left;
 }
 
 .contactText {
@@ -144,14 +146,19 @@
   line-height: var(--body2-line-height);
   margin: 0;
   padding-bottom: 20px;
-
-  width: 220px;
+  height: 83px;
+  width: 255px;
+  text-align: left;
 }
 
 .contactBtn {
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);
   padding: 12px 19.5px;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+
 }
 
 @media screen and (max-width: 426px) {
