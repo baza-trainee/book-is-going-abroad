@@ -204,7 +204,7 @@ const FeedbackForm = () => {
         disabled={!formIsValid}
         className={styles['feedback-button']}
         type="submit"
-        // onClick={successSendMessageHandler}
+        onClick={successSendMessageHandler}
       >
         {translate('feedback.send')}
       </button>
