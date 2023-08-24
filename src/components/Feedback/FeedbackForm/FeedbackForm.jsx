@@ -111,7 +111,7 @@ const FeedbackForm = () => {
     }
 
     try {
-      const response = await axios.post('https://openbookhands.site/admin/', {
+      const response = await axios.post('https://openbookhands.site/admin/api/contact/', {
         name: enteredName,
         email: enteredEmail,
         message: enteredMessage
