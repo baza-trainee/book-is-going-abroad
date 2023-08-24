@@ -20,18 +20,22 @@ const Features = () => {
   const [textHeight, setTextHeight] = useState('10em');
   const [arrowRotation, setArrowRotation] = useState(0);
 
-  const { translate } = useContext(TranslateContext);
+  const { translate, currentLocale } = useContext(TranslateContext);
 
   // eslint-disable-next-line max-len
-  const text = 'Доступ кожної української дитини до книжок та підручників для навчання рідною мовою, незважаючи на місце їх тимчасового перебування. Надаючи кожній дитині книги та будь-яку літературу українською мовою, можемо зберегти ідентичність нашої нації за межами країни. Це особливо важливо для дітей, адже читання дає відчуття безпеки та стабільності у стресових ситуаціях. Маємо подбати про те, щоб українці у всіх куточках світу мали змогу зберігати свою культурну ідентичність, зокрема й навчати своїх дітей українською. Наша ціль забезпечити кожну дитину, що через війну була вимушена виїхати за кордон, власною книжкою, написаною рідною мовою. Для наших громадян доступ до українських книжок є надзвичайно важливою підтримкою у непростий воєнний час. Тому допомога дітям та їхнім родинам отримати частинку свого дому в іншій країні є надзвичайно важливою. Ми також пропонуємо будь-яку необхідну допомогу дітям-біженцям з України, бо саме вони є майбутнім нашої країни.';
+  const text = translate('features.mainActivityText');
+
+  // eslint-disable-next-line no-nested-ternary
+  const letters = currentLocale === 'ua' ? 132 : currentLocale === 'en' ? 141 : currentLocale === 'de' ? 169 : null;
+  const height = currentLocale === 'en' ? '90px' : '123px';
 
   useEffect(() => {
     if (textRef.current) {
       setTextHeight(
-        isTextExpanded ? `${textRef.current.scrollHeight}px` : '123px'
+        isTextExpanded ? `${textRef.current.scrollHeight}px` : height
       );
     }
-  }, [isTextExpanded, text]);
+  }, [height, isTextExpanded, text]);
 
   const handleButtonClick = () => {
     setIsTextExpanded((prevIsTextExpanded) => !prevIsTextExpanded);
@@ -53,14 +57,12 @@ const Features = () => {
             <div
               className={`${styles['features-text-wrapper']} ${styles['features-text-top']}`}>
               <h3 className={`${styles['features-title']} ${styles['features-title-top']}`}>
-                Головною ідеєю Організації є
+                {translate('features.mainIdea')}
               </h3>
               <img src={ideasMobile} alt="Main ideas"
               className={styles['features-img-mobile']} />
               <p className={styles['features-text']}>
-                Допомога постраждалим дітям-біженцям з України; надання допомоги
-                громадянам, постраждалим внаслідок правових режимів
-                надзвичайного чи воєнного стану
+              {translate('features.mainIdeaText')}
               </p>
             </div>
           </div>
@@ -74,13 +76,13 @@ const Features = () => {
               className={styles['features-img-mobile']} />
             <h3
               className={`${styles['features-title']} ${styles['features-title-float']}`}>
-              Цілями діяльності Організації є
+              {translate('features.mainActivity')}
             </h3>
             <p
               ref={textRef}
               className={`${styles['features-text']} ${styles['features-text-float']} `}
               style={{ height: textHeight, transition: 'all 1s ease' }}>
-              {isTextExpanded ? text : `${text.slice(0, 132)}`}
+              {isTextExpanded ? text : `${text.slice(0, letters)}`}
             </p>
             <Button
               // eslint-disable-next-line no-lone-blocks, no-unused-expressions

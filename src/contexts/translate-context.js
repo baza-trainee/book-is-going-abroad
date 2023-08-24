@@ -5,10 +5,13 @@ export const TranslateContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 const Translate = ({ children }) => {
-  const [currentLocale, setCurrentLocale] = useState('ua');
+  const [currentLocale, setCurrentLocale] = useState(
+    localStorage.getItem('currentLocale') || 'ua'
+  );
 
   const handleLanguageChange = (newValue) => {
     setCurrentLocale(newValue.value);
+    localStorage.setItem('currentLocale', newValue.value);
   };
 
   const translate = (key) => {
