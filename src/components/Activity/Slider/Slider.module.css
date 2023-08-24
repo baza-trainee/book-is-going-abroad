@@ -86,7 +86,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 769px) {
   .slider-arrow-prev {
     left: -18px;
   }
