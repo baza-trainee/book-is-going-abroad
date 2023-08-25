@@ -111,7 +111,7 @@ const FeedbackForm = () => {
     }
 
     try {
-      const response = await axios.post('https://openbookhands.site/admin/api/contact/', {
+      const response = await axios.post('https://openbookhands.site/admin/api/v1/contact/', {
         name: enteredName,
         email: enteredEmail,
         message: enteredMessage
@@ -174,6 +174,7 @@ const FeedbackForm = () => {
       <input
         className={styles[nameInputClasses]}
         type="text"
+        name="user-name"
         placeholder={translate('feedback.name')}
         value={enteredName}
         required
@@ -184,6 +185,7 @@ const FeedbackForm = () => {
       <input
         className={styles[emailInputClasses]}
         type="email"
+        name="user-email"
         placeholder={translate('feedback.email')}
         value={enteredEmail}
         required
@@ -194,6 +196,7 @@ const FeedbackForm = () => {
       <textarea
         className={styles[messageTextareaClass]}
         type="text"
+        name="user-message"
         placeholder={translate('feedback.message')}
         value={enteredMessage}
         onChange={messageInputChangeHandler}
