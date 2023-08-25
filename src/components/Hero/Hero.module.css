@@ -251,6 +251,9 @@
 @media screen and (min-width: 426px) and (max-width: 675px) {
   .hero {
     margin-top: 156px !important;
+    background-size: cover;
+    background-position-y: 55%;
+    background-position-x: 38%;
   }
 
   .container {
