@@ -158,7 +158,7 @@
   width: 100%;
   margin: 0 auto;
   display: inline-block;
-
+  font-family: var(--button-font-family);
 }
 
 @media screen and (max-width: 426px) {
