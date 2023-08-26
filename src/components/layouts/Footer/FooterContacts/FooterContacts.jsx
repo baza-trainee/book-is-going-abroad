@@ -1,24 +1,46 @@
 import React, { useState, useEffect, useContext } from 'react';
-
+import axios from 'axios';
 import CopyNotification from './index';
 import { TranslateContext } from '../../../../contexts/translate-context';
 
 import styles from './FooterContacts.module.css';
 import phoneNum from './phone-icon.svg';
-import email from './email-icon.svg';
-
-const contactsArray = [
-  { id: 1, phone: '+38 044 209 53 02', icon: phoneNum },
-  { id: 2, phone: '+38 098 683 85 21', icon: phoneNum },
-  { id: 3, phone: '+38 098 306 84 84', icon: phoneNum },
-  { id: 4, phone: '+38 063 499 37 69', icon: phoneNum }
-];
-
-const emailLink = 'child.help.book@\ngmail.com';
+import emailImg from './email-icon.svg';
 
 const FooterContacts = () => {
   const [showCopyNotification, setShowCopyNotification] = useState(false);
+  const [contactsArray, setContactsArray] = useState([]);
+  const [emailData, setEmailData] = useState([]);
+
   const { translate } = useContext(TranslateContext);
+
+  useEffect(() => {
+    // Make the API request to fetch text
+    axios
+      .get('https://openbookhands.site/admin/api/v1/phone/')
+      .then((response) => {
+        setContactsArray(response.data);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.error('Error fetching images:', error);
+      });
+  }, []);
+
+  useEffect(() => {
+    // Make the API request to fetch text
+    axios
+      .get('https://openbookhands.site/admin/api/v1/email/')
+      .then((response) => {
+        setEmailData(response.data);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.error('Error fetching images:', error);
+      });
+  }, []);
+
+  const icon = phoneNum;
 
   const handleCopy = (phone) => {
     navigator.clipboard.writeText(phone);
@@ -36,11 +58,20 @@ const FooterContacts = () => {
     }
   }, [showCopyNotification]);
 
-  const RenderContacts = contactsArray.map(({ id, phone, icon }) => (
-    <li key={id} icon={icon} onClick={() => handleCopy(phone)}>
+  const RenderContacts = contactsArray.map(({ id, number }) => (
+    <li key={id} icon={icon} onClick={() => handleCopy(number)}>
       <img src={icon} />
-      <p>{phone}</p>
+      <p>{number}</p>
     </li>
+  ));
+
+  const RenderEmail = emailData.map(({ id, email }) => (
+      <div className={styles['footer-email']} onClick={() => handleCopy(email)} key={id}>
+        <img src={emailImg} />
+        <p className={styles['footer-email-text']}>
+          {email}
+        </p>
+      </div>
   ));
 
   return (
@@ -49,10 +80,7 @@ const FooterContacts = () => {
         <CopyNotification message={translate('copyMessage')} />
       )}
       <ul className={styles['footer-phones']}>{RenderContacts}</ul>
-      <div className={styles['footer-email']} onClick={() => handleCopy(emailLink)}>
-        <img src={email} />
-        <p className={styles['footer-email-text']}>{emailLink}</p>
-      </div>
+      {RenderEmail}
     </div>
   );
 };

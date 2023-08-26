@@ -16,6 +16,10 @@
   line-height: var(--footer-line-height);
 }
 
+.footer-email p {
+  word-break: break-all;
+}
+
 .footer-email p:hover {
   color: var(--footer-primary-text-color);
 }

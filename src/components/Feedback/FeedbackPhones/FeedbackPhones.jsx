@@ -1,20 +1,29 @@
 import React, { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
 import CopyNotification from './index';
 import { TranslateContext } from '../../../contexts/translate-context';
 
 import styles from './FeedbackPhones.module.css';
 import phoneNum from './feedback-phone-icon.svg';
 
-const contactsArray = [
-  { id: 1, phone: '+38 044 209 53 02', icon: phoneNum },
-  { id: 2, phone: '+38 098 306 84 84', icon: phoneNum },
-  { id: 3, phone: '+38 098 683 85 21', icon: phoneNum },
-  { id: 4, phone: '+38 063 499 37 69', icon: phoneNum }
-];
-
 const FeedbackPhones = () => {
   const { translate } = useContext(TranslateContext);
   const [showCopyNotification, setShowCopyNotification] = useState(false);
+  const [contactsArray, setContactsArray] = useState([]);
+
+  useEffect(() => {
+    // Make the API request to fetch text
+    axios.get('https://openbookhands.site/admin/api/v1/phone/')
+      .then((response) => {
+        setContactsArray(response.data);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.error('Error fetching images:', error);
+      });
+  }, []);
+
+  const icon = phoneNum;
 
   const handleCopy = (phone) => {
     navigator.clipboard.writeText(phone);
@@ -32,10 +41,10 @@ const FeedbackPhones = () => {
     }
   }, [showCopyNotification]);
 
-  const RenderContacts = contactsArray.map(({ id, phone, icon }) => (
-    <li key={id} icon={icon} onClick={() => handleCopy(phone)}>
+  const RenderContacts = contactsArray.map(({ id, number }) => (
+    <li key={id} icon={icon} onClick={() => handleCopy(number)}>
       <img src={icon} />
-      <p>{phone}</p>
+      <p>{number}</p>
     </li>
   ));
 
