@@ -1,9 +1,7 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 // eslint-disable-next-line import/extensions
 import useWindowSize from '../useWindowSize.js';
-// eslint-disable-next-line import/extensions
-import { TranslateContext } from '../../../contexts/translate-context.js';
 import Button from '../../UI/Button.jsx';
 import styles from './Slider.module.css';
 import slide1 from '../../../assets/img/activity-slider/slide1.jpg';
@@ -17,8 +15,6 @@ import arrowNext from './arrow-next.svg';
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-
-  const { translate } = useContext(TranslateContext);
 
   const slides = [slide1, slide2, slide3];
   const slidesSmall = [slide1Small, slide2Small, slide3Small];
@@ -67,17 +63,17 @@ const Slider = () => {
       </div>
       <div className={styles.dots}>
         {slides.map((_, btnIndex) => (
-          <button
+          <div
             key={btnIndex}
             className={`${styles.dot} ${
               btnIndex === activeSlide ? `${styles.active}` : ''
             }`}
             onClick={() => handleSlideChange(btnIndex)}
-          />
+          ></div>
         ))}
       </div>
       <NavLink className={styles['slider-btn-link']} to="/gallery">
-        <Button className={styles['slider-btn']}>{translate('activity.seeMore')}</Button>
+        <Button className={styles['slider-btn']}>Переглянути</Button>
       </NavLink>
     </div>
   );
