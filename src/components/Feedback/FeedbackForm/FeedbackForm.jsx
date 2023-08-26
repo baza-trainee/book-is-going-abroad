@@ -54,7 +54,7 @@ const FeedbackForm = () => {
     }
   }, [showSuccessSendMessage]);
 
-  const nameRegex = XRegExp('^(?!.*[%^*|~{};\\"<>])[\\p{L}ʼ\\-]{2,30}$');
+  const nameRegex = XRegExp('^(?!.*[%^*|~{};<>"`]).{2,30}$');
 
   const enteredNameIsValid = nameRegex.test(enteredName.trim());
   const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
@@ -64,7 +64,7 @@ const FeedbackForm = () => {
   const enteredEmailIsValid = emailRegex.test(enteredEmail.trim());
   const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
 
-  const textareaRegex = XRegExp('^[\\p{L}\\d\\s]{0,5000}$');
+  const textareaRegex = XRegExp('^(?!.*[%^*|~{};<>"`])[\\p{L}ʼ\\-\\s]{2,5000}$');
 
   const enteredMessageIsValid = textareaRegex.test(enteredMessage.trim());
   const messageInputIsInvalid = !enteredMessageIsValid && enteredMessageTouched;
