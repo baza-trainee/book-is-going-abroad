@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 import { useState, useEffect, useRef, useContext } from 'react';
+import axios from 'axios';
 
 import Container from '../layouts/Container/Container.jsx';
 // eslint-disable-next-line import/extensions
@@ -108,6 +109,20 @@ const Address = () => {
   const [linkMap, setLinkMap] = useState('');
   const [isCitySelectOpen, setIsCitySelectOpen] = useState(false);
   const [isAddressSelectOpen, setIsAddressSelectOpen] = useState(false);
+  const [getAddresses, setGetAdrresses] = useState();
+
+  useEffect(() => {
+    // Make the API request to fetch images
+    axios.get('https://openbookhands.site/admin/api/v1/adress/')
+      .then((response) => {
+        setGetAdrresses(response.data);
+        console.log(getAddresses);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.error('Error fetching images:', error);
+      });
+  }, []);
 
   const uniqueCities = [...new Set(addresses.map((address) => address.city))];
 

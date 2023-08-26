@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useContext } from 'react';
 
 import Container from '../layouts/Container/Container.jsx';
 import Button from '../UI/Button.jsx';
-// eslint-disable-next-line import/extensions
+// eslint-disable-next-line import/extensions, import/no-unresolved
 import { TranslateContext } from '../../contexts/translate-context.js';
 
 // eslint-disable-next-line import/no-unresolved
