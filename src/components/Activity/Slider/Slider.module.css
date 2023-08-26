@@ -62,7 +62,7 @@
 }
 
 .dots {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
@@ -70,20 +70,24 @@
   max-width: 72px;
   height: 16px;
   min-height: 16px;
-  column-gap: 12px;
+  column-gap: 12px; */
+  display: grid;
+  grid-template-columns: repeat(3, 16px);
+  gap: 12px;
+  width: 72px;
+  height: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .dot {
   width: 16px;
   height: 16px;
-  min-height: 16px;
-  max-width: 16px;
   border-radius: 50%;
   background-color: #d9d9d9;
   border: 0;
   cursor: pointer;
   outline: none;
-  flex-shrink: 0;
 }
 
 /* .dot:not(:last-child) {
