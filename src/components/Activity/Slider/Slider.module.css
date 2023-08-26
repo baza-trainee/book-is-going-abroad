@@ -67,18 +67,18 @@
   margin-bottom: 20px;
   width: 72px;
   height: 16px;
+  min-width: 72px;
 }
 
 .dot {
   width: 16px;
+  max-width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #d9d9d9;
   border: 0;
   cursor: pointer;
-  margin: 0 5px;
   outline: none;
-  margin: 0;
 }
 
 .dot.active {
