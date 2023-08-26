@@ -76,9 +76,8 @@
   background-color: #d9d9d9;
   border: 0;
   cursor: pointer;
-  margin: 0 5px;
   outline: none;
-  margin: 0;
+  flex-shrink: 0;
 }
 
 .dot.active {
