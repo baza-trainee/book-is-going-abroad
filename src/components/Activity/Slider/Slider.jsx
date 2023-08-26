@@ -63,13 +63,13 @@ const Slider = () => {
       </div>
       <div className={styles.dots}>
         {slides.map((_, btnIndex) => (
-          <div
+          <button
             key={btnIndex}
             className={`${styles.dot} ${
               btnIndex === activeSlide ? `${styles.active}` : ''
             }`}
             onClick={() => handleSlideChange(btnIndex)}
-          ></div>
+          ></button>
         ))}
       </div>
       <NavLink className={styles['slider-btn-link']} to="/gallery">
