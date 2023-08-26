@@ -12,7 +12,7 @@ const ContactItem = (props) => {
       <h5 className={styles.contactTitle}> {props.title}</h5>
       <p className={styles.contactText}>{props.text}</p>
       <Button className={styles.contactBtn} onClick={props.onClick}>
-        <span>{translate('hero.completeForm')}</span>
+        {translate('hero.completeForm')}
       </Button>
     </div>
   );
