@@ -26,6 +26,7 @@ const Translate = ({ children }) => {
       value={{
         translate,
         currentLocale,
+        setCurrentLocale,
         // eslint-disable-next-line comma-dangle
         handleLanguageChange,
       }}>
