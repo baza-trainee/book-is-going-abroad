@@ -31,10 +31,7 @@ const Footer = () => {
                 className={styles['footer-logo']}>
                 <img src={logo} alt="logo" />
               </Link>
-              <p className={styles['footer-org-name']}>
-                БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
-                ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
-              </p>
+              <p className={styles['footer-org-name']}>{translate('orgName')}</p>
             </div>
             <div className={styles['footer-wrapper-content']}>
               <FooterPayment />

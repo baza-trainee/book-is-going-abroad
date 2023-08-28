@@ -76,6 +76,7 @@
     "footer.regulations": "Статут",
     "footer.policy": "Політика Конфіденційності",
     "footer.terms": "Умови Використання Сайту",
+    "orgName": "БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»",
     "404.button" : "На головну",
     "copyMessage": "Скопійовано!"
   },
@@ -156,6 +157,7 @@
     "footer.regulations": "Regulations",
     "footer.policy": "Privacy Policy",
     "footer.terms": "Terms of Use",
+    "orgName": "CHARITABLE ORGANIZATION «СHARITABLE FOUNDATION «HELP FOR AFFECTED CHILDREN FROM UKRAINE»",
     "404.button" : "Homepage",
     "copyMessage": "Text copied!"
   },
@@ -236,6 +238,7 @@
     "footer.regulations": "Vorschriften",
     "footer.policy": "Datenschutzrichtlinie",
     "footer.terms": "Nutzungsbedingungen der Website",
+    "orgName": "CHARITABLE ORGANIZATION «СHARITABLE FOUNDATION «HELP FOR AFFECTED CHILDREN FROM UKRAINE»",
     "404.button" : "Startseite",
     "copyMessage": "Text kopiert!"
   }
