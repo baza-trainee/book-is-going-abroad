@@ -3,6 +3,11 @@
     padding-bottom: 0;
 }
 
+.container {
+    position: relative;
+    overflow-x: hidden;
+}
+
 .partnersTitle {
     font-family: var(--heading-text-font-family);
     font-size: var(--h2-font-size);
@@ -13,25 +18,112 @@
 
 .partnersLogoWrapper {
     display: flex;
-    justify-content: space-around;
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: none;
 
+    /* animation */
+    /* overflow-x: hidden; */
+    /* animation: scroll 50s linear infinite; */
 }
 
-@media screen and (min-width: 320px) and (max-width: 426px) {
-    .partnersTitle {
-        font-size: 26px;
-        line-height: 35.88px;
-        margin-bottom: 40px;
+.partnersLogoWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollIndicator {
+    width: 10%;
+    height: 2px;
+    background-color: #ccc;
+    /* position: absolute; */
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-radius: 16px;
+}
+
+.scrollIndicatorFill {
+    height: 100%;
+    background-color: #10316B;
+    opacity: .4;
+    width: 0;
+    transition: width 0.8s ease;
+    border-radius: 16px;
+}
+
+/* @keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
 
-    .partnersLogoWrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
+    100% {
+        transform: translateX(-100%);
+    }
+} */
+
+.logo {
+    margin-right: 160px;
+}
+
+.lastLogo {
+    margin-right: 0px;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .scrollIndicator {
+        width: 30%;
     }
 
     .logo {
-        width: 156px;
+        margin-right: 120px;
+    }
+
+    .lastLogo {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .scrollIndicator {
+        width: 30%;
+    }
+
+    .logo {
+        margin-right: 90px;
+    }
+
+    .lastLogo {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .scrollIndicator {
+        width: 30%;
+    }
+
+    .logo {
+        margin-right: 70px;
+    }
+
+    .lastLogo {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+
+    .scrollIndicator {
+        width: 30%;
+    }
+
+    .logo {
+        margin-right: 18px;
+    }
+
+    .lastLogo {
+        margin-right: 0px;
     }
 }
