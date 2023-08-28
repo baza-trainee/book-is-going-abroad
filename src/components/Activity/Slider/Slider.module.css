@@ -81,11 +81,8 @@
   border: 0;
   cursor: pointer;  
   padding: 0;
+  font-size: 0;
 }
-
-/* .dot:not(:last-child) {
-  margin-right: 12px;
-} */
 
 .dot.active {
   background-color: #10316b;
