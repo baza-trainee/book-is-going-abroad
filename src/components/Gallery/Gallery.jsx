@@ -39,7 +39,6 @@ const Gallery = () => {
     setModalOpen(false);
     setActiveImage(null);
   };
-  console.log(images[activeImage]);
 
   return (
     <section className={styles.gallery}>
@@ -75,8 +74,8 @@ const Gallery = () => {
           <div className={styles.modalOverlay} onClick={closeModal}>
             <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
               <img
-                src={activeImage.image}
-                alt={images[activeImage].alt}
+                src={images[activeImage].image}
+                alt='Photo'
               />
               <span className={styles.closeModal} onClick={closeModal}>
                 &times;
