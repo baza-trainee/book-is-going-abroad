@@ -26,7 +26,7 @@ const Features = () => {
   const text = translate('features.mainActivityText');
 
   // eslint-disable-next-line no-nested-ternary
-  const letters = currentLocale === 'ua' ? 132 : currentLocale === 'en' ? 141 : currentLocale === 'de' ? 169 : null;
+  const letters = currentLocale === 'ua' ? 132 : currentLocale === 'eng' ? 141 : currentLocale === 'de' ? 169 : null;
 
   useEffect(() => {
     if (textRef.current) {

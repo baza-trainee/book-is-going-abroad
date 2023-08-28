@@ -10,7 +10,7 @@ import { TranslateContext } from '../../../../../contexts/translate-context';
 export default function LangSelect() {
   const options = [
     { value: 'ua', label: 'UA' },
-    { value: 'en', label: 'EN' },
+    { value: 'eng', label: 'EN' },
     { value: 'de', label: 'DE' },
   ];
 

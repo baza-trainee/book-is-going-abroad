@@ -80,7 +80,7 @@
     "404.button" : "На головну",
     "copyMessage": "Скопійовано!"
   },
-  "en": {
+  "eng": {
     "header.addresses": "Addresses",
     "header.activity": "Activities",
     "header.goalsProject": "The goal of the project",
@@ -173,7 +173,7 @@
     "hero.hotline": "HOTLINE",
     "hero.inform": "Informieren",
     "hero.willingness": "über Pläne zur Bereitstellung humanitärer Hilfe",
-    "hero.completeForm": "FÜLLEN SIE DAS FORMULAR AUS",
+    "hero.completeForm": "DAS FORMÜLAR AUS",
     "hero.make": "STELLEN SIE EINEN",
     "hero.request": "Antrag auf humanitäre Hilfe",
     "hero.want": "ICH MÖCHTE",
