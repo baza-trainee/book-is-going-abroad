@@ -2,13 +2,16 @@
 /* eslint-disable no-confusing-arrow */
 /* eslint-disable no-unused-vars */
 /* eslint-disable comma-dangle */
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import LangSelect from './LangSelect/LangSelect.jsx';
+import { TranslateContext } from '../../../../contexts/translate-context';
 import styles from '../Header.module.css';
 import logo from './Logo.svg';
-import LangSelect from './LangSelect/LangSelect.jsx';
 
 export default function HeaderUpper({ setBurgerActive, burgerActive }) {
+  const { translate } = useContext(TranslateContext);
+
   function handleLogoClick() {
     if (window.location.pathname === '/') {
       window.location.href = '/#top';
@@ -27,10 +30,7 @@ export default function HeaderUpper({ setBurgerActive, burgerActive }) {
         <img src={logo} alt="logo" className={styles.logo} />
       </Link>
 
-      <p className={styles.headerTitle}>
-        БЛАГОДІЙНА ОРГАНІЗАЦІЯ МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ДОПОМОГА
-        ПОСТРАЖДАЛИМ ДІТЯМ З УКРАЇНИ»
-      </p>
+      <p className={styles.headerTitle}>{translate('orgName')}</p>
 
       <div
         className={`${styles.headerLanguage} ${
