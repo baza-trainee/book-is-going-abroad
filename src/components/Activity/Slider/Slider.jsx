@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+// eslint-disable-next-line import/extensions
+import { TranslateContext } from '../../../contexts/translate-context.js';
 // eslint-disable-next-line import/extensions
 import useWindowSize from '../useWindowSize.js';
 import Button from '../../UI/Button.jsx';
@@ -18,6 +20,8 @@ const Slider = () => {
 
   const slides = [slide1, slide2, slide3];
   const slidesSmall = [slide1Small, slide2Small, slide3Small];
+
+  const { translate } = useContext(TranslateContext);
 
   const windowSize = useWindowSize();
   const { width } = windowSize;
@@ -73,7 +77,7 @@ const Slider = () => {
         ))}
       </div>
       <NavLink className={styles['slider-btn-link']} to="/gallery">
-        <Button className={styles['slider-btn']}>Переглянути</Button>
+        <Button className={styles['slider-btn']}>{translate('activity.seeMore')}</Button>
       </NavLink>
     </div>
   );
