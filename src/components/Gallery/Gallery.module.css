@@ -83,8 +83,8 @@
 
 .closeModal {
   position: absolute;
-  top: 6px;
-  right: 14px;
+  top: 10px;
+  right: 16px;
   font-size: 32px;
   cursor: pointer;
 }
