@@ -38,8 +38,8 @@
 
 .notification {
   position: absolute;
-  bottom: 50%;
-  right: 0;
+  bottom: 42%;
+  left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
   background-color: var(--button-hover-bg-color);
