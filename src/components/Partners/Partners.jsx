@@ -1,9 +1,9 @@
 /* eslint-disable operator-linebreak */
 /* eslint-disable comma-dangle */
-import { useContext, useRef, useState } from 'react';
+import { useContext, useRef, useState, useEffect } from 'react';
+import axios from 'axios';
 import styles from './partners.module.css';
 import Container from '../layouts/Container/Container.jsx';
-import logo1 from './Logo 1.svg';
 import { TranslateContext } from '../../contexts/translate-context';
 
 const Partners = () => {
@@ -13,6 +13,22 @@ const Partners = () => {
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(null);
   const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [partnersArray, setPartnersArray] = useState([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!dataLoaded) {
+      axios
+        .get('https://openbookhands.site/admin/api/v1/photologo/')
+        .then((response) => {
+          setPartnersArray(response.data);
+          setDataLoaded(true);
+        })
+        .catch((error) => {
+          console.error('Error fetching logo:', error);
+        });
+    }
+  }, [dataLoaded]);
 
   const handleScroll = () => {
     const element = partnersLogoRef.current;
@@ -40,16 +56,16 @@ const Partners = () => {
     partnersLogoRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  const partnerLogos = [
-    { alt: 'Partner-1', src: logo1 },
-    { alt: 'Partner-2', src: logo1 },
-    { alt: 'Partner-3', src: logo1 },
-    { alt: 'Partner-3', src: logo1 },
-    { alt: 'Partner-3', src: logo1 },
-    { alt: 'Partner-3', src: logo1 },
-    { alt: 'Partner-3', src: logo1 },
-    { alt: 'Partner-3', src: logo1 },
-  ];
+  const renderPartnersLogo = partnersArray.map((logo, index) => (
+    <img
+      key={index}
+      alt={index}
+      src={logo.image}
+      className={`${styles.logo} ${
+        index === partnersArray.length - 1 ? styles.lastLogo : ''
+      }`}
+    />
+  ));
 
   return (
     <section className={styles.partners}>
@@ -63,16 +79,7 @@ const Partners = () => {
           onMouseLeave={handleMouseUp}
           onMouseMove={handleMouseMove}
           onScroll={handleScroll}>
-          {partnerLogos.map((partner, index) => (
-            <img
-              key={index}
-              src={partner.src}
-              alt={partner.alt}
-              className={`${styles.logo} ${
-                index === partnerLogos.length - 1 ? styles.lastLogo : ''
-              }`}
-            />
-          ))}
+          {renderPartnersLogo}
         </div>
         <div className={styles.scrollIndicator}>
           <div
