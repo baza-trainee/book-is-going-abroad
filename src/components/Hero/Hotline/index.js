@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import styles from '../Hero.module.css';
+import { TranslateContext } from '../../../contexts/translate-context';
 
 // eslint-disable-next-line react/prop-types
-const CopyNotififaction = ({ message, onClose }) => {
+const CopyNotififaction = ({ onClose }) => {
+  const { translate } = useContext(TranslateContext);
   useEffect(() => {
     const timer = setTimeout(onClose, 1500);
 
@@ -11,7 +13,7 @@ const CopyNotififaction = ({ message, onClose }) => {
 
   return (
     <div className={styles.notification}>
-      <p>{message}</p>
+      <p>{translate('copyMessage')}</p>
     </div>
   );
 };
