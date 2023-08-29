@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 
 import Container from '../layouts/Container/Container.jsx';
 import Button from '../UI/Button.jsx';
@@ -16,14 +16,22 @@ import styles from './Features.module.css';
 
 const Features = () => {
   const [isTextExpanded, setIsTextExpanded] = useState(false);
+
+  const { translate, currentLocale } = useContext(TranslateContext);
   const textRef = useRef(null);
+  // eslint-disable-next-line no-use-before-define, no-nested-ternary
+  const letters = currentLocale === 'ua' ? 132 : currentLocale === 'eng' ? 141 : currentLocale === 'de' ? 169 : null;
+  const [textHeight, setTextHeight] = useState(`${letters}px`);
   const [arrowRotation, setArrowRotation] = useState(0);
 
-  const { translate } = useContext(TranslateContext);
-
-  // eslint-disable-next-line max-len
-  const smallText = translate('features.mainActivitySmallText');
   const text = translate('features.mainActivityText');
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    setTextHeight(
+      isTextExpanded ? `${textRef.current.scrollHeight}px` : '156px'
+    );
+  });
 
   const handleButtonClick = () => {
     setIsTextExpanded((prevIsTextExpanded) => !prevIsTextExpanded);
@@ -68,15 +76,9 @@ const Features = () => {
             </h3>
             <p
               ref={textRef}
-              className={`${styles['features-text']} `}
-              style={{ maxHeight: isTextExpanded ? '123px' : '1000px', transition: 'all 1s ease', display: isTextExpanded ? 'none' : 'block' }}>
-              {smallText}
-            </p>
-            <p
-              ref={textRef}
               className={`${styles['features-text']} ${styles['features-text-float']} `}
-              style={{ maxHeight: isTextExpanded ? '1000px' : '123px', transition: 'all 1s ease', display: isTextExpanded ? 'block' : 'none' }}>
-              {text}
+              style={{ height: textHeight, transition: 'all 1s ease' }}>
+              {isTextExpanded ? text : `${text.slice(0, letters)}`}
             </p>
             <Button
               // eslint-disable-next-line no-lone-blocks, no-unused-expressions
