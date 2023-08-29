@@ -87,14 +87,13 @@
 
 .features-text-float {
   width: 100%;
-  transition: 'all 1s ease';
 }
 
 .features-arrow {
   display: none;
 }
 
-@media (max-width: 1048px) {
+@media (max-width: 1129px) {
   .features-img-float {
     margin-left: 0;
   }
