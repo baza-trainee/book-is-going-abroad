@@ -73,7 +73,8 @@ const Slider = () => {
               btnIndex === activeSlide ? `${styles.active}` : ''
             }`}
             onClick={() => handleSlideChange(btnIndex)}
-          ></button>
+            aria-label="Slide"
+          >Slide</button>
         ))}
       </div>
       <NavLink className={styles['slider-btn-link']} to="/gallery">
