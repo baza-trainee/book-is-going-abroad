@@ -1,6 +1,6 @@
 /* eslint-disable operator-linebreak */
 /* eslint-disable comma-dangle */
-import { useContext, useRef, useState, useEffect } from 'react';
+import React, { useContext, useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './partners.module.css';
 import Container from '../layouts/Container/Container.jsx';
@@ -31,13 +31,11 @@ const Partners = () => {
     }
   }, [dataLoaded]);
 
-  // console.log(partnersArray);
-
   const handleScroll = () => {
     const element = partnersLogoRef.current;
     const maxScrollLeft = element.scrollWidth - element.clientWidth;
     const scrolled = element.scrollLeft;
-    const percentage = (scrolled / maxScrollLeft) * 100;
+    const percentage = (scrolled / maxScrollLeft) * 280;
     setScrollPercentage(percentage);
   };
 
@@ -87,7 +85,7 @@ const Partners = () => {
         <div className={styles.scrollIndicator}>
           <div
             className={styles.scrollIndicatorFill}
-            style={{ width: `${scrollPercentage}%` }}
+            style={{ transform: `translateX(${scrollPercentage}%)` }}
           />
         </div>
       </Container>
