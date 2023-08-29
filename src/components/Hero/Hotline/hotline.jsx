@@ -1,17 +1,24 @@
 import React, { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
 import styles from '../Hero.module.css';
 import CopyNotififaction from './index';
 import { TranslateContext } from '../../../contexts/translate-context';
 
 export default function Hotline() {
   const { translate } = useContext(TranslateContext);
-  const phones = [
-    { id: 1, number: '+38 044 209 53 02' },
-    { id: 2, number: '+38 098 683 85 21' },
-    { id: 3, number: '+38 098 306 84 84' },
-    // eslint-disable-next-line comma-dangle
-    { id: 4, number: '+38 063 499 37 69' },
-  ];
+  const [contactsArray, setContactsArray] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://openbookhands.site/admin/api/v1/phone/')
+      .then((response) => {
+        setContactsArray(response.data);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.error('Error fetching images:', error);
+      });
+  }, []);
 
   const [showCopyNotification, setShowCopyNotification] = useState(false);
 
@@ -31,13 +38,13 @@ export default function Hotline() {
     }
   }, [showCopyNotification]);
 
-  const renderPhones = phones.map((phone) => (
+  const renderPhones = contactsArray.map(({ id, number }) => (
     <p
-      data-phone={phone.number}
+      data-phone={number}
       className={styles.hotlinePhone}
-      key={phone.id}
-      onClick={() => handleCopy(phone.number)}>
-      {phone.number}
+      key={id}
+      onClick={() => handleCopy(number)}>
+      {number}
     </p>
   ));
 
@@ -45,7 +52,7 @@ export default function Hotline() {
     <div className={styles.hotlineWrapper}>
       <h6 className={styles.hotlineTitle}>{translate('hero.hotline')}</h6>
       <div className={styles.hotlinePhonesWrapper}>{renderPhones}</div>
-      {showCopyNotification && <CopyNotififaction message="Скопійовано!" />}
+      {showCopyNotification && <CopyNotififaction />}
     </div>
   );
 }
