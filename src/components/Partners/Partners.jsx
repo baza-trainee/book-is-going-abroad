@@ -30,6 +30,8 @@ const Partners = () => {
     }
   }, [dataLoaded]);
 
+  // console.log(partnersArray);
+
   const handleScroll = () => {
     const element = partnersLogoRef.current;
     const maxScrollLeft = element.scrollWidth - element.clientWidth;
