@@ -87,6 +87,7 @@
 
 .features-text-float {
   width: 100%;
+  transition: 'all 1s ease';
 }
 
 .features-arrow {
