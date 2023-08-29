@@ -17,7 +17,7 @@ import styles from './Features.module.css';
 const Features = () => {
   const [isTextExpanded, setIsTextExpanded] = useState(false);
   const textRef = useRef(null);
-  const [textHeight, setTextHeight] = useState('10em');
+  const [textHeight, setTextHeight] = useState('123px');
   const [arrowRotation, setArrowRotation] = useState(0);
 
   const { translate, currentLocale } = useContext(TranslateContext);
@@ -27,13 +27,15 @@ const Features = () => {
 
   // eslint-disable-next-line no-nested-ternary
   const letters = currentLocale === 'ua' ? 132 : currentLocale === 'eng' ? 141 : currentLocale === 'de' ? 169 : null;
+  const textHeightClose = currentLocale === 'eng' ? '90px' : '123px';
 
   useEffect(() => {
     if (textRef.current) {
       setTextHeight(
-        isTextExpanded ? `${textRef.current.scrollHeight}px` : ''
+        isTextExpanded ? `${textRef.current.scrollHeight}px` : textHeightClose
       );
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isTextExpanded, text]);
 
   const handleButtonClick = () => {
