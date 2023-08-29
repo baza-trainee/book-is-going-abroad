@@ -136,6 +136,11 @@
   border-radius: 14px;
   padding: 20px 20px;
   text-align: center;
+  margin-right: 15px;
+}
+
+.contactItem:last-child {
+  margin-right: 0;
 }
 
 .contactTitle {
@@ -428,6 +433,7 @@
 
   .contactItem {
     padding: 20px 15px;
+    margin-right: 15px;
   }
 
   .contactTitle {
@@ -490,6 +496,7 @@
 
   .contactItem {
     padding: 20px 15px;
+    margin-right: 15px;
   }
 
   .contactTitle {
@@ -537,6 +544,11 @@
     column-gap: 10px;
     margin-bottom: 40px;
     padding: 0px 5px;
+  }
+
+  .contactItem {
+    padding: 20px 15px;
+    margin-right: 15px;
   }
 
   /* .hotlinePhone:nth-child(4n) {
