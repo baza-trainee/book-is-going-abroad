@@ -54,7 +54,6 @@ const FeedbackForm = () => {
     }
   }, [showSuccessSendMessage]);
 
-  // const nameRegex = XRegExp('^(?!.*[%^*|~{};<>"`]).{2,30}$');
   const nameRegex = XRegExp('^(?!.*[%^*|~{};<>"`0-9]).{2,30}$');
 
   const enteredNameIsValid = nameRegex.test(enteredName.trim());
