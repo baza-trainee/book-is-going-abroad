@@ -5,9 +5,9 @@ import Button from '../UI/Button.jsx';
 import Hotline from './Hotline/hotline.jsx';
 import Contact from './Contact/Contact.jsx';
 import { scroll } from '../layouts/Header/HeaderNav/NavButtons.jsx';
-import slide1 from '../../assets/img/hero-backgrounds/slider1.jpg';
-import slide2 from '../../assets/img/hero-backgrounds/slider2.jpg';
-import slide3 from '../../assets/img/hero-backgrounds/slider3.jpg';
+import slide1 from '../../assets/img/hero-backgrounds/slider1.webp';
+import slide2 from '../../assets/img/hero-backgrounds/slider2.webp';
+import slide3 from '../../assets/img/hero-backgrounds/slider3.webp';
 import { TranslateContext } from '../../contexts/translate-context';
 
 const slides = [slide1, slide2, slide3];
