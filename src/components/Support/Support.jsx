@@ -6,7 +6,7 @@ import Container from '../layouts/Container/Container.jsx';
 import { TranslateContext } from '../../contexts/translate-context';
 
 import styles from './Support.module.css';
-import supportHeart from '../../assets/img/support/supportHeart.png';
+import supportHeart from '../../assets/img/support/supportHeart.webp';
 import monobankIcon from '../../assets/img/support/monobankIcon.png';
 
 const Support = () => {
