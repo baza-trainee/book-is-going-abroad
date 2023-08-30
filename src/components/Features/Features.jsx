@@ -16,27 +16,22 @@ import styles from './Features.module.css';
 
 const Features = () => {
   const [isTextExpanded, setIsTextExpanded] = useState(false);
-  const textRef = useRef(null);
-  const [textHeight, setTextHeight] = useState('123px');
-  const [arrowRotation, setArrowRotation] = useState(0);
 
   const { translate, currentLocale } = useContext(TranslateContext);
+  const textRef = useRef(null);
+  // eslint-disable-next-line no-use-before-define, no-nested-ternary
+  const letters = currentLocale === 'ua' ? 132 : currentLocale === 'eng' ? 141 : currentLocale === 'de' ? 169 : null;
+  const [textHeight, setTextHeight] = useState(`${letters}px`);
+  const [arrowRotation, setArrowRotation] = useState(0);
 
-  // eslint-disable-next-line max-len
   const text = translate('features.mainActivityText');
 
-  // eslint-disable-next-line no-nested-ternary
-  const letters = currentLocale === 'ua' ? 132 : currentLocale === 'eng' ? 141 : currentLocale === 'de' ? 169 : null;
-  const textHeightClose = currentLocale === 'eng' ? '90px' : '123px';
-
-  useEffect(() => {
-    if (textRef.current) {
-      setTextHeight(
-        isTextExpanded ? `${textRef.current.scrollHeight}px` : textHeightClose
-      );
-    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isTextExpanded, text]);
+  useEffect(() => {
+    setTextHeight(
+      isTextExpanded ? `${textRef.current.scrollHeight}px` : '156px'
+    );
+  });
 
   const handleButtonClick = () => {
     setIsTextExpanded((prevIsTextExpanded) => !prevIsTextExpanded);
