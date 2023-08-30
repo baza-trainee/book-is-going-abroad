@@ -246,6 +246,7 @@
 
   .contactItem {
     padding: 20px 46px;
+    margin-right: 0;
   }
 
   .contactTitle {
@@ -308,6 +309,11 @@
     justify-content: center;
     gap: 16px;
   }
+
+  .contactItem {
+    padding: 20px 15px;
+    margin-right: 5px;
+  }
 }
 
 @media screen and (min-width: 675px) and (max-width: 769px) {
@@ -369,11 +375,12 @@
   .contactWrapper {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
+    gap: 5px;
   }
 
   .contactItem {
     padding: 20px 15px;
+    margin-right: 5px;
   }
 
   .contactTitle {
