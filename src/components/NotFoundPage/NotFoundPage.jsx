@@ -8,7 +8,7 @@ import Container from '../layouts/Container/Container.jsx';
 import { TranslateContext } from '../../contexts/translate-context.js';
 
 import styles from './NotFoundPage.module.css';
-import image from '../../assets/img/404.png';
+import image from '../../assets/img/404.webp';
 
 const NotFoundPage = () => {
   const { translate } = useContext(TranslateContext);

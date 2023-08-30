@@ -6,12 +6,12 @@ import { TranslateContext } from '../../../contexts/translate-context.js';
 import useWindowSize from '../useWindowSize.js';
 import Button from '../../UI/Button.jsx';
 import styles from './Slider.module.css';
-import slide1 from '../../../assets/img/activity-slider/slide1.jpg';
-import slide2 from '../../../assets/img/activity-slider/slide2.jpg';
-import slide3 from '../../../assets/img/activity-slider/slide3.jpg';
-import slide1Small from '../../../assets/img/activity-slider/slide1-small.jpg';
-import slide2Small from '../../../assets/img/activity-slider/slide2-small.jpg';
-import slide3Small from '../../../assets/img/activity-slider/slide3-small.jpg';
+import slide1 from '../../../assets/img/activity-slider/slide1.webp';
+import slide2 from '../../../assets/img/activity-slider/slide2.webp';
+import slide3 from '../../../assets/img/activity-slider/slide3.webp';
+import slide1Small from '../../../assets/img/activity-slider/slide1-small.webp';
+import slide2Small from '../../../assets/img/activity-slider/slide2-small.webp';
+import slide3Small from '../../../assets/img/activity-slider/slide3-small.webp';
 import arrowPrev from './arrow-prev.svg';
 import arrowNext from './arrow-next.svg';
 

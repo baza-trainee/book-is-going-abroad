@@ -6,10 +6,10 @@ import Button from '../UI/Button.jsx';
 import { TranslateContext } from '../../contexts/translate-context.js';
 
 // eslint-disable-next-line import/no-unresolved
-import ideas from '../../assets/img/features/ideas-img.png';
+import ideas from '../../assets/img/features/ideas-img.webp';
 import ideasMobile from '../../assets/img/features/ideas-img-mobile.png';
 // eslint-disable-next-line import/no-unresolved
-import activity from '../../assets/img/features/activity-img.png';
+import activity from '../../assets/img/features/activity-img.webp';
 import activityMobile from '../../assets/img/features/activity-img-mobile.png';
 import arrow from './features-arrow.svg';
 import styles from './Features.module.css';
