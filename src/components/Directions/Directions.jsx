@@ -41,6 +41,24 @@ const Directions = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  function scroll(className, block) {
+    const section = document.querySelectorAll(`[class*=${className}]`);
+    if (section.length > 0) {
+      // eslint-disable-next-line operator-linebreak
+      let headerHeight = document.querySelector(
+        '[class*=headerWrapper]'
+      ).offsetHeight;
+      headerHeight -= headerHeight * 8;
+
+      window.scrollTo({
+        top: section[0].offsetTop - headerHeight,
+        behavior: 'smooth',
+        // eslint-disable-next-line comma-dangle
+        block,
+      });
+    }
+  }
   const directionsRow1 = [
     {
       id: '1',
@@ -295,7 +313,10 @@ const Directions = () => {
                     {renderDirections5}
                   </div>
                   <Button
-                    onClick={toggleDirections}
+                    onClick={() => {
+                      scroll('directionWrapper', 'start');
+                      toggleDirections();
+                    }}
                     className={styles.expandButton}>
                     {translate('features.reduce')}
                     <img
