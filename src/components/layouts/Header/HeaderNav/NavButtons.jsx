@@ -28,7 +28,7 @@ const NavButton = ({ icon, text, link, block, closeMenu }) => {
       setTimeout(() => {
         scroll(link, block);
         setScrollAfterRedirect(false);
-      }, 100);
+      }, 500);
     }
   }, [scrollAfterRedirect, link, block]);
 
