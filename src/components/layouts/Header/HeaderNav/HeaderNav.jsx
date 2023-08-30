@@ -47,7 +47,7 @@ export default function HeaderNav({ burgerActive, setBurgerActive }) {
       key={id}
       text={text}
       link={link}
-      block="center"
+      block="start"
       closeMenu={toggleBurger}
     />
   ));

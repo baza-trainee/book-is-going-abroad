@@ -6,7 +6,16 @@ import styles from '../Header.module.css';
 export function scroll(className, block) {
   const section = document.querySelectorAll(`[class*=${className}]`);
   if (section.length > 0) {
-    section[0].scrollIntoView({ behavior: 'smooth', block });
+    // eslint-disable-next-line operator-linebreak
+    const headerHeight = document.querySelector(
+      '[class*=headerWrapper]'
+    ).offsetHeight;
+    window.scrollTo({
+      top: section[0].offsetTop - headerHeight,
+      behavior: 'smooth',
+      // eslint-disable-next-line comma-dangle
+      block,
+    });
   }
 }
 
