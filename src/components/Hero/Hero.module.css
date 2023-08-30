@@ -57,7 +57,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  column-gap: 60px;
+  column-gap: 50px;
 
   background-color: #F2F7FFB2;
   border-radius: 14px;
