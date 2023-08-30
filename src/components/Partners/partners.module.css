@@ -156,6 +156,11 @@
 
 @media screen and (min-width: 320px) and (max-width: 426px) {
 
+    .partnersTitle {
+        font-size: 26px;
+        line-height: 35px;
+    }
+
     .scrollIndicator {
         width: 115px;
     }
