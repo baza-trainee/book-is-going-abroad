@@ -19,6 +19,7 @@
 .footer-number {
   padding: 0;
   word-break: keep-all;
+  min-width: 124px;
 }
 
 .footer-email p {
