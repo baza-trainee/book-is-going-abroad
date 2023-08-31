@@ -140,6 +140,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-color: transparent; 
+  background-color: transparent;
 }
 
 .address-select-city {
