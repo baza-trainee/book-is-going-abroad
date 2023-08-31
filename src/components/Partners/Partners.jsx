@@ -19,7 +19,7 @@ const Partners = () => {
   useEffect(() => {
     if (!dataLoaded) {
       axios
-        .get('https://openbookhands.site/admin/api/v1/photologo/')
+        .get('https://www.openbookhands.site/admin/api/v1/photologo/')
         .then((response) => {
           setPartnersArray(response.data);
           setDataLoaded(true);

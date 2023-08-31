@@ -10,7 +10,7 @@ export default function Hotline() {
 
   useEffect(() => {
     axios
-      .get('https://openbookhands.site/admin/api/v1/phone/')
+      .get('https://www.openbookhands.site/admin/api/v1/phone/')
       .then((response) => {
         setContactsArray(response.data);
       })

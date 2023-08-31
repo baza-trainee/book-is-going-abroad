@@ -13,7 +13,7 @@ const FeedbackPhones = () => {
 
   useEffect(() => {
     // Make the API request to fetch text
-    axios.get('https://openbookhands.site/admin/api/v1/phone/')
+    axios.get('https://www.openbookhands.site/admin/api/v1/phone/')
       .then((response) => {
         setContactsArray(response.data);
       })

@@ -20,7 +20,7 @@ const Gallery = () => {
   useEffect(() => {
     setLoading(false);
     // Make the API request to fetch images
-    axios.get('https://openbookhands.site/admin/api/v1/photo/')
+    axios.get('https://www.openbookhands.site/admin/api/v1/photo/')
       .then((response) => {
         setImages(response.data);
       })

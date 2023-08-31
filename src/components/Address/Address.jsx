@@ -22,7 +22,7 @@ const Address = () => {
   useEffect(() => {
     // Make the API request to fetch images
     axios
-      .get('https://openbookhands.site/admin/api/v1/adress/')
+      .get('https://www.openbookhands.site/admin/api/v1/adress/')
       .then((response) => {
         setAddresses(response.data);
       })
