@@ -128,8 +128,8 @@
   padding: 12px 12px;
 }
 
-.select-city-wrapper label img,
-.select-address-wrapper label img {
+.select-city-wrapper .address-select-inputs label img,
+.select-address-wrapper .address-select-inputs label img {
   width: 20px;
   height: 20px;
   margin-right: 8px;
