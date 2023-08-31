@@ -14,7 +14,7 @@
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 57px;
+  gap: 56px;
 }
 
 .footer-wrapper-organization,
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 57px;
+  gap: 56px;
 }
 
 .footer-logo {
@@ -56,24 +56,24 @@
 @media screen and (min-width: 800px) and (max-width: 1170px) {
   .footer-wrapper {
     justify-content: center;
-    gap: 45px;
+    gap: 44px;
   }
 
   .footer-wrapper-organization,
   .footer-wrapper-content {
-    gap: 45px;
+    gap: 44px;
   }
 }
 
 @media screen and (min-width: 770px) and (max-width: 800px) {
   .footer-wrapper {
     justify-content: center;
-    gap: 28px;
+    gap: 27px;
   }
 
   .footer-wrapper-organization,
   .footer-wrapper-content {
-    gap: 28px;
+    gap: 27px;
   }
 }
 
