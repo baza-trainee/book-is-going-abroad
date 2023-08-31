@@ -135,19 +135,27 @@
   margin-right: 8px;
 }
 
-.select-city-wrapper label input, 
-.select-address-wrapper label input {
+.select-city-wrapper .address-select-inputs label input, 
+.select-address-wrapper .address-select-inputs label input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-color: transparent; 
+  background-color: transparent;
 }
 
 .address-select-city {
   margin-bottom: 21px;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .address-select-address {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
