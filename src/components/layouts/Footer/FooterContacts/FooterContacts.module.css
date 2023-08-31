@@ -16,6 +16,11 @@
   line-height: var(--footer-line-height);
 }
 
+.footer-number {
+  padding: 0;
+  word-break: keep-all;
+}
+
 .footer-email p {
   word-break: break-all;
 }

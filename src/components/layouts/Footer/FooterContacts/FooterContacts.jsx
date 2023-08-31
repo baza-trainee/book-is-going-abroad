@@ -61,7 +61,7 @@ const FooterContacts = () => {
   const RenderContacts = contactsArray.map(({ id, number }) => (
     <li key={id} icon={icon} onClick={() => handleCopy(number)}>
       <img src={icon} />
-      <p>{number}</p>
+      <p className={styles['footer-number']}>{number}</p>
     </li>
   ));
 
