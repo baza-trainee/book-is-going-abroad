@@ -29,7 +29,8 @@ const PopupIcon = (props) => {
         className={modalActive ? 'hideIcon' : 'showIcon'}></img>
       <div
         className={`showModal ${props.style}`}
-        onMouseOver={handleMouseOver}></div>
+        onMouseOver={handleMouseOver}
+        onTouchStart={handleMouseOver}></div>
       <Modal
         active={modalActive}
         setActive={setModalActive}
