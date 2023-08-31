@@ -147,6 +147,9 @@
 .address-select-city {
   margin-bottom: 21px;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .address-select-address {
